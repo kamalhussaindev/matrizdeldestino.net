@@ -1,18 +1,8 @@
 ---
+import type { IconName } from './icon-names';
+
 export interface Props {
-  name:
-    | 'chevron-down'
-    | 'check'
-    | 'sparkle'
-    | 'share'
-    | 'menu'
-    | 'close'
-    | 'compass'
-    | 'heart'
-    | 'coins'
-    | 'infinity'
-    | 'users'
-    | 'child';
+  name: IconName;
   class?: string;
   'aria-hidden'?: boolean;
 }

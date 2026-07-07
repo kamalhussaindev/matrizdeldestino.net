@@ -1,11 +1,11 @@
-import type { Props as IconProps } from '../components/ui/Icon.astro';
+import type { IconName } from '../components/ui/icon-names';
 
 export interface CalculatorMeta {
   slug: string;
   label: string;
   description: string;
   href: string;
-  icon: IconProps['name'];
+  icon: IconName;
 }
 
 // Single source of truth for every calculator on the site — adding a new

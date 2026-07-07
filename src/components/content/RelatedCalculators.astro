@@ -1,10 +1,10 @@
 ---
 import Card from '../ui/Card.astro';
 import Icon from '../ui/Icon.astro';
-import type { Props as IconProps } from '../ui/Icon.astro';
+import type { IconName } from '../ui/icon-names';
 
 export interface Props {
-  items: { label: string; description: string; href: string; icon: IconProps['name'] }[];
+  items: { label: string; description: string; href: string; icon: IconName }[];
   heading?: string;
 }
 
