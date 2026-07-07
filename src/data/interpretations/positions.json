@@ -1,0 +1,22 @@
+{
+  "A": "En tu personalidad y la forma en que te muestras al mundo,",
+  "B": "En tus talentos naturales,",
+  "C": "En la energía generacional que heredas,",
+  "D": "En tu misión terrenal,",
+  "E": "En tu punto E, tu zona de confort y propósito central,",
+  "karmicTail": "En tu cola kármica, el patrón que arrastras de otras vidas,",
+  "masculine": "En tu línea masculina o paterna,",
+  "feminine": "En tu línea femenina o materna,",
+  "money": "En tu línea del dinero,",
+  "chakras": "En el equilibrio de tus chakras,",
+  "purposes": {
+    "personal": "En tu propósito personal,",
+    "social": "En tu propósito social,",
+    "general": "En tu propósito general,",
+    "planetary": "En tu propósito planetario,",
+    "sky": "En tu punto cielo,",
+    "earth": "En tu punto tierra,",
+    "male": "En tu punto masculino,",
+    "female": "En tu punto femenino,"
+  }
+}

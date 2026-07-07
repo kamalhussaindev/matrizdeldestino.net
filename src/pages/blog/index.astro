@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import Card from '../../components/ui/Card.astro';
+import Badge from '../../components/ui/Badge.astro';
+
+const breadcrumbItems = [{ label: 'Blog' }];
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const dateFormatter = new Intl.DateTimeFormat('es', { dateStyle: 'long' });
+---
+
+<BaseLayout
+  title="Blog: Matriz del Destino y Numerología | Arcania"
+  description="Artículos sobre la Matriz del Destino, numerología y autoconocimiento: guías prácticas, curiosidades y ejemplos reales de interpretación."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Blog: Matriz del Destino y Numerología</h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Artículos sobre numerología, autoconocimiento e interpretación de la Matriz del Destino.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-10 grid max-w-5xl gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
+    {
+      posts.map((post) => (
+        <Card href={`/blog/${post.slug}/`}>
+          <Badge variant="outline">{dateFormatter.format(post.data.publishDate)}</Badge>
+          <h2 class="mt-3 font-heading text-lg font-semibold text-ink">{post.data.title}</h2>
+          <p class="mt-2 text-sm text-ink-muted">{post.data.metaDescription}</p>
+        </Card>
+      ))
+    }
+  </div>
+</BaseLayout>

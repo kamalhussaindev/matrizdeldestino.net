@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
+
+const breadcrumbItems = [{ label: 'Privacidad' }];
+const lastUpdated = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(new Date('2026-01-01'));
+---
+
+<BaseLayout
+  title="Política de Privacidad | Arcania"
+  description="Qué datos recopila Arcania, cómo los usamos y cuáles son tus derechos como usuario de nuestras calculadoras."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Política de Privacidad</h1>
+    <p class="mt-2 text-sm text-ink-muted">Última actualización: {lastUpdated}</p>
+
+    <div class="mt-6 flex flex-col gap-4 text-ink-muted">
+      <h2 class="font-heading text-2xl font-bold text-ink">Qué datos recopilamos</h2>
+      <p>
+        Para calcular tu Matriz del Destino solo necesitamos tu fecha de nacimiento y, opcionalmente,
+        un nombre para personalizar el resultado en pantalla. Este cálculo ocurre por completo en tu
+        navegador: tu fecha de nacimiento nunca se envía a nuestros servidores ni se almacena en
+        ninguna base de datos.
+      </p>
+      <p>
+        Si decides solicitar el informe completo en PDF, te pedimos tu correo electrónico únicamente
+        para poder enviártelo. Ese correo se usa exclusivamente para ese fin y para futuras
+        comunicaciones relacionadas con nuestros servicios, de las cuales puedes darte de baja en
+        cualquier momento.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Qué no hacemos</h2>
+      <p>
+        No vendemos, alquilamos ni compartimos tus datos personales con terceros con fines
+        comerciales. No usamos tu fecha de nacimiento ni tu correo para ningún propósito distinto al
+        que autorizaste explícitamente al usarlos.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Cookies y analítica</h2>
+      <p>
+        Usamos cookies y herramientas de analítica únicamente para entender de forma agregada cómo se
+        usa el sitio —qué páginas se visitan más, desde qué dispositivos— y así poder mejorarlo. No
+        usamos esta información para identificarte individualmente ni para fines publicitarios de
+        terceros.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Tus derechos</h2>
+      <p>
+        Puedes solicitarnos en cualquier momento acceder a los datos que tengamos asociados a tu
+        correo, corregirlos o eliminarlos por completo de nuestros sistemas. Para ejercer cualquiera de
+        estos derechos, escríbenos a través de nuestra
+        <a href="/contacto/" class="font-medium text-primary hover:underline">página de contacto</a>.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Cambios a esta política</h2>
+      <p>
+        Si actualizamos esta política de forma significativa, lo indicaremos en esta misma página con
+        una nueva fecha de actualización.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

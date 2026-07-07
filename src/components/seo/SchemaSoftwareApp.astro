@@ -1,0 +1,26 @@
+---
+export interface Props {
+  name: string;
+  description: string;
+}
+
+const { name, description } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name,
+  description,
+  url,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

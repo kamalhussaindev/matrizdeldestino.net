@@ -1,0 +1,198 @@
+﻿Diagnose log at 2026-07-07T20:57:06Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.5.1+90d5f897f164a8fe07d2aa3bf7db439b0b4e03ea
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 22631)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\etopi.DESKTOP-51VUFOC
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=UTOPIYA-ALY
+GIT_TRACE2_PARENT_SID=7b4173d6-f538-4f39-beee-a5041c0593d5
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\etopi.DESKTOP-51VUFOC\OneDrive
+ChocolateyLastPathUpdate=133740690079518901
+PYTHON_BASIC_REPL=1
+BUNDLED_DEBUGPY_PATH=c:\Users\etopi.DESKTOP-51VUFOC\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy
+PYDEVD_DISABLE_FILE_VALIDATION=1
+LANG=en_US.UTF-8
+TMP=C:\Users\ETOPI~1.DES\AppData\Local\Temp
+HOME=C:\Users\etopi.DESKTOP-51VUFOC
+PROCESSOR_REVISION=8e09
+CLAUDE_CODE_SSE_PORT=52024
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+GIT_ASKPASS=c:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\ETOPI~1.DES\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+COPILOT_DEBUG_NONCE=837fcd43dc65485bdcf7535de825e50e
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+ProgramW6432=C:\Program Files
+PYTHONSTARTUP=c:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\Code\User\workspaceStorage\ee5209f18fb193af0a621c5a1889e334\ms-python.python\pythonrc.py
+USERDOMAIN=UTOPIYA-ALY
+ProgramFiles(x86)=C:\Program Files (x86)
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\etopi.DESKTOP-51VUFOC\bin;c:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Python312;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Python\Python313\;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Python\Python312\;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Microsoft\WindowsApps;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\npm;C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Microsoft\WinGet\Packages\Hashicorp.Terraform_Microsoft.Winget.Source_8wekyb3d8bbwe;;c:\Users\etopi.DESKTOP-51VUFOC\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\scripts\noConfigScripts
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+TMPDIR=C:\Users\ETOPI~1.DES\AppData\Local\Temp
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+TERM_PROGRAM_VERSION=1.127.0
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass-main.js
+PSModulePath=C:\Users\etopi.DESKTOP-51VUFOC\OneDrive\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=4
+FPS_BROWSER_USER_PROFILE_STRING=Default
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+VSCODE_INJECTION=1
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=c:\Users\etopi.DESKTOP-51VUFOC\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f919b35c5d934a36.txt
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-134bdf5ee8-sock
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_8556_SXIMOEGAWGEJCKKN
+ProgramFiles=C:\Program Files (x86)
+EFC_7872=1
+ProgramData=C:\ProgramData
+MSYS=disable_pcon
+ChocolateyInstall=C:\ProgramData\chocolatey
+PLINK_PROTOCOL=ssh
+VSCODE_GIT_ASKPASS_NODE=C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Programs\Microsoft VS Code\Code.exe
+SystemRoot=C:\Windows
+SESSIONNAME=Console
+CommonProgramW6432=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\UTOPIYA-ALY
+USERPROFILE=C:\Users\etopi.DESKTOP-51VUFOC
+COLORTERM=truecolor
+USERDOMAIN_ROAMINGPROFILE=UTOPIYA-ALY
+APPDATA=C:\Users\etopi.DESKTOP-51VUFOC\AppData\Roaming
+HOMEDRIVE=C:
+USERNAME=etopi
+PROCESSOR_ARCHITEW6432=AMD64
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\Windows\system32\cmd.exe
+SystemDrive=C:
+windir=C:\Windows
+OneDriveConsumer=C:\Users\etopi.DESKTOP-51VUFOC\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Temp\ec13490ca54e7815eb9a1161'... OK
+Reading from temporary file 'C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Temp\ec13490ca54e7815eb9a1161'... OK
+Deleting temporary file 'C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\Temp\ec13490ca54e7815eb9a1161'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\etopi.DESKTOP-51VUFOC
+UserDataDirectoryPath: C:\Users\etopi.DESKTOP-51VUFOC\.gcm
+GetCurrentDirectory(): D:\calculadora matriz del
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:61240/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.46.2.windows.1'
+Locating current repository...Git repository at 'D:/calculadora matriz del/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/etopi.DESKTOP-51VUFOC/.gitconfig	user.email=etopiyaaly611@gmail.com
+file:C:/Users/etopi.DESKTOP-51VUFOC/.gitconfig	user.name=kamalaly611
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/kamalhussaindev/matrizdeldestino.net.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\etopi.DESKTOP-51VUFOC\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

@@ -1,0 +1,22 @@
+---
+export interface Props {
+  href?: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+
+const classes = [
+  'block rounded-2xl border border-surface-alt bg-white p-6 shadow-sm',
+  href && 'transition-shadow duration-150 hover:shadow-md',
+  className,
+]
+  .filter(Boolean)
+  .join(' ');
+
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag class={classes} href={href}>
+  <slot />
+</Tag>

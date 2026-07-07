@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import ArcanaCard from '../../components/content/ArcanaCard.astro';
+
+const breadcrumbItems = [{ label: 'Arcanos' }];
+
+const arcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - b.data.numero);
+---
+
+<BaseLayout
+  title="Los 22 Arcanos de la Matriz del Destino | Arcania"
+  description="Descubre el significado de los 22 arcanos mayores del tarot en la Matriz del Destino: energía positiva y negativa, en el amor, el trabajo y cada posición del octagrama."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Los 22 Arcanos de la Matriz del Destino</h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Cada posición de tu octagrama —tu personalidad, tu punto E, tu cola kármica, tus propósitos— se
+      reduce a uno de los 22 arcanos mayores del tarot. Explora el significado de cada uno y descubre
+      cómo se interpreta en cada posición de tu matriz.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-10 grid max-w-5xl gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
+    {
+      arcanos.map((entry) => (
+        <ArcanaCard
+          numero={entry.data.numero}
+          nombre={entry.data.nombre}
+          description={entry.data.metaDescription ?? `Descubre el significado del Arcano ${entry.data.numero} en tu Matriz del Destino.`}
+          href={`/arcanos/${entry.data.numero}/`}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

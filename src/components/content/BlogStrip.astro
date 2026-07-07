@@ -1,0 +1,52 @@
+---
+import Card from '../ui/Card.astro';
+import Badge from '../ui/Badge.astro';
+
+export interface BlogPostPreview {
+  title: string;
+  excerpt: string;
+  href: string;
+}
+
+export interface Props {
+  posts?: BlogPostPreview[];
+}
+
+// Placeholder cards until Milestone 5 wires the real blog content
+// collection in. Structurally ready: just pass `posts` once real entries
+// exist and this section renders them instead.
+const defaultPosts: BlogPostPreview[] = [
+  {
+    title: 'Próximamente',
+    excerpt: 'Estamos preparando artículos sobre numerología, arcanos y autoconocimiento.',
+    href: '/blog/',
+  },
+  {
+    title: 'Próximamente',
+    excerpt: 'Muy pronto encontrarás aquí guías prácticas para interpretar tu matriz.',
+    href: '/blog/',
+  },
+  {
+    title: 'Próximamente',
+    excerpt: 'Historias y ejemplos reales de lectura de la Matriz del Destino.',
+    href: '/blog/',
+  },
+];
+
+const { posts = defaultPosts } = Astro.props;
+---
+
+<section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">Del blog</h2>
+  <div class="mt-10 grid gap-6 sm:grid-cols-3">
+    {
+      posts.map((post) => (
+        <Card href={post.href}>
+          <Badge variant="outline">Blog</Badge>
+          <h3 class="mt-3 font-heading text-lg font-semibold text-ink">{post.title}</h3>
+          <p class="mt-2 text-sm text-ink-muted">{post.excerpt}</p>
+        </Card>
+      ))
+    }
+  </div>
+</section>

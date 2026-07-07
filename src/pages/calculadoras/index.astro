@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import Card from '../../components/ui/Card.astro';
+import Icon from '../../components/ui/Icon.astro';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [{ label: 'Calculadoras' }];
+---
+
+<BaseLayout
+  title="Calculadoras de Numerología y Autoconocimiento | Arcania"
+  description="Explora todas nuestras calculadoras gratuitas de numerología y autoconocimiento: Matriz del Destino, compatibilidad de pareja y matriz infantil."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
+      Calculadoras de Numerología y Autoconocimiento
+    </h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Todas nuestras herramientas son gratuitas, no requieren registro y entregan tu resultado al
+      instante. Esta colección crece con el tiempo — vuelve pronto por más.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-10 grid max-w-4xl gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
+    {
+      calculators.map((calc) => (
+        <Card href={calc.href} class="flex flex-col items-center gap-3 text-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Icon name={calc.icon} class="h-7 w-7" />
+          </div>
+          <h2 class="font-heading text-lg font-semibold text-ink">{calc.label}</h2>
+          <p class="text-sm text-ink-muted">{calc.description}</p>
+        </Card>
+      ))
+    }
+  </div>
+</BaseLayout>

@@ -1,0 +1,94 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaArticle from '../../components/seo/SchemaArticle.astro';
+import ArcanaCard from '../../components/content/ArcanaCard.astro';
+
+export async function getStaticPaths() {
+  const arcanos = await getCollection('arcanos');
+  return arcanos.map((entry) => ({
+    params: { numero: String(entry.data.numero) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'arcanos'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { numero, nombre, metaDescription, relatedArcanos, datePublished } = entry.data;
+
+const title = entry.data.title ?? `Arcano ${numero} en la Matriz del Destino: Significado | Arcania`;
+const description =
+  metaDescription ??
+  `Descubre el significado del Arcano ${numero} (${nombre}) en tu Matriz del Destino: energía positiva y negativa, en el amor, el trabajo y la cola kármica.`;
+
+const allArcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - b.data.numero);
+const currentIndex = allArcanos.findIndex((e) => e.data.numero === numero);
+const prevEntry = allArcanos[(currentIndex - 1 + allArcanos.length) % allArcanos.length];
+const nextEntry = allArcanos[(currentIndex + 1) % allArcanos.length];
+
+const relatedEntries = relatedArcanos
+  .map((n) => allArcanos.find((e) => e.data.numero === n))
+  .filter((e): e is CollectionEntry<'arcanos'> => Boolean(e));
+
+const breadcrumbItems = [
+  { label: 'Arcanos', href: '/arcanos/' },
+  { label: `Arcano ${numero}` },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaArticle slot="schema" headline={title} description={description} datePublished={datePublished} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
+      Arcano {numero} en la Matriz del Destino: {nombre}
+    </h1>
+
+    <a
+      href="/matriz-del-destino/"
+      class="mt-4 inline-block font-medium text-primary hover:underline"
+    >
+      Calcula tu Matriz del Destino →
+    </a>
+
+    <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
+      <Content />
+    </div>
+
+    {
+      relatedEntries.length > 0 && (
+        <section class="py-12">
+          <h2 class="font-heading text-2xl font-bold text-ink">Arcanos relacionados</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            {relatedEntries.map((related) => (
+              <ArcanaCard
+                numero={related.data.numero}
+                nombre={related.data.nombre}
+                description={related.data.metaDescription ?? `Descubre el significado del Arcano ${related.data.numero}.`}
+                href={`/arcanos/${related.data.numero}/`}
+              />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <nav class="flex items-center justify-between border-t border-surface-alt py-8" aria-label="Navegación entre arcanos">
+      <a href={`/arcanos/${prevEntry.data.numero}/`} class="font-medium text-primary hover:underline">
+        ← Arcano {prevEntry.data.numero}
+      </a>
+      <a href={`/arcanos/${nextEntry.data.numero}/`} class="font-medium text-primary hover:underline">
+        Arcano {nextEntry.data.numero} →
+      </a>
+    </nav>
+  </article>
+</BaseLayout>

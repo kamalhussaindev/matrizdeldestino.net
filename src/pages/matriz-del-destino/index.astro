@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaSoftwareApp from '../../components/seo/SchemaSoftwareApp.astro';
+import FaqAccordion from '../../components/content/FaqAccordion.astro';
+import RelatedCalculators from '../../components/content/RelatedCalculators.astro';
+import RelatedArcana from '../../components/content/RelatedArcana.astro';
+import MatrixCalculator from '../../components/calculator/MatrixCalculator';
+import { calculatorFaq } from '../../data/faq';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [{ label: 'Matriz del Destino' }];
+
+const relatedCalculators = calculators.filter((c) => c.slug !== 'matriz-del-destino');
+---
+
+<BaseLayout
+  title="Calculadora de la Matriz del Destino Gratis | Arcania"
+  description="Descubre cómo calcular tu Matriz del Destino paso a paso: los 22 arcanos, el punto E, la cola kármica y más. Calculadora gratuita, sin registro, resultado al instante."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaFAQ slot="schema" qa={calculatorFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Calculadora de la Matriz del Destino"
+    description="Calculadora gratuita de la Matriz del Destino a partir de la fecha de nacimiento, con interpretación de cada posición del octagrama."
+  />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
+      Calculadora de la Matriz del Destino Gratis
+    </h1>
+    <div class="mt-4 flex flex-col gap-3 text-lg text-ink-muted">
+      <p>
+        Calcula tu Matriz del Destino completa a partir de tu fecha de nacimiento: tu octagrama, tus
+        líneas masculina y femenina, tu cola kármica, tu línea del dinero y tus propósitos personal,
+        social, general y planetario.
+      </p>
+      <p>
+        El resultado se calcula al instante, directamente en tu navegador, sin registro y sin costo. A
+        continuación de la calculadora encontrarás una explicación completa del método y cómo
+        interpretar cada posición.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6">
+    <MatrixCalculator client:visible />
+  </div>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Qué es la Matriz del Destino?</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        La Matriz del Destino —también conocida como matriz del alma o mapa del alma— es un sistema de
+        autoconocimiento creado en 2006 por la numeróloga rusa Natalia Ladini. Integra la numerología,
+        los 22 arcanos mayores del tarot, la tradición de los chakras y la geometría de un octagrama
+        (una estrella de ocho puntas formada por dos cuadrados superpuestos) para construir un
+        diagnóstico simbólico de tu personalidad y tu camino de vida.
+      </p>
+      <p>
+        El primer cuadrado —el cuadrado central— describe tu personalidad, tus talentos, la energía
+        generacional que heredas y tu misión terrenal. El segundo —el cuadrado ancestral o diagonal—
+        añade una capa de energías heredadas de tu linaje familiar. Del cruce de ambos surgen tu punto
+        E (tu zona de confort), tu cola kármica, tus líneas masculina y femenina, tu línea del dinero y
+        tus propósitos personal, social, general y planetario.
+      </p>
+      <p>
+        A diferencia de una tirada de tarot, aquí los arcanos no se sortean: se derivan matemáticamente
+        de tu fecha de nacimiento, por lo que tu matriz es siempre la misma y puedes volver a consultarla
+        cuando quieras.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Cómo se calcula?</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>Nuestra calculadora hace todo esto automáticamente, pero así funciona el método paso a paso:</p>
+      <ol class="flex list-decimal flex-col gap-3 pl-5">
+        <li>
+          <strong class="text-ink">Punto A (día):</strong> se toma tu día de nacimiento y, si supera 22,
+          se reducen sus dígitos hasta llegar a un número entre 1 y 22 —cada valor corresponde a uno de
+          los 22 arcanos mayores.
+        </li>
+        <li>
+          <strong class="text-ink">Punto B (mes):</strong> se usa directamente tu mes de nacimiento
+          (del 1 al 12).
+        </li>
+        <li>
+          <strong class="text-ink">Punto C (año):</strong> se suman todos los dígitos de tu año de
+          nacimiento y el resultado se reduce de la misma forma.
+        </li>
+        <li>
+          <strong class="text-ink">Punto D (misión):</strong> es la suma reducida de A + B + C.
+        </li>
+        <li>
+          <strong class="text-ink">Punto E (zona de confort):</strong> es la suma reducida de
+          A + B + C + D, tu arcano central.
+        </li>
+        <li>
+          <strong class="text-ink">Cuadrado ancestral y líneas:</strong> a partir de estos cinco valores
+          se derivan el resto de posiciones —las líneas masculina y femenina, la cola kármica, la línea
+          del dinero, los chakras y los cuatro propósitos.
+        </li>
+      </ol>
+      <p>
+        Si te interesa el detalle completo de cada fórmula, lo explicamos con total transparencia en
+        nuestra página de <a href="/metodo/" class="font-medium text-primary hover:underline">método</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">Cómo interpretar tu resultado</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        Cada posición de tu matriz se interpreta combinando dos capas: lo que esa posición representa
+        (por ejemplo, "tu línea del dinero") y el significado del arcano que te tocó en ella. Por eso
+        dos personas con el mismo arcano central pueden vivirlo de forma distinta según en qué otras
+        posiciones aparezca.
+      </p>
+      <p>
+        Debajo del octagrama interactivo encontrarás el desglose posición por posición, y más abajo,
+        pestañas organizadas por tema —propósito, relaciones, carrera, y fortalezas y retos— para leer
+        tu resultado según lo que te interese explorar primero.
+      </p>
+    </div>
+  </section>
+
+  <FaqAccordion heading="Preguntas frecuentes" qa={calculatorFaq} />
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
+      Esta calculadora es una herramienta de autoconocimiento y no debe interpretarse como una forma de
+      adivinación o predicción del futuro. Te invitamos a usarla como punto de partida para la
+      reflexión personal, no como un diagnóstico definitivo.
+    </p>
+  </section>
+
+  <RelatedArcana />
+  <RelatedCalculators items={relatedCalculators} />
+</BaseLayout>

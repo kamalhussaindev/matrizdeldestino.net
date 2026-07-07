@@ -1,0 +1,28 @@
+---
+export interface Props {
+  headline: string;
+  description: string;
+  datePublished: Date;
+  dateModified?: Date;
+  authorName?: string;
+}
+
+const { headline, description, datePublished, dateModified, authorName = 'Equipo Arcania' } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).toString();
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline,
+  description,
+  url,
+  datePublished: datePublished.toISOString(),
+  dateModified: (dateModified ?? datePublished).toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: authorName,
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

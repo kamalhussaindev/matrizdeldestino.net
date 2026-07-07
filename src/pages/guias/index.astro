@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import Card from '../../components/ui/Card.astro';
+
+const breadcrumbItems = [{ label: 'Guías' }];
+
+const guias = await getCollection('guias');
+---
+
+<BaseLayout
+  title="Guías sobre la Matriz del Destino | Arcania"
+  description="Guías completas para entender, calcular e interpretar tu Matriz del Destino: qué es, cómo se calcula, cómo leer cada posición y qué es la cola kármica."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Guías sobre la Matriz del Destino</h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Todo lo que necesitas para entender el método, calcular tu matriz paso a paso e interpretar cada
+      una de sus posiciones.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-10 grid max-w-4xl gap-6 px-4 pb-16 sm:grid-cols-2 sm:px-6">
+    {
+      guias.map((entry) => (
+        <Card href={`/guias/${entry.slug}/`}>
+          <h2 class="font-heading text-lg font-semibold text-ink">{entry.data.title}</h2>
+          <p class="mt-2 text-sm text-ink-muted">{entry.data.metaDescription}</p>
+        </Card>
+      ))
+    }
+  </div>
+</BaseLayout>

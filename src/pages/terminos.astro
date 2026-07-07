@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
+
+const breadcrumbItems = [{ label: 'Términos' }];
+const lastUpdated = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(new Date('2026-01-01'));
+---
+
+<BaseLayout
+  title="Términos de Uso | Arcania"
+  description="Términos y condiciones de uso de las calculadoras y contenidos de Arcania."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Términos de Uso</h1>
+    <p class="mt-2 text-sm text-ink-muted">Última actualización: {lastUpdated}</p>
+
+    <div class="mt-6 flex flex-col gap-4 text-ink-muted">
+      <h2 class="font-heading text-2xl font-bold text-ink">Naturaleza del servicio</h2>
+      <p>
+        Arcania ofrece calculadoras y contenidos relacionados con la Matriz del Destino con fines de
+        entretenimiento y autoconocimiento. No constituye asesoría profesional de ningún tipo —médica,
+        psicológica, financiera, legal o de cualquier otra índole— y no debe usarse como sustituto de
+        dicha asesoría.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Sin garantías de exactitud</h2>
+      <p>
+        Si bien procuramos que nuestros cálculos repliquen fielmente el modelo estándar de la Matriz
+        del Destino (ver nuestra <a href="/metodo/" class="font-medium text-primary hover:underline">página de método</a>),
+        no garantizamos que los resultados sean exactos, completos o adecuados para ningún propósito
+        particular. El uso de nuestras calculadoras e interpretaciones es bajo tu propio criterio y
+        responsabilidad.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Uso permitido</h2>
+      <p>
+        Puedes usar nuestras calculadoras libremente para fines personales y no comerciales. No está
+        permitido extraer de forma automatizada (scraping) nuestros contenidos o interpretaciones para
+        republicarlos o reutilizarlos en otros productos sin autorización previa por escrito.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Propiedad intelectual</h2>
+      <p>
+        Los textos, interpretaciones, diseño visual y código de este sitio son propiedad de Arcania,
+        salvo donde se indique lo contrario. El método de la Matriz del Destino en sí —desarrollado
+        originalmente por Natalia Ladini— es de dominio público como sistema; nuestra implementación
+        particular del cálculo y nuestras interpretaciones escritas no lo son.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Cambios en el servicio</h2>
+      <p>
+        Podemos modificar, suspender o discontinuar cualquier parte de nuestros servicios en cualquier
+        momento, incluyendo funciones gratuitas o de pago, sin previo aviso.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Contacto</h2>
+      <p>
+        Si tienes dudas sobre estos términos, puedes escribirnos a través de nuestra
+        <a href="/contacto/" class="font-medium text-primary hover:underline">página de contacto</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

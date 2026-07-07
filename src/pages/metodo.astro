@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
+
+const breadcrumbItems = [{ label: 'Nuestro método' }];
+---
+
+<BaseLayout
+  title="Nuestro Método de Cálculo | Arcania"
+  description="Cómo calculamos tu Matriz del Destino, con total transparencia: la regla de reducción, la derivación de cada posición y el modelo de 22 arcanos que seguimos."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Nuestro Método de Cálculo</h1>
+
+    <div class="mt-6 flex flex-col gap-4 text-ink-muted">
+      <p>
+        Muchas calculadoras de la Matriz del Destino son cajas negras: ingresas tu fecha, aparece un
+        resultado, y no hay forma de saber cómo se llegó a él. Nosotros preferimos lo contrario. Esta
+        página explica, con el mayor detalle posible, exactamente qué hace nuestro motor de cálculo —el
+        mismo que corre en tu navegador cuando usas nuestra
+        <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">calculadora</a>.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">El modelo que seguimos</h2>
+      <p>
+        Implementamos el modelo estándar de 22 arcanos desarrollado por Natalia Ladini, buscando
+        deliberadamente la paridad con lo que verías en otras calculadoras reconocidas del método —no
+        una variante propia. Cada posición de tu matriz se reduce siempre a un valor entre 1 y 22, cada
+        uno correspondiente a uno de los arcanos mayores del tarot.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">La regla de reducción</h2>
+      <p>
+        La operación base de todo el sistema: si un número supera 22, sumamos sus dígitos hasta obtener
+        un valor entre 1 y 22 (por ejemplo, 27 → 2 + 7 = 9). Esta misma regla se aplica de forma
+        consistente en cada paso del cálculo, sin excepciones ocultas.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Cómo se derivan las posiciones</h2>
+      <p>
+        Partimos de tres valores base —tu día (Punto A), tu mes (Punto B, sin reducir, ya que va de 1 a
+        12) y la suma reducida de los dígitos de tu año (Punto C)—. A partir de ahí, cada posición
+        siguiente se construye sumando y reduciendo posiciones anteriores: el Punto D es A + B + C; el
+        Punto E —tu zona de confort— es A + B + C + D; y así sucesivamente para el resto del árbol de
+        posiciones: el cuadrado ancestral, tus líneas masculina y femenina, tu cola kármica, tu línea
+        del dinero y tus cuatro propósitos. Puedes ver la versión paso a paso, con un ejemplo resuelto
+        completo, en nuestra guía sobre
+        <a href="/guias/como-calcular-la-matriz-del-destino/" class="font-medium text-primary hover:underline">
+          cómo calcular la Matriz del Destino
+        </a>.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Qué no hacemos</h2>
+      <p>
+        No sorteamos arcanos al azar, no aplicamos ajustes manuales "para que el resultado se sienta
+        bien", y no ocultamos ninguna fórmula detrás de un algoritmo propietario secreto. Todo el
+        cálculo ocurre en tu propio navegador —nunca enviamos tu fecha de nacimiento a un servidor— y
+        puedes verificar cualquier resultado repitiendo el proceso descrito arriba a mano.
+      </p>
+
+      <h2 class="font-heading text-2xl font-bold text-ink">Interpretación, no solo aritmética</h2>
+      <p>
+        El cálculo es solo la mitad del trabajo. Cada posición se combina después con el significado
+        del arcano que le corresponde, siguiendo un enfoque de posición × arcano en vez de mostrar
+        números aislados — la misma lógica combinatoria que aplicamos en cada una de nuestras
+        <a href="/arcanos/" class="font-medium text-primary hover:underline">páginas de arcanos</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

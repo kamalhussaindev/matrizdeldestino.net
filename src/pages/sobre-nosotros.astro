@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
+
+const breadcrumbItems = [{ label: 'Sobre nosotros' }];
+---
+
+<BaseLayout
+  title="Sobre Nosotros | Arcania"
+  description="Conoce a Arcania: quiénes somos, por qué construimos esta calculadora de la Matriz del Destino y el compromiso detrás de cada interpretación."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Sobre Nosotros</h1>
+
+    <div class="mt-6 flex flex-col gap-4 text-ink-muted">
+      <p>
+        Arcania nació de una pregunta simple: ¿por qué las mejores herramientas de autoconocimiento en
+        español seguían siendo traducciones automáticas de sitios en otros idiomas? La Matriz del
+        Destino es un método profundo y genuinamente útil, pero casi nadie lo estaba explicando en un
+        español que sonara natural, cuidado y confiable. Decidimos construir el sitio que nos hubiera
+        gustado encontrar nosotros mismos.
+      </p>
+      <p>
+        Nuestro equipo —Equipo Arcania— combina experiencia en numerología aplicada con un compromiso
+        estricto de escribir cada interpretación en español neutro, sin traducciones automáticas ni
+        relleno genérico. Cada una de las páginas de este sitio, desde el significado de cada arcano
+        hasta nuestras guías de método, está escrita pensando en una persona real que quiere entenderse
+        mejor a sí misma, no en llenar un espacio en blanco.
+      </p>
+      <p>
+        Nuestra calculadora se basa honestamente en el método desarrollado por la numeróloga rusa
+        Natalia Ladini en 2006, que combina numerología, los 22 arcanos mayores del tarot y la
+        tradición de los chakras. No inventamos un sistema propio ni prometemos que sea infalible:
+        explicamos con total transparencia cómo funciona el cálculo en nuestra
+        <a href="/metodo/" class="font-medium text-primary hover:underline">página de método</a>, para
+        que puedas confiar en tu resultado sin tener que creernos a ciegas.
+      </p>
+      <p>
+        Creemos que el autoconocimiento no debería tener barrera de entrada: por eso nuestra
+        calculadora es gratuita, no requiere registro y nunca esconde tu resultado básico detrás de un
+        muro de pago. Si quieres profundizar más allá de lo gratuito, ofrecemos un informe completo en
+        PDF y lecturas personalizadas — pero el resultado esencial siempre es tuyo, sin condiciones.
+      </p>
+      <p>
+        ¿Tienes preguntas, sugerencias o quieres contarnos tu experiencia? Puedes
+        <a href="/contacto/" class="font-medium text-primary hover:underline">escribirnos</a> cuando
+        quieras.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

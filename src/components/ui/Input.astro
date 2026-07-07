@@ -1,0 +1,58 @@
+---
+type InputType = 'text' | 'email' | 'tel' | 'number' | 'date' | 'password' | 'search' | 'url';
+
+export interface Props {
+  id: string;
+  label: string;
+  type?: InputType;
+  name?: string;
+  placeholder?: string;
+  required?: boolean;
+  error?: string;
+  class?: string;
+}
+
+const {
+  id,
+  label,
+  type = 'text',
+  name = id,
+  placeholder,
+  required = false,
+  error,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const errorId = `${id}-error`;
+---
+
+<div class="flex flex-col gap-1.5">
+  <label for={id} class="text-sm font-medium text-ink">
+    {label}
+    {required && <span class="text-primary" aria-hidden="true"> *</span>}
+  </label>
+  <input
+    id={id}
+    name={name}
+    type={type}
+    placeholder={placeholder}
+    required={required}
+    aria-invalid={error ? 'true' : undefined}
+    aria-describedby={error ? errorId : undefined}
+    class={[
+      'rounded-xl border border-surface-alt bg-white px-4 py-3 text-base text-ink placeholder:text-ink-muted',
+      'focus-visible:outline-2 focus-visible:outline-accent',
+      error && 'border-red-500',
+      className,
+    ]
+      .filter(Boolean)
+      .join(' ')}
+    {...rest}
+  />
+  {error && (
+    <p id={errorId} class="text-sm text-red-700" role="alert">
+      {error}
+    </p>
+  )}
+</div>

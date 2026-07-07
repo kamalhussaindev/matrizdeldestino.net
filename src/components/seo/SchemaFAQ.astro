@@ -1,0 +1,22 @@
+---
+export interface Props {
+  qa: { question: string; answer: string }[];
+}
+
+const { qa } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: qa.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

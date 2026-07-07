@@ -1,0 +1,67 @@
+---
+// [MARCA] placeholder — replace "Arcania" with the final brand name.
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+const navItems = [
+  { label: 'Calculadora', href: '/matriz-del-destino/' },
+  { label: 'Arcanos', href: '/arcanos/' },
+  { label: 'Guías', href: '/guias/' },
+  { label: 'Blog', href: '/blog/' },
+];
+---
+
+<header class="nav-header sticky top-0 z-50 border-b border-surface-alt bg-surface/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="/" class="font-heading text-xl font-bold text-primary">Arcania</a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input sr-only" />
+
+    <nav aria-label="Principal" class="hidden items-center gap-8 md:flex">
+      {
+        navItems.map((item) => (
+          <a href={item.href} class="text-sm font-medium text-ink hover:text-primary">
+            {item.label}
+          </a>
+        ))
+      }
+      <Button href="/matriz-del-destino/" size="sm">Calcular gratis</Button>
+    </nav>
+
+    <label
+      for="nav-toggle"
+      class="toggle-label cursor-pointer rounded-lg p-2 hover:bg-surface-alt md:hidden"
+      aria-label="Abrir menú"
+    >
+      <Icon name="menu" class="icon-menu h-6 w-6" />
+      <Icon name="close" class="icon-close hidden h-6 w-6" />
+    </label>
+  </div>
+
+  <nav aria-label="Principal móvil" class="mobile-nav hidden flex-col gap-1 border-t border-surface-alt px-4 py-4 md:hidden">
+    {
+      navItems.map((item) => (
+        <a href={item.href} class="rounded-lg px-2 py-2 text-sm font-medium text-ink hover:bg-surface-alt">
+          {item.label}
+        </a>
+      ))
+    }
+    <Button href="/matriz-del-destino/" size="sm" class="mt-2 w-full">Calcular gratis</Button>
+  </nav>
+</header>
+
+<style>
+  /* Icon renders inside the child Icon.astro component, so it doesn't carry
+     Header's scoping attribute — :global() is required for these to match. */
+  .nav-header:has(.nav-toggle-input:checked) :global(.icon-menu) {
+    display: none;
+  }
+
+  .nav-header:has(.nav-toggle-input:checked) :global(.icon-close) {
+    display: block;
+  }
+
+  .nav-header:has(.nav-toggle-input:checked) .mobile-nav {
+    display: flex;
+  }
+</style>

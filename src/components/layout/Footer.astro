@@ -1,0 +1,104 @@
+---
+// [MARCA] placeholder — replace "Arcania" with the final brand name.
+const calculadoras = [
+  { label: 'Matriz del destino', href: '/matriz-del-destino/' },
+  { label: 'Compatibilidad de pareja', href: '/matriz-del-destino/compatibilidad/' },
+  { label: 'Matriz infantil', href: '/matriz-del-destino/matriz-infantil/' },
+  { label: 'Todas las calculadoras', href: '/calculadoras/' },
+];
+
+const guias = [
+  { label: '¿Qué es la Matriz del Destino?', href: '/guias/que-es-la-matriz-del-destino/' },
+  { label: 'Cómo calcular tu matriz', href: '/guias/como-calcular-la-matriz-del-destino/' },
+  { label: 'Cómo leer tu matriz', href: '/guias/como-leer-la-matriz-del-destino/' },
+  { label: 'Cola kármica', href: '/guias/cola-karmica/' },
+];
+
+const empresa = [
+  { label: 'Sobre nosotros', href: '/sobre-nosotros/' },
+  { label: 'Nuestro método', href: '/metodo/' },
+  { label: 'Contacto', href: '/contacto/' },
+  { label: 'Privacidad', href: '/privacidad/' },
+  { label: 'Términos', href: '/terminos/' },
+];
+
+const arcanos = Array.from({ length: 22 }, (_, i) => i + 1);
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-surface-alt bg-white">
+  <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4">
+    <div>
+      <h2 class="font-heading text-sm font-semibold text-ink">Calculadoras</h2>
+      <ul class="mt-4 flex flex-col gap-2">
+        {
+          calculadoras.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm text-ink-muted hover:text-primary">
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-heading text-sm font-semibold text-ink">Arcanos</h2>
+      <ul class="mt-4 grid grid-cols-4 gap-x-2 gap-y-2 sm:grid-cols-5">
+        {
+          arcanos.map((n) => (
+            <li>
+              <a
+                href={`/arcanos/${n}/`}
+                class="block text-center text-sm text-ink-muted hover:text-primary"
+              >
+                {n}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a href="/arcanos/" class="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        Ver todos los arcanos →
+      </a>
+    </div>
+
+    <div>
+      <h2 class="font-heading text-sm font-semibold text-ink">Guías</h2>
+      <ul class="mt-4 flex flex-col gap-2">
+        {
+          guias.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm text-ink-muted hover:text-primary">
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-heading text-sm font-semibold text-ink">Empresa</h2>
+      <ul class="mt-4 flex flex-col gap-2">
+        {
+          empresa.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm text-ink-muted hover:text-primary">
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-surface-alt px-4 py-6 sm:px-6">
+    <p class="mx-auto max-w-6xl text-xs text-ink-muted">
+      © {year} Arcania. Herramienta de autoconocimiento; no sustituye asesoría profesional.
+    </p>
+  </div>
+</footer>

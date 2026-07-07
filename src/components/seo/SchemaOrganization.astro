@@ -1,0 +1,13 @@
+---
+const siteURL = Astro.site ? new URL(Astro.site).toString() : '/';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Arcania',
+  url: siteURL,
+  logo: new URL('/favicon.svg', Astro.site).toString(),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

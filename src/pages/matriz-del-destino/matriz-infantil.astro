@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaSoftwareApp from '../../components/seo/SchemaSoftwareApp.astro';
+import FaqAccordion from '../../components/content/FaqAccordion.astro';
+import RelatedCalculators from '../../components/content/RelatedCalculators.astro';
+import MatrixCalculator from '../../components/calculator/MatrixCalculator';
+import { childFaq } from '../../data/faq';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [
+  { label: 'Matriz del Destino', href: '/matriz-del-destino/' },
+  { label: 'Matriz infantil' },
+];
+
+const relatedCalculators = calculators.filter((c) => c.slug !== 'matriz-infantil');
+---
+
+<BaseLayout
+  title="Matriz Infantil del Destino: Talentos de tu Hijo/a | Arcania"
+  description="Descubre los talentos naturales y el propósito de tu hijo/a con la Matriz Infantil del Destino. Calculadora gratuita pensada para padres."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaFAQ slot="schema" qa={childFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Calculadora de la Matriz Infantil del Destino"
+    description="Calculadora gratuita de la Matriz del Destino pensada para descubrir los talentos y el propósito de niños y niñas."
+  />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Matriz Infantil del Destino</h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Descubre los talentos naturales y el propósito de tu hijo/a con la misma Matriz del Destino, en
+      una lectura pensada para acompañar su crecimiento desde el cariño y la observación, no desde la
+      comparación.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6">
+    <MatrixCalculator
+      client:visible
+      nameLabel="Nombre del niño/a (opcional)"
+      namePlaceholder="Nombre de tu hijo/a"
+      submitLabel="Calcular su matriz →"
+    />
+  </div>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">Una herramienta para acompañar, no para etiquetar</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        La Matriz Infantil del Destino usa exactamente el mismo cálculo que nuestra
+        <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">calculadora principal</a>,
+        a partir de la fecha de nacimiento de tu hijo/a. Lo que cambia es la mirada: te invitamos a leer
+        cada posición como una semilla de talento en desarrollo, no como un destino fijo o una etiqueta
+        definitiva.
+      </p>
+      <p>
+        Conocer las energías dominantes de un niño o niña desde temprano puede ayudarte a reconocer sus
+        inclinaciones naturales —creativas, sociales, analíticas o físicas— y a acompañarlo respetando su
+        propio ritmo, en lugar de compararlo con hermanos o compañeros.
+      </p>
+      <p>
+        Recuerda que esta herramienta es un punto de partida para la observación y la conversación
+        familiar, no un sustituto de la orientación de un profesional en psicología infantil.
+      </p>
+    </div>
+  </section>
+
+  <FaqAccordion qa={childFaq} />
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
+      Esta calculadora es una herramienta de autoconocimiento y acompañamiento, no un diagnóstico
+      clínico ni una forma de adivinación sobre el futuro de tu hijo/a.
+    </p>
+  </section>
+
+  <RelatedCalculators items={relatedCalculators} />
+</BaseLayout>

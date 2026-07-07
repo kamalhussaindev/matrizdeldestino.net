@@ -1,0 +1,22 @@
+---
+import Card from '../ui/Card.astro';
+
+export interface Props {
+  numero: number;
+  nombre: string;
+  description: string;
+  href: string;
+}
+
+const { numero, nombre, description, href } = Astro.props;
+---
+
+<Card href={href} class="flex items-start gap-4">
+  <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary font-heading font-bold text-white">
+    {numero}
+  </div>
+  <div>
+    <h3 class="font-heading text-lg font-semibold text-ink">{nombre}</h3>
+    <p class="mt-1 text-sm text-ink-muted">{description}</p>
+  </div>
+</Card>

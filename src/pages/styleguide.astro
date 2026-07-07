@@ -1,0 +1,110 @@
+---
+// Internal QA page for the Milestone 1 design system — not linked from nav,
+// not meant for indexing. Kept as a living reference for later milestones.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import Input from '../components/ui/Input.astro';
+import Badge from '../components/ui/Badge.astro';
+import Icon from '../components/ui/Icon.astro';
+import Tabs from '../components/ui/Tabs.astro';
+import Accordion from '../components/ui/Accordion.tsx';
+
+const iconNames = ['chevron-down', 'check', 'sparkle', 'share', 'menu', 'close'] as const;
+---
+
+<BaseLayout title="Guía de estilos | Arcania" description="Página interna de verificación del sistema de diseño.">
+  <Breadcrumbs items={[{ label: 'Guía de estilos' }]} />
+
+  <div class="mx-auto flex max-w-4xl flex-col gap-16 px-4 pb-24 sm:px-6">
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Botones</h2>
+      <div class="mt-4 flex flex-wrap items-center gap-4">
+        <Button variant="primary" size="sm">Primario sm</Button>
+        <Button variant="primary" size="md">Primario md</Button>
+        <Button variant="primary" size="lg">Primario lg</Button>
+        <Button variant="secondary">Secundario</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button href="/">Como enlace</Button>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Badges</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <Badge variant="default">100% gratis</Badge>
+        <Badge variant="gold">Sin registro</Badge>
+        <Badge variant="outline">Resultado al instante</Badge>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Iconos</h2>
+      <div class="mt-4 flex flex-wrap gap-6">
+        {
+          iconNames.map((name) => (
+            <div class="flex flex-col items-center gap-2 text-xs text-ink-muted">
+              <Icon name={name} class="h-6 w-6 text-primary" />
+              {name}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Card</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <Card>
+          <h3 class="font-heading text-lg font-semibold">Tarjeta simple</h3>
+          <p class="mt-2 text-sm text-ink-muted">Contenido de ejemplo dentro de una tarjeta.</p>
+        </Card>
+        <Card href="/">
+          <h3 class="font-heading text-lg font-semibold">Tarjeta enlazable</h3>
+          <p class="mt-2 text-sm text-ink-muted">Toda la tarjeta es un enlace.</p>
+        </Card>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Input</h2>
+      <div class="mt-4 flex max-w-sm flex-col gap-4">
+        <Input id="nombre" label="Nombre (opcional)" placeholder="Tu nombre" />
+        <Input id="fecha" label="Fecha de nacimiento" placeholder="DD/MM/AAAA" required />
+        <Input id="con-error" label="Campo con error" error="Este campo es obligatorio." />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Tabs</h2>
+      <div class="mt-4">
+        <Tabs
+          tabs={[
+            { id: 'proposito', label: 'Propósito' },
+            { id: 'relaciones', label: 'Relaciones' },
+            { id: 'carrera', label: 'Carrera' },
+            { id: 'retos', label: 'Retos' },
+          ]}
+        >
+          <p slot="proposito">Contenido de ejemplo para la pestaña Propósito.</p>
+          <p slot="relaciones">Contenido de ejemplo para la pestaña Relaciones.</p>
+          <p slot="carrera">Contenido de ejemplo para la pestaña Carrera.</p>
+          <p slot="retos">Contenido de ejemplo para la pestaña Retos.</p>
+        </Tabs>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-heading text-2xl font-semibold">Accordion</h2>
+      <div class="mt-4 max-w-2xl">
+        <Accordion title="¿Qué es la Matriz del Destino?" defaultOpen client:visible>
+          Es un sistema de autoconocimiento basado en tu fecha de nacimiento.
+        </Accordion>
+        <Accordion title="¿Cómo se calcula?" client:visible>
+          Se reduce cada componente de tu fecha a un arcano del 1 al 22.
+        </Accordion>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

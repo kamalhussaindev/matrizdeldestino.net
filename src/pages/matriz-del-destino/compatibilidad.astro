@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaSoftwareApp from '../../components/seo/SchemaSoftwareApp.astro';
+import FaqAccordion from '../../components/content/FaqAccordion.astro';
+import RelatedCalculators from '../../components/content/RelatedCalculators.astro';
+import CompatibilityCalculator from '../../components/calculator/CompatibilityCalculator';
+import { compatibilityFaq } from '../../data/faq';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [
+  { label: 'Matriz del Destino', href: '/matriz-del-destino/' },
+  { label: 'Compatibilidad de pareja' },
+];
+
+const relatedCalculators = calculators.filter((c) => c.slug !== 'compatibilidad');
+---
+
+<BaseLayout
+  title="Matriz del Destino: Compatibilidad de Pareja Gratis | Arcania"
+  description="Descubre la compatibilidad de tu pareja con la Matriz del Destino. Compara arcanos, energías y propósito de ambos gratis, sin registro."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaFAQ slot="schema" qa={compatibilityFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Calculadora de Compatibilidad de la Matriz del Destino"
+    description="Calculadora gratuita de compatibilidad de pareja según la Matriz del Destino de ambas personas."
+  />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
+      Matriz del Destino: Compatibilidad de Pareja
+    </h1>
+    <p class="mt-4 text-lg text-ink-muted">
+      Calcula la Matriz del Destino de ambas personas y descubre qué arcanos comparten, en qué energías
+      se complementan y qué dice su combinación sobre la relación.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-4xl px-4 sm:px-6">
+    <CompatibilityCalculator client:visible />
+  </div>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Cómo funciona la compatibilidad?</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        Calculamos la Matriz del Destino de cada persona por separado, con el mismo método que usa
+        nuestra <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">calculadora principal</a>.
+        Después comparamos sus arcanos centrales y el resto de sus posiciones principales para identificar
+        coincidencias y diferencias entre ambas energías.
+      </p>
+      <p>
+        Un arcano compartido en una posición clave suele señalar una afinidad natural en esa área de la
+        vida. Una diferencia no es una mala señal: casi siempre indica complementariedad, es decir, que
+        cada persona aporta algo que la otra no tiene.
+      </p>
+    </div>
+  </section>
+
+  <FaqAccordion qa={compatibilityFaq} />
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
+      Esta calculadora es una herramienta de autoconocimiento y no debe interpretarse como una forma de
+      adivinación o predicción del futuro de la relación.
+    </p>
+  </section>
+
+  <RelatedCalculators items={relatedCalculators} />
+</BaseLayout>

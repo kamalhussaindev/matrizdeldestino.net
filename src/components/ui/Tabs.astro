@@ -1,0 +1,74 @@
+---
+// Static, zero-JS tabs primitive (radio-input + CSS :has()). Not an island —
+// only the calculator/share/email/accordion are islands per the architecture
+// rules. Content-specific tab components (e.g. the calculator's InsightTabs)
+// are separate, purpose-built islands.
+export interface Props {
+  tabs: { id: string; label: string }[];
+  name?: string;
+  class?: string;
+}
+
+const {
+  tabs,
+  name = `tabs-${Math.random().toString(36).slice(2, 8)}`,
+  class: className,
+} = Astro.props;
+
+// Astro requires `<slot name="...">` to be a static string, so dynamic
+// per-tab slots are rendered manually via Astro.slots.render().
+const panels = await Promise.all(
+  tabs.map(async (tab) => ({ id: tab.id, html: await Astro.slots.render(tab.id) })),
+);
+---
+
+<div class={['tabs-group', className].filter(Boolean).join(' ')}>
+  <div class="tablist flex flex-wrap gap-1 border-b border-surface-alt">
+    {
+      tabs.map((tab, i) => (
+        <>
+          <input
+            type="radio"
+            name={name}
+            id={`${name}-${tab.id}`}
+            class="tab-input sr-only"
+            checked={i === 0}
+          />
+          <label
+            for={`${name}-${tab.id}`}
+            class="tab-label -mb-px cursor-pointer border-b-2 border-transparent px-4 py-2 text-sm font-medium text-ink-muted transition-colors"
+          >
+            {tab.label}
+          </label>
+        </>
+      ))
+    }
+  </div>
+  <div class="tab-panels">
+    {
+      panels.map((panel) => (
+        <div class="tab-panel py-4" data-tab={panel.id} set:html={panel.html} />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .tab-input:checked + .tab-label {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .tab-panel {
+    display: none;
+  }
+
+  .tabs-group:has(.tab-input:nth-of-type(1):checked) .tab-panels .tab-panel:nth-of-type(1),
+  .tabs-group:has(.tab-input:nth-of-type(2):checked) .tab-panels .tab-panel:nth-of-type(2),
+  .tabs-group:has(.tab-input:nth-of-type(3):checked) .tab-panels .tab-panel:nth-of-type(3),
+  .tabs-group:has(.tab-input:nth-of-type(4):checked) .tab-panels .tab-panel:nth-of-type(4),
+  .tabs-group:has(.tab-input:nth-of-type(5):checked) .tab-panels .tab-panel:nth-of-type(5),
+  .tabs-group:has(.tab-input:nth-of-type(6):checked) .tab-panels .tab-panel:nth-of-type(6) {
+    display: block;
+  }
+</style>

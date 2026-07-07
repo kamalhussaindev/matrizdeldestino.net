@@ -1,0 +1,22 @@
+---
+export interface Props {
+  items: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+
+const allItems = [{ label: 'Inicio', href: '/' }, ...items];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: allItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    ...(item.href ? { item: new URL(item.href, Astro.site).toString() } : {}),
+  })),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

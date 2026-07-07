@@ -1,0 +1,69 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaArticle from '../../components/seo/SchemaArticle.astro';
+import Card from '../../components/ui/Card.astro';
+
+export async function getStaticPaths() {
+  const guias = await getCollection('guias');
+  return guias.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'guias'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, metaDescription, relatedGuias, datePublished } = entry.data;
+
+const allGuias = await getCollection('guias');
+const relatedEntries = relatedGuias
+  .map((slug) => allGuias.find((e) => e.slug === slug))
+  .filter((e): e is CollectionEntry<'guias'> => Boolean(e));
+
+const breadcrumbItems = [
+  { label: 'Guías', href: '/guias/' },
+  { label: title },
+];
+---
+
+<BaseLayout title={`${title} | Arcania`} description={metaDescription}>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaArticle slot="schema" headline={title} description={metaDescription} datePublished={datePublished} />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <article class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
+
+    <a href="/matriz-del-destino/" class="mt-4 inline-block font-medium text-primary hover:underline">
+      Calcula tu Matriz del Destino →
+    </a>
+
+    <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
+      <Content />
+    </div>
+
+    {
+      relatedEntries.length > 0 && (
+        <section class="py-12">
+          <h2 class="font-heading text-2xl font-bold text-ink">Guías relacionadas</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            {relatedEntries.map((related) => (
+              <Card href={`/guias/${related.slug}/`}>
+                <h3 class="font-heading text-lg font-semibold text-ink">{related.data.title}</h3>
+                <p class="mt-2 text-sm text-ink-muted">{related.data.metaDescription}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>

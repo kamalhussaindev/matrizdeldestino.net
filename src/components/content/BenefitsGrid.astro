@@ -1,0 +1,45 @@
+---
+import Icon from '../ui/Icon.astro';
+
+const items = [
+  {
+    icon: 'compass' as const,
+    title: 'Propósito',
+    body: 'Entiende hacia dónde te dirige tu energía y qué misión venías a cumplir en esta vida.',
+  },
+  {
+    icon: 'heart' as const,
+    title: 'Relaciones',
+    body: 'Descubre tus líneas masculina y femenina, y cómo influyen en tus vínculos afectivos.',
+  },
+  {
+    icon: 'coins' as const,
+    title: 'Dinero',
+    body: 'Conoce tu línea de prosperidad y los bloqueos que conviene trabajar en tu vida financiera.',
+  },
+  {
+    icon: 'infinity' as const,
+    title: 'Karma',
+    body: 'Identifica tu cola kármica: los patrones que se repiten y que puedes transformar conscientemente.',
+  },
+];
+---
+
+<section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">
+    Lo que descubrirás en tu matriz
+  </h2>
+  <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      items.map((item) => (
+        <div class="text-center">
+          <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Icon name={item.icon} class="h-7 w-7" />
+          </div>
+          <h3 class="mt-4 font-heading text-lg font-semibold text-ink">{item.title}</h3>
+          <p class="mt-2 text-sm text-ink-muted">{item.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
