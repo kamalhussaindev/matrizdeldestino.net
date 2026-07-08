@@ -5,6 +5,7 @@ metaDescription: "Descubre qué es la Matriz del Destino, quién la creó y qué
 keywords: ["qué es la matriz del destino", "matriz del destino origen", "natalia ladini", "mapa del alma"]
 relatedGuias: ["como-calcular-la-matriz-del-destino", "como-leer-la-matriz-del-destino", "cola-karmica"]
 author: "Equipo Arcania"
+heroImage: "/images/guias/guia-que-es-la-matriz-del-destino.webp"
 ---
 
 La Matriz del Destino —también conocida como matriz del alma, mapa del alma o matriz kármica— es un sistema de autoconocimiento que convierte tu fecha de nacimiento en un mapa simbólico de tu personalidad, tus talentos, tus relaciones y tu propósito de vida. A diferencia de una tirada de tarot, en la que las cartas se sortean al azar, aquí cada posición se deriva matemáticamente de tus datos de nacimiento: tu matriz es siempre la misma y puedes volver a consultarla las veces que quieras.

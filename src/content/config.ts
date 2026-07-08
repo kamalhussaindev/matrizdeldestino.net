@@ -22,6 +22,7 @@ const arcanos = defineCollection({
     keywords: z.array(z.string()).default([]),
     relatedArcanos: z.array(z.number().int().min(1).max(22)).default([]),
     datePublished: z.coerce.date().default(SITE_LAUNCH_DATE),
+    heroImage: z.string().optional(),
   }),
 });
 
@@ -34,6 +35,7 @@ const guias = defineCollection({
     relatedGuias: z.array(z.string()).default([]),
     author: z.string().default('Equipo Arcania'),
     datePublished: z.coerce.date().default(SITE_LAUNCH_DATE),
+    heroImage: z.string().optional(),
   }),
 });
 
@@ -46,6 +48,7 @@ const blog = defineCollection({
     author: z.string().default('Equipo Arcania'),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
+    heroImage: z.string().optional(),
   }),
 });
 

@@ -5,6 +5,7 @@ metaDescription: "Guía práctica para interpretar cada posición de tu Matriz d
 keywords: ["cómo leer la matriz del destino", "interpretar matriz del destino", "punto e zona de confort"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-calcular-la-matriz-del-destino", "cola-karmica"]
 author: "Equipo Arcania"
+heroImage: "/images/guias/guia-como-leer-la-matriz-del-destino.webp"
 ---
 
 Tener tu octagrama calculado es solo el primer paso. Leerlo bien —entender qué significa cada número en cada posición— es donde realmente empieza el autoconocimiento. Esta guía te explica cómo interpretar cada zona de tu matriz y en qué orden conviene leerlas.

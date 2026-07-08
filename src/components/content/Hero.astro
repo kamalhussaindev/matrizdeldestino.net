@@ -1,16 +1,40 @@
 ---
+import { Image } from 'astro:assets';
+
 export interface Props {
   title: string;
   subtitle: string;
+  backgroundImage?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, backgroundImage } = Astro.props;
 ---
 
-<section class="mx-auto max-w-3xl px-4 pb-4 pt-12 text-center sm:px-6 sm:pt-16">
-  <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
-  <p class="mx-auto mt-4 max-w-xl text-lg text-ink-muted">{subtitle}</p>
-  <div class="mt-8">
-    <slot />
+<section class="relative overflow-hidden px-4 pb-4 pt-12 text-center sm:px-6 sm:pt-16">
+  {
+    backgroundImage && (
+      <>
+        <Image
+          src={backgroundImage}
+          alt=""
+          width={1920}
+          height={1080}
+          loading="eager"
+          class="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 -z-10 bg-primary-dark/65" />
+      </>
+    )
+  }
+  <div class="relative mx-auto max-w-3xl">
+    <h1 class={`font-heading text-4xl font-bold sm:text-5xl ${backgroundImage ? 'text-white' : 'text-ink'}`}>
+      {title}
+    </h1>
+    <p class={`mx-auto mt-4 max-w-xl text-lg ${backgroundImage ? 'text-white/90' : 'text-ink-muted'}`}>
+      {subtitle}
+    </p>
+    <div class="mt-8">
+      <slot />
+    </div>
   </div>
 </section>

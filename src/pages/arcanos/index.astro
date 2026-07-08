@@ -35,6 +35,7 @@ const arcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - 
           nombre={entry.data.nombre}
           description={entry.data.metaDescription ?? `Descubre el significado del Arcano ${entry.data.numero} en tu Matriz del Destino.`}
           href={`/arcanos/${entry.data.numero}/`}
+          heroImage={entry.data.heroImage}
         />
       ))
     }

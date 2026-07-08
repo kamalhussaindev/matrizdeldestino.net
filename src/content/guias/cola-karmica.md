@@ -5,6 +5,7 @@ metaDescription: "Qué es la cola kármica en la Matriz del Destino, cómo se ca
 keywords: ["cola kármica matriz del destino", "qué es la cola kármica", "karma matriz del destino"]
 relatedGuias: ["como-leer-la-matriz-del-destino", "que-es-la-matriz-del-destino"]
 author: "Equipo Arcania"
+heroImage: "/images/guias/guia-cola-karmica-matriz-del-destino.webp"
 ---
 
 De todas las posiciones de la Matriz del Destino, la cola kármica suele ser la que más curiosidad —y a veces más inquietud— despierta. A diferencia de tu Punto E o tu línea del dinero, que describen una sola energía, la cola kármica está formada por tres arcanos que trabajan juntos para señalar patrones que se repiten en tu vida casi sin que los decidas conscientemente.

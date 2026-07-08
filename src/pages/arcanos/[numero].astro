@@ -1,5 +1,6 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
@@ -20,7 +21,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { numero, nombre, metaDescription, relatedArcanos, datePublished } = entry.data;
+const { numero, nombre, metaDescription, relatedArcanos, datePublished, heroImage } = entry.data;
 
 const title = entry.data.title ?? `Arcano ${numero} en la Matriz del Destino: Significado | Arcania`;
 const description =
@@ -49,6 +50,19 @@ const breadcrumbItems = [
   <Breadcrumbs items={breadcrumbItems} />
 
   <article class="mx-auto max-w-3xl px-4 sm:px-6">
+    {
+      heroImage && (
+        <Image
+          src={heroImage}
+          alt={`Arcano ${numero} ${nombre} en la Matriz del Destino`}
+          width={800}
+          height={450}
+          loading="eager"
+          class="mb-6 aspect-[800/450] w-full rounded-2xl object-cover"
+        />
+      )
+    }
+
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
       Arcano {numero} en la Matriz del Destino: {nombre}
     </h1>
@@ -75,6 +89,7 @@ const breadcrumbItems = [
                 nombre={related.data.nombre}
                 description={related.data.metaDescription ?? `Descubre el significado del Arcano ${related.data.numero}.`}
                 href={`/arcanos/${related.data.numero}/`}
+                heroImage={related.data.heroImage}
               />
             ))}
           </div>

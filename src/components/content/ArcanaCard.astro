@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Card from '../ui/Card.astro';
 
 export interface Props {
@@ -6,17 +7,36 @@ export interface Props {
   nombre: string;
   description: string;
   href: string;
+  heroImage?: string;
 }
 
-const { numero, nombre, description, href } = Astro.props;
+const { numero, nombre, description, href, heroImage } = Astro.props;
 ---
 
-<Card href={href} class="flex items-start gap-4">
-  <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary font-heading font-bold text-white">
-    {numero}
+<Card href={href} class="overflow-hidden">
+  <div class="-mx-6 -mt-6 mb-4 aspect-[400/225] overflow-hidden">
+    {
+      heroImage ? (
+        <Image
+          src={heroImage}
+          alt={`Arcano ${numero}: ${nombre}`}
+          width={400}
+          height={225}
+          loading="lazy"
+          class="h-full w-full object-cover"
+        />
+      ) : (
+        <div class="h-full w-full bg-gradient-to-br from-primary to-accent" />
+      )
+    }
   </div>
-  <div>
-    <h3 class="font-heading text-lg font-semibold text-ink">{nombre}</h3>
-    <p class="mt-1 text-sm text-ink-muted">{description}</p>
+  <div class="flex items-start gap-4">
+    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary font-heading font-bold text-white">
+      {numero}
+    </div>
+    <div>
+      <h3 class="font-heading text-lg font-semibold text-ink">{nombre}</h3>
+      <p class="mt-1 text-sm text-ink-muted">{description}</p>
+    </div>
   </div>
 </Card>

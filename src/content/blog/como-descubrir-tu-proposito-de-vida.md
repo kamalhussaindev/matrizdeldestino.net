@@ -6,6 +6,7 @@ publishDate: 2026-02-03
 author: "Equipo Arcania"
 tags: ["propósito", "autoconocimiento"]
 featured: true
+heroImage: "/images/blog/blog-como-descubrir-tu-proposito-de-vida.webp"
 ---
 
 "¿Cuál es mi propósito de vida?" es probablemente la pregunta que más nos hacen quienes calculan su Matriz del Destino por primera vez. La buena noticia es que el sistema no da una sola respuesta genérica: describe cuatro capas distintas de propósito, que conviene leer juntas para entender el panorama completo.

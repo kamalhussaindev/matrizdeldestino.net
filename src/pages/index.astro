@@ -26,6 +26,7 @@ const latestPosts = (await getCollection('blog'))
     title: post.data.title,
     excerpt: post.data.metaDescription,
     href: `/blog/${post.slug}/`,
+    heroImage: post.data.heroImage,
   }));
 ---
 
@@ -43,6 +44,7 @@ const latestPosts = (await getCollection('blog'))
   <Hero
     title="Calculadora de la Matriz del Destino"
     subtitle="Descubre tus 22 arcanos, tu propósito y tus energías al instante, a partir de tu fecha de nacimiento."
+    backgroundImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
   >
     <MatrixCalculator client:visible />
   </Hero>

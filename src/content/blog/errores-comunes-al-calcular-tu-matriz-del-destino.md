@@ -6,6 +6,7 @@ publishDate: 2026-02-17
 author: "Equipo Arcania"
 tags: ["errores comunes", "cómo calcular"]
 featured: false
+heroImage: "/images/blog/blog-errores-comunes-calcular-matriz-del-destino.webp"
 ---
 
 Después de ver miles de resultados, notamos que casi todos los errores al calcular o interpretar la Matriz del Destino se repiten. Aquí van los cinco más comunes, para que tu lectura salga bien desde el principio.

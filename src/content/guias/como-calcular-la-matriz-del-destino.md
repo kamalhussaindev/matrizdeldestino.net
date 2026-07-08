@@ -5,6 +5,7 @@ metaDescription: "Aprende paso a paso cómo se calcula la Matriz del Destino a p
 keywords: ["cómo calcular la matriz del destino", "matriz del destino paso a paso", "reducción numerológica"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-leer-la-matriz-del-destino"]
 author: "Equipo Arcania"
+heroImage: "/images/guias/guia-como-calcular-la-matriz-del-destino.webp"
 ---
 
 Nuestra [calculadora](/matriz-del-destino/) hace todo este proceso de forma automática e instantánea, pero entender la lógica detrás del cálculo te ayuda a confiar en tu resultado y a interpretarlo con más criterio. Aquí lo explicamos paso a paso, con un ejemplo resuelto.

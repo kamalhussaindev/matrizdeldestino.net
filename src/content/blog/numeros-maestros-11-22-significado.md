@@ -6,6 +6,7 @@ publishDate: 2026-02-10
 author: "Equipo Arcania"
 tags: ["numerología", "números maestros"]
 featured: false
+heroImage: "/images/blog/blog-numeros-maestros-11-22-significado.webp"
 ---
 
 Si alguna vez te acercaste a la numerología, seguro escuchaste hablar de los "números maestros": 11, 22 y, en menor medida, 33. A diferencia del resto de los números, que la numerología clásica reduce siempre a una sola cifra (por ejemplo, 15 se convierte en 1 + 5 = 6), estos se dejan tal cual, sin reducir, porque se considera que cargan una intensidad especial.
