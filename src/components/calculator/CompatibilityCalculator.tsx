@@ -6,18 +6,37 @@ import { getArcana } from '../../lib/matrix/interpretations';
 import MatrixChart from './MatrixChart';
 import ResultSummary from './ResultSummary';
 
-const DATE_PATTERN = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+const CURRENT_YEAR = new Date().getFullYear();
+const MONTHS = [
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre',
+];
+const DAYS = Array.from({ length: 31 }, (_, i) => i + 1);
+const YEARS = Array.from({ length: CURRENT_YEAR - 1900 + 1 }, (_, i) => CURRENT_YEAR - i);
+
+const selectClass =
+  'mt-1.5 w-full rounded-xl border border-surface-alt bg-white px-3 py-3 text-base text-ink focus-visible:outline-2 focus-visible:outline-accent';
 
 interface PersonFormState {
   name: string;
-  dateText: string;
+  day: string;
+  month: string;
+  year: string;
 }
 
-function parseDate(dateText: string) {
-  const match = dateText.trim().match(DATE_PATTERN);
-  if (!match) return null;
-  const [, dayStr, monthStr, yearStr] = match;
-  return { day: Number(dayStr), month: Number(monthStr), year: Number(yearStr) };
+function parseDate(state: PersonFormState) {
+  if (!state.day || !state.month || !state.year) return null;
+  return { day: Number(state.day), month: Number(state.month), year: Number(state.year) };
 }
 
 function buildComparison(a: MatrixResult, b: MatrixResult, nameA: string, nameB: string): string {
@@ -39,19 +58,19 @@ function buildComparison(a: MatrixResult, b: MatrixResult, nameA: string, nameB:
 }
 
 export default function CompatibilityCalculator() {
-  const [personA, setPersonA] = useState<PersonFormState>({ name: '', dateText: '' });
-  const [personB, setPersonB] = useState<PersonFormState>({ name: '', dateText: '' });
+  const [personA, setPersonA] = useState<PersonFormState>({ name: '', day: '', month: '', year: '' });
+  const [personB, setPersonB] = useState<PersonFormState>({ name: '', day: '', month: '', year: '' });
   const [error, setError] = useState<string | null>(null);
   const [results, setResults] = useState<{ a: MatrixResult; b: MatrixResult } | null>(null);
 
   const handleSubmit = (event: TargetedEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const dateA = parseDate(personA.dateText);
-    const dateB = parseDate(personB.dateText);
+    const dateA = parseDate(personA);
+    const dateB = parseDate(personB);
 
     if (!dateA || !dateB) {
-      setError('Ingresa ambas fechas de nacimiento en formato DD/MM/AAAA.');
+      setError('Selecciona ambas fechas de nacimiento.');
       return;
     }
 
@@ -95,24 +114,62 @@ export default function CompatibilityCalculator() {
                 />
               </div>
               <div>
-                <label for={`compat-date-${index}`} class="text-sm font-medium text-ink">
+                <span id={`compat-date-label-${index}`} class="text-sm font-medium text-ink">
                   Fecha de nacimiento{' '}
                   <span class="text-primary" aria-hidden="true">
                     *
                   </span>
-                </label>
-                <input
-                  id={`compat-date-${index}`}
-                  type="text"
-                  inputMode="numeric"
-                  required
-                  value={person.state.dateText}
-                  onInput={(event) =>
-                    person.setState((prev) => ({ ...prev, dateText: (event.target as HTMLInputElement).value }))
-                  }
-                  placeholder="DD/MM/AAAA"
-                  class="mt-1.5 w-full rounded-xl border border-surface-alt bg-white px-4 py-3 text-base text-ink placeholder:text-ink-muted focus-visible:outline-2 focus-visible:outline-accent"
-                />
+                </span>
+                <div role="group" aria-labelledby={`compat-date-label-${index}`} class="grid grid-cols-3 gap-2">
+                  <select
+                    aria-label={`Día — ${person.label}`}
+                    required
+                    value={person.state.day}
+                    onInput={(event) =>
+                      person.setState((prev) => ({ ...prev, day: (event.target as HTMLSelectElement).value }))
+                    }
+                    class={selectClass}
+                  >
+                    <option value="" disabled>
+                      Día
+                    </option>
+                    {DAYS.map((d) => (
+                      <option value={d}>{d}</option>
+                    ))}
+                  </select>
+                  <select
+                    aria-label={`Mes — ${person.label}`}
+                    required
+                    value={person.state.month}
+                    onInput={(event) =>
+                      person.setState((prev) => ({ ...prev, month: (event.target as HTMLSelectElement).value }))
+                    }
+                    class={selectClass}
+                  >
+                    <option value="" disabled>
+                      Mes
+                    </option>
+                    {MONTHS.map((label, monthIndex) => (
+                      <option value={monthIndex + 1}>{label}</option>
+                    ))}
+                  </select>
+                  <select
+                    aria-label={`Año — ${person.label}`}
+                    required
+                    value={person.state.year}
+                    onInput={(event) =>
+                      person.setState((prev) => ({ ...prev, year: (event.target as HTMLSelectElement).value }))
+                    }
+                    class={selectClass}
+                  >
+                    <option value="" disabled>
+                      Año
+                    </option>
+                    {YEARS.map((y) => (
+                      <option value={y}>{y}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
           ))}

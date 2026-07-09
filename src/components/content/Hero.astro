@@ -18,11 +18,11 @@ const { title, subtitle, backgroundImage } = Astro.props;
           src={backgroundImage}
           alt=""
           width={1920}
-          height={1080}
+          height={900}
           loading="eager"
-          class="absolute inset-0 -z-20 h-full w-full object-cover"
+          class="absolute inset-x-0 top-0 -z-20 h-[620px] w-full object-cover sm:h-[680px]"
         />
-        <div class="absolute inset-0 -z-10 bg-primary-dark/65" />
+        <div class="absolute inset-x-0 top-0 -z-10 h-[620px] bg-gradient-to-b from-primary-dark/70 via-primary-dark/65 to-primary-dark/0 sm:h-[680px]" />
       </>
     )
   }

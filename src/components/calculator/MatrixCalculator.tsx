@@ -10,7 +10,26 @@ import InsightTabs from './InsightTabs';
 import ShareResult from './ShareResult';
 import PdfReportCTA from './PdfReportCTA';
 
-const DATE_PATTERN = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+const CURRENT_YEAR = new Date().getFullYear();
+const MONTHS = [
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre',
+];
+const DAYS = Array.from({ length: 31 }, (_, i) => i + 1);
+const YEARS = Array.from({ length: CURRENT_YEAR - 1900 + 1 }, (_, i) => CURRENT_YEAR - i);
+
+const selectClass =
+  'mt-1.5 w-full rounded-xl border border-surface-alt bg-white px-3 py-3 text-base text-ink focus-visible:outline-2 focus-visible:outline-accent';
 
 export interface MatrixCalculatorProps {
   nameLabel?: string;
@@ -24,7 +43,9 @@ export default function MatrixCalculator({
   submitLabel = 'Calcular mi matriz →',
 }: MatrixCalculatorProps) {
   const [name, setName] = useState('');
-  const [dateText, setDateText] = useState('');
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [year, setYear] = useState('');
   const [result, setResult] = useState<MatrixResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [activeKey, setActiveKey] = useState<PositionKey | null>(null);
@@ -32,19 +53,16 @@ export default function MatrixCalculator({
   const handleSubmit = (event: TargetedEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const match = dateText.trim().match(DATE_PATTERN);
-    if (!match) {
-      setError('Ingresa tu fecha de nacimiento en formato DD/MM/AAAA.');
+    if (!day || !month || !year) {
+      setError('Selecciona tu día, mes y año de nacimiento.');
       return;
     }
 
-    const [, dayStr, monthStr, yearStr] = match;
-
     try {
       const nextResult = calculate({
-        day: Number(dayStr),
-        month: Number(monthStr),
-        year: Number(yearStr),
+        day: Number(day),
+        month: Number(month),
+        year: Number(year),
         name: name.trim() || undefined,
       });
       setResult(nextResult);
@@ -74,24 +92,62 @@ export default function MatrixCalculator({
             />
           </div>
           <div>
-            <label for="calc-date" class="text-sm font-medium text-ink">
+            <span id="calc-date-label" class="text-sm font-medium text-ink">
               Fecha de nacimiento{' '}
               <span class="text-primary" aria-hidden="true">
                 *
               </span>
-            </label>
-            <input
-              id="calc-date"
-              type="text"
-              inputMode="numeric"
-              required
-              value={dateText}
-              onInput={(event) => setDateText((event.target as HTMLInputElement).value)}
-              placeholder="DD/MM/AAAA"
+            </span>
+            <div
+              role="group"
+              aria-labelledby="calc-date-label"
               aria-invalid={error ? 'true' : undefined}
               aria-describedby={error ? 'calc-date-error' : undefined}
-              class="mt-1.5 w-full rounded-xl border border-surface-alt bg-white px-4 py-3 text-base text-ink placeholder:text-ink-muted focus-visible:outline-2 focus-visible:outline-accent"
-            />
+              class="grid grid-cols-3 gap-2"
+            >
+              <select
+                aria-label="Día"
+                required
+                value={day}
+                onInput={(event) => setDay((event.target as HTMLSelectElement).value)}
+                class={selectClass}
+              >
+                <option value="" disabled>
+                  Día
+                </option>
+                {DAYS.map((d) => (
+                  <option value={d}>{d}</option>
+                ))}
+              </select>
+              <select
+                aria-label="Mes"
+                required
+                value={month}
+                onInput={(event) => setMonth((event.target as HTMLSelectElement).value)}
+                class={selectClass}
+              >
+                <option value="" disabled>
+                  Mes
+                </option>
+                {MONTHS.map((label, index) => (
+                  <option value={index + 1}>{label}</option>
+                ))}
+              </select>
+              <select
+                aria-label="Año"
+                required
+                value={year}
+                onInput={(event) => setYear((event.target as HTMLSelectElement).value)}
+                class={selectClass}
+              >
+                <option value="" disabled>
+                  Año
+                </option>
+                {YEARS.map((y) => (
+                  <option value={y}>{y}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
