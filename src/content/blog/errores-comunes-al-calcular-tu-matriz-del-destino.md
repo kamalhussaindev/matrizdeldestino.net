@@ -13,7 +13,7 @@ Después de ver miles de resultados, notamos que casi todos los errores al calcu
 
 ## 1. Confundir el formato de la fecha
 
-El error más frecuente ni siquiera es numerológico: es de formato. Si escribes tu fecha como MM/DD/AAAA en una calculadora que espera DD/MM/AAAA (o al revés), el resultado completo cambia. Nuestra calculadora usa siempre el formato DD/MM/AAAA —día primero—, y lo indicamos junto al campo para evitar justo este error.
+El error más frecuente ni siquiera es numerológico: es de formato. Muchas calculadoras piden la fecha como texto libre, y es fácil escribir el mes donde va el día (o al revés), cambiando el resultado completo sin darte cuenta. Por eso nuestra calculadora te pide el día, el mes y el año por separado, en menús claramente etiquetados —así se elimina de raíz cualquier ambigüedad de formato.
 
 ## 2. Reducir el mes cuando no corresponde
 
@@ -29,6 +29,6 @@ Este es un error de expectativa, no de cálculo. La Matriz del Destino es una he
 
 ## 5. Leer una sola posición y quedarse ahí
 
-Es tentador calcular tu matriz, mirar solo tu arcano central y cerrar la pestaña. Pero el verdadero valor del sistema está en cruzar varias posiciones entre sí: tu Punto E junto con tu cola kármica, tu línea del dinero junto con tu propósito personal. Leídas en conjunto cuentan una historia mucho más completa que cualquier posición aislada. Nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) explica en qué orden conviene leerlas.
+Es tentador calcular tu matriz, mirar solo tu arcano central y cerrar la pestaña. Pero el verdadero valor del sistema está en cruzar varias posiciones entre sí: tu Punto E junto con tu cola kármica, tu línea del dinero junto con tu propósito personal. Por ejemplo, tener el [Arcano 16: La Torre](/arcanos/16/) en tu cola kármica se lee muy distinto si tu Punto E es un arcano estable como el [Arcano 4: El Emperador](/arcanos/4/) que si también es una energía de cambio constante. Leídas en conjunto cuentan una historia mucho más completa que cualquier posición aislada. Nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) explica en qué orden conviene leerlas.
 
 ¿Quieres calcular la tuya sin cometer ninguno de estos errores? Nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) hace todo el cálculo por ti, de forma automática y gratuita.

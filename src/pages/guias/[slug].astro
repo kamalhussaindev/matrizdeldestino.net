@@ -6,6 +6,10 @@ import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import SchemaArticle from '../../components/seo/SchemaArticle.astro';
 import Card from '../../components/ui/Card.astro';
+import TableOfContents from '../../components/content/TableOfContents.astro';
+import { readingTime } from '../../lib/readingTime';
+
+const CONTENT_UPDATED = new Date('2026-07-09');
 
 export async function getStaticPaths() {
   const guias = await getCollection('guias');
@@ -20,8 +24,9 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
-const { title, metaDescription, relatedGuias, datePublished, heroImage } = entry.data;
+const { Content, headings } = await render(entry);
+const { title, metaDescription, author, relatedGuias, datePublished, heroImage } = entry.data;
+const minutesToRead = readingTime(entry.body);
 
 const allGuias = await getCollection('guias');
 const relatedEntries = relatedGuias
@@ -34,9 +39,15 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={`${title} | Arcania`} description={metaDescription}>
+<BaseLayout title={`${title} | Arcania`} description={metaDescription} showMobileStickyBar>
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
-  <SchemaArticle slot="schema" headline={title} description={metaDescription} datePublished={datePublished} />
+  <SchemaArticle
+    slot="schema"
+    headline={title}
+    description={metaDescription}
+    datePublished={datePublished}
+    dateModified={CONTENT_UPDATED}
+  />
 
   <Breadcrumbs items={breadcrumbItems} />
 
@@ -55,10 +66,17 @@ const breadcrumbItems = [
     }
 
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
+    <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-muted">
+      <span>{author}</span>
+      <span aria-hidden="true">·</span>
+      <span>{minutesToRead}</span>
+    </div>
 
     <a href="/matriz-del-destino/" class="mt-4 inline-block font-medium text-primary hover:underline">
       Calcula tu Matriz del Destino →
     </a>
+
+    <TableOfContents headings={headings.filter((h) => h.depth === 2)} />
 
     <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
       <Content />

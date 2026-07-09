@@ -9,6 +9,7 @@ import PositionBreakdown from './PositionBreakdown';
 import InsightTabs from './InsightTabs';
 import ShareResult from './ShareResult';
 import PdfReportCTA from './PdfReportCTA';
+import InlineEmailCta from './InlineEmailCta';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONTHS = [
@@ -177,6 +178,7 @@ export default function MatrixCalculator({
           <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={setActiveKey} />
           <PositionBreakdown result={result} activeKey={activeKey} onSelectKey={setActiveKey} />
           <InsightTabs result={result} />
+          <InlineEmailCta />
           <ShareResult result={result} />
           <PdfReportCTA result={result} />
         </div>

@@ -36,5 +36,14 @@ const { title, subtitle, backgroundImage } = Astro.props;
     <div class="mt-8">
       <slot />
     </div>
+    {
+      backgroundImage && (
+        <p class="mt-5 flex justify-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-xs font-medium text-accent">
+            ✨ Más de 50,000 personas han descubierto su propósito
+          </span>
+        </p>
+      )
+    }
   </div>
 </section>

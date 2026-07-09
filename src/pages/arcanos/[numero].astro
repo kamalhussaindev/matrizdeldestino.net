@@ -6,6 +6,14 @@ import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import SchemaArticle from '../../components/seo/SchemaArticle.astro';
 import ArcanaCard from '../../components/content/ArcanaCard.astro';
+import TableOfContents from '../../components/content/TableOfContents.astro';
+import { getArcana, getPositionFraming, type ArcanaFacet, type PositionKey } from '../../lib/matrix/interpretations';
+
+function describePositionSentence(key: PositionKey, numero: number, facet: ArcanaFacet): string {
+  const facetText = getArcana(numero)[facet];
+  const lowerFacetText = facetText.charAt(0).toLowerCase() + facetText.slice(1);
+  return `${getPositionFraming(key)} ${lowerFacetText}`;
+}
 
 export async function getStaticPaths() {
   const arcanos = await getCollection('arcanos');
@@ -19,9 +27,59 @@ interface Props {
   entry: CollectionEntry<'arcanos'>;
 }
 
+const CONTENT_UPDATED = new Date('2026-07-09');
+
+const POSITION_SECTIONS: { key: PositionKey; heading: string; slug: string; facet: ArcanaFacet; closing: string }[] = [
+  {
+    key: 'E',
+    heading: 'Punto E · Zona de confort',
+    slug: 'punto-e-zona-de-confort',
+    facet: 'general',
+    closing:
+      'Vale la pena observar cómo esta energía aparece en tu día a día, porque es el lugar al que sueles volver una y otra vez, incluso después de atravesar etapas muy distintas de tu vida. Entender este arcano en profundidad te ayuda a sentirte en paz con tu propia naturaleza, en lugar de compararla con la de otras personas.',
+  },
+  {
+    key: 'karmicTail',
+    heading: 'Cola kármica',
+    slug: 'cola-karmica',
+    facet: 'shadow',
+    closing:
+      'Este patrón no aparece para castigarte, sino para señalarte qué necesitas soltar de forma consciente. Trabajarlo con honestidad —en vez de repetirlo automáticamente— es lo que te permite convertir esa carga en aprendizaje real.',
+  },
+  {
+    key: 'money',
+    heading: 'Línea del dinero',
+    slug: 'linea-del-dinero',
+    facet: 'career',
+    closing:
+      'Reconocer esta dinámica te ayuda a ajustar tus expectativas frente al trabajo y el dinero, en lugar de compararte con modelos de éxito que no corresponden a tu propia energía. Con el tiempo, aprender a sostener esta forma particular de generar recursos suele traer mucha más estabilidad que forzarla.',
+  },
+  {
+    key: 'masculine',
+    heading: 'Línea masculina',
+    slug: 'linea-masculina',
+    facet: 'gift',
+    closing:
+      'Esta energía suele reflejar patrones heredados de las figuras masculinas de tu historia familiar, y puede mostrarse tanto en tu propia forma de actuar como en los vínculos que estableces con figuras de autoridad. Observarla con atención ayuda a distinguir lo que heredaste de lo que realmente eliges para ti.',
+  },
+  {
+    key: 'feminine',
+    heading: 'Línea femenina',
+    slug: 'linea-femenina',
+    facet: 'love',
+    closing:
+      'Esta energía suele reflejar patrones heredados de las figuras femeninas de tu historia familiar, y con frecuencia se expresa en la forma en que das y recibes cuidado en tus vínculos más cercanos. Reconocerla te permite decidir conscientemente qué de esa herencia quieres conservar.',
+  },
+];
+
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const { numero, nombre, metaDescription, relatedArcanos, datePublished, heroImage } = entry.data;
+
+const tocHeadings = [
+  ...headings.filter((h) => h.depth === 2),
+  { depth: 2, slug: 'en-cada-posicion-de-la-matriz', text: 'En cada posición de la matriz' },
+];
 
 const title = entry.data.title ?? `Arcano ${numero} en la Matriz del Destino: Significado | Arcania`;
 const description =
@@ -43,9 +101,15 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} showMobileStickyBar>
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
-  <SchemaArticle slot="schema" headline={title} description={description} datePublished={datePublished} />
+  <SchemaArticle
+    slot="schema"
+    headline={title}
+    description={description}
+    datePublished={datePublished}
+    dateModified={CONTENT_UPDATED}
+  />
 
   <Breadcrumbs items={breadcrumbItems} />
 
@@ -74,9 +138,35 @@ const breadcrumbItems = [
       Calcula tu Matriz del Destino →
     </a>
 
+    <TableOfContents headings={tocHeadings} />
+
     <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
       <Content />
     </div>
+
+    <section class="py-12">
+      <h2 id="en-cada-posicion-de-la-matriz" class="font-heading text-2xl font-bold text-ink">
+        En cada posición de la matriz
+      </h2>
+      <p class="mt-3 text-ink-muted">
+        La ubicación de este arcano cambia mucho su lectura. Así se interpreta en cada una de las posiciones
+        principales de tu octagrama:
+      </p>
+      <div class="mt-6 flex flex-col gap-6">
+        {
+          POSITION_SECTIONS.map((section) => (
+            <div>
+              <h3 id={section.slug} class="font-heading text-lg font-semibold text-ink">
+                {section.heading}
+              </h3>
+              <p class="mt-2 text-ink-muted">
+                {describePositionSentence(section.key, numero, section.facet)} {section.closing}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
 
     {
       relatedEntries.length > 0 && (
@@ -96,6 +186,30 @@ const breadcrumbItems = [
         </section>
       )
     }
+
+    <div class="border-t border-surface-alt py-8">
+      <p class="text-center text-sm font-medium text-ink-muted">
+        Explorando los 22 arcanos · {currentIndex + 1} de 22
+      </p>
+      <nav aria-label="Todos los arcanos" class="mt-4 flex flex-wrap justify-center gap-2">
+        {
+          allArcanos.map((a) => (
+            <a
+              href={`/arcanos/${a.data.numero}/`}
+              aria-current={a.data.numero === numero ? 'page' : undefined}
+              aria-label={`Arcano ${a.data.numero}: ${a.data.nombre}`}
+              class={
+                a.data.numero === numero
+                  ? 'flex h-8 w-8 items-center justify-center rounded-full bg-accent font-heading text-xs font-bold text-ink'
+                  : 'flex h-6 w-6 items-center justify-center rounded-full bg-surface-alt font-heading text-xs font-bold text-ink-muted hover:bg-primary hover:text-white'
+              }
+            >
+              {a.data.numero}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
 
     <nav class="flex items-center justify-between border-t border-surface-alt py-8" aria-label="Navegación entre arcanos">
       <a href={`/arcanos/${prevEntry.data.numero}/`} class="font-medium text-primary hover:underline">

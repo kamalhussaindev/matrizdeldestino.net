@@ -25,4 +25,31 @@ const sample = calculate({ day: 10, month: 10, year: 1990 });
   <div class="pointer-events-none mt-8" inert>
     <MatrixChart positions={sample.positions} activeKey={null} onSelect={() => {}} />
   </div>
+
+  <dl class="mx-auto mt-6 grid max-w-md grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-3">
+    <div class="flex items-baseline gap-1.5">
+      <dt class="font-heading font-bold text-primary">A</dt>
+      <dd class="text-ink-muted">Personalidad</dd>
+    </div>
+    <div class="flex items-baseline gap-1.5">
+      <dt class="font-heading font-bold text-primary">B</dt>
+      <dd class="text-ink-muted">Talentos</dd>
+    </div>
+    <div class="flex items-baseline gap-1.5">
+      <dt class="font-heading font-bold text-primary">C</dt>
+      <dd class="text-ink-muted">Energía generacional</dd>
+    </div>
+    <div class="flex items-baseline gap-1.5">
+      <dt class="font-heading font-bold text-primary">D</dt>
+      <dd class="text-ink-muted">Misión</dd>
+    </div>
+    <div class="flex items-baseline gap-1.5">
+      <dt class="font-heading font-bold text-primary">E</dt>
+      <dd class="text-ink-muted">Centro · Propósito</dd>
+    </div>
+  </dl>
+
+  <p class="mx-auto mt-4 max-w-md text-center text-sm text-ink-muted">
+    Cada número es uno de los 22 arcanos mayores. Haz clic para interpretarlo.
+  </p>
 </section>

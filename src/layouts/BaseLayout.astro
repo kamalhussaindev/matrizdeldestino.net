@@ -6,6 +6,7 @@ import SEOHead from '../components/seo/SEOHead.astro';
 import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
 import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
 import Analytics from '../components/seo/Analytics.astro';
+import MobileStickyBar from '../components/content/MobileStickyBar.astro';
 
 export interface Props {
   title: string;
@@ -13,9 +14,10 @@ export interface Props {
   canonicalPath?: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
+  showMobileStickyBar?: boolean;
 }
 
-const { title, description, canonicalPath, ogImage, ogType } = Astro.props;
+const { title, description, canonicalPath, ogImage, ogType, showMobileStickyBar = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -44,9 +46,10 @@ const { title, description, canonicalPath, ogImage, ogType } = Astro.props;
   <body class="flex min-h-screen flex-col">
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
     <Header />
-    <main id="contenido" class="flex-1">
+    <main id="contenido" class:list={['flex-1', { 'pb-20 md:pb-0': showMobileStickyBar }]}>
       <slot />
     </main>
     <Footer />
+    {showMobileStickyBar && <MobileStickyBar />}
   </body>
 </html>

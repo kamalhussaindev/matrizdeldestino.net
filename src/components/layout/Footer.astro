@@ -22,6 +22,31 @@ const empresa = [
   { label: 'Términos', href: '/terminos/' },
 ];
 
+const ARCANA_NAMES = [
+  'El Mago',
+  'La Sacerdotisa',
+  'La Emperatriz',
+  'El Emperador',
+  'El Hierofante',
+  'Los Enamorados',
+  'El Carro',
+  'La Fuerza',
+  'El Ermitaño',
+  'La Rueda de la Fortuna',
+  'La Justicia',
+  'El Colgado',
+  'La Muerte',
+  'La Templanza',
+  'El Diablo',
+  'La Torre',
+  'La Estrella',
+  'La Luna',
+  'El Sol',
+  'El Juicio',
+  'El Mundo',
+  'El Loco',
+];
+
 const arcanos = Array.from({ length: 22 }, (_, i) => i + 1);
 
 const year = new Date().getFullYear();
@@ -46,15 +71,12 @@ const year = new Date().getFullYear();
 
     <div>
       <h2 class="font-heading text-sm font-semibold text-ink">Arcanos</h2>
-      <ul class="mt-4 grid grid-cols-4 gap-x-2 gap-y-2 sm:grid-cols-5">
+      <ul class="mt-4 grid grid-cols-2 gap-x-3 gap-y-2">
         {
           arcanos.map((n) => (
             <li>
-              <a
-                href={`/arcanos/${n}/`}
-                class="block text-center text-sm text-ink-muted hover:text-primary"
-              >
-                {n}
+              <a href={`/arcanos/${n}/`} class="text-sm text-ink-muted hover:text-primary">
+                {n} · {ARCANA_NAMES[n - 1]}
               </a>
             </li>
           ))
