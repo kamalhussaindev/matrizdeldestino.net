@@ -39,7 +39,12 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={`${title} | Arcania`} description={metaDescription} showMobileStickyBar>
+<BaseLayout
+  title={`${title} | Arcania`}
+  description={metaDescription}
+  preloadImage={heroImage}
+  showMobileStickyBar
+>
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaArticle
     slot="schema"
@@ -59,7 +64,10 @@ const breadcrumbItems = [
           alt={`${title} — Guía Arcania`}
           width={1200}
           height={500}
+          widths={[600, 900, 1200]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
           loading="eager"
+          fetchpriority="high"
           class="mb-6 aspect-[1200/500] w-full rounded-2xl object-cover"
         />
       )

@@ -63,7 +63,13 @@ const arcanaPositions = getArcana(numero).positions;
 const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
 ---
 
-<BaseLayout title={title} description={description} ogImage={ogImage} showMobileStickyBar>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  preloadImage={heroImage}
+  showMobileStickyBar
+>
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaArticle
     slot="schema"
@@ -83,7 +89,10 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
           alt={`Arcano ${numero} ${nombre} en la Matriz del Destino`}
           width={800}
           height={450}
+          widths={[400, 600, 800]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
           loading="eager"
+          fetchpriority="high"
           class="mb-6 aspect-[800/450] w-full rounded-2xl object-cover"
         />
       )

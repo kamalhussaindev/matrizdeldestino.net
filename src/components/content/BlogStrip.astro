@@ -51,6 +51,8 @@ const { posts = defaultPosts } = Astro.props;
                 alt={post.title}
                 width={600}
                 height={400}
+                widths={[300, 450, 600]}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 loading="lazy"
                 class="h-full w-full object-cover"
               />

@@ -22,6 +22,8 @@ const { numero, nombre, description, href, heroImage } = Astro.props;
           alt={`Arcano ${numero}: ${nombre}`}
           width={400}
           height={225}
+          widths={[200, 300, 400]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
           loading="lazy"
           class="h-full w-full object-cover"
         />
