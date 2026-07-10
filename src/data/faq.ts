@@ -17,7 +17,7 @@ export const homeFaq: FaqItem[] = [
   {
     question: '¿Necesito pagar para ver mi resultado?',
     answer:
-      'No. El cálculo completo —octagrama, líneas, propósitos e interpretación de cada posición— es 100% gratis y no requiere registro. Ofrecemos un informe descargable en PDF como opción adicional para quien quiera profundizar todavía más.',
+      'No. El cálculo completo —octagrama, líneas, propósitos e interpretación de cada posición— es 100% gratis y no requiere registro.',
   },
   {
     question: '¿Es lo mismo que el tarot o la numerología tradicional?',
@@ -42,7 +42,7 @@ export const homeFaq: FaqItem[] = [
   {
     question: '¿Mis datos quedan guardados o son públicos?',
     answer:
-      'No. El cálculo se hace por completo en tu dispositivo y no guardamos tu fecha de nacimiento en ningún servidor. Si decides descargar el informe en PDF, solo pedimos tu correo para enviártelo.',
+      'No. El cálculo se hace por completo en tu dispositivo y no guardamos tu fecha de nacimiento en ningún servidor.',
   },
   {
     question: '¿Funciona la calculadora en España, México y Argentina?',
@@ -80,7 +80,7 @@ export const calculatorFaq: FaqItem[] = [
   {
     question: '¿Puedo interpretar mi matriz sin ayuda de un experto?',
     answer:
-      'Sí. Diseñamos cada posición para que se explique por sí misma: combinamos el significado de esa posición con el del arcano que te tocó ahí, en lenguaje claro y sin tecnicismos. Si quieres profundizar más, el informe completo en PDF amplía cada interpretación.',
+      'Sí. Diseñamos cada posición para que se explique por sí misma: combinamos el significado de esa posición con el del arcano que te tocó ahí, en lenguaje claro y sin tecnicismos.',
   },
   {
     question: '¿La Matriz del Destino cambia con el tiempo?',

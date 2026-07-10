@@ -8,8 +8,6 @@ import ResultSummary from './ResultSummary';
 import PositionBreakdown from './PositionBreakdown';
 import InsightTabs from './InsightTabs';
 import ShareResult from './ShareResult';
-import PdfReportCTA from './PdfReportCTA';
-import InlineEmailCta from './InlineEmailCta';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONTHS = [
@@ -178,9 +176,21 @@ export default function MatrixCalculator({
           <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={setActiveKey} />
           <PositionBreakdown result={result} activeKey={activeKey} onSelectKey={setActiveKey} />
           <InsightTabs result={result} />
-          <InlineEmailCta />
           <ShareResult result={result} />
-          <PdfReportCTA result={result} />
+          <div class="rounded-2xl border border-accent/40 bg-gradient-to-br from-primary to-primary-dark p-6 text-white shadow-sm sm:p-8">
+            <h2 class="font-heading text-xl font-bold">El informe PDF está en camino</h2>
+            <p class="mt-2 text-sm text-white/85">
+              Estamos preparando un informe descargable más completo. Esta función estará disponible
+              próximamente.
+            </p>
+            <button
+              type="button"
+              disabled
+              class="mt-4 rounded-xl bg-white/10 px-6 py-3 text-sm font-semibold text-white/70 disabled:cursor-not-allowed"
+            >
+              Próximamente
+            </button>
+          </div>
         </div>
       )}
     </div>

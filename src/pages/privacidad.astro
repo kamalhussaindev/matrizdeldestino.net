@@ -20,6 +20,13 @@ const lastUpdated = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(
     <p class="mt-2 text-sm text-ink-muted">Última actualización: {lastUpdated}</p>
 
     <div class="mt-6 flex flex-col gap-4 text-ink-muted">
+      <h2 class="font-heading text-2xl font-bold text-ink">Estado actual de la recopilación de datos</h2>
+      <p>
+        Actualmente, el formulario del informe PDF no transmite ni almacena direcciones de correo
+        electrónico. Esta funcionalidad se encuentra en desarrollo. El cálculo de la Matriz del Destino
+        se realiza localmente en tu dispositivo.
+      </p>
+
       <h2 class="font-heading text-2xl font-bold text-ink">Qué datos recopilamos</h2>
       <p>
         Para calcular tu Matriz del Destino solo necesitamos tu fecha de nacimiento y, opcionalmente,
@@ -27,33 +34,27 @@ const lastUpdated = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(
         navegador: tu fecha de nacimiento nunca se envía a nuestros servidores ni se almacena en
         ninguna base de datos.
       </p>
-      <p>
-        Si decides solicitar el informe completo en PDF, te pedimos tu correo electrónico únicamente
-        para poder enviártelo. Ese correo se usa exclusivamente para ese fin y para futuras
-        comunicaciones relacionadas con nuestros servicios, de las cuales puedes darte de baja en
-        cualquier momento.
-      </p>
 
       <h2 class="font-heading text-2xl font-bold text-ink">Qué no hacemos</h2>
       <p>
         No vendemos, alquilamos ni compartimos tus datos personales con terceros con fines
-        comerciales. No usamos tu fecha de nacimiento ni tu correo para ningún propósito distinto al
-        que autorizaste explícitamente al usarlos.
+        comerciales. No usamos tu fecha de nacimiento para ningún propósito distinto al que autorizaste
+        explícitamente al usarla.
       </p>
 
       <h2 class="font-heading text-2xl font-bold text-ink">Cookies y analítica</h2>
       <p>
-        Usamos cookies y herramientas de analítica únicamente para entender de forma agregada cómo se
-        usa el sitio —qué páginas se visitan más, desde qué dispositivos— y así poder mejorarlo. No
+        Si están habilitadas, usamos herramientas de analítica agregada (como Google Analytics)
+        únicamente para entender de forma agregada cómo se usa el sitio —qué páginas se visitan más,
+        desde qué dispositivos— y así poder mejorarlo. El sitio funciona igual si están desactivadas. No
         usamos esta información para identificarte individualmente ni para fines publicitarios de
         terceros.
       </p>
 
       <h2 class="font-heading text-2xl font-bold text-ink">Tus derechos</h2>
       <p>
-        Puedes solicitarnos en cualquier momento acceder a los datos que tengamos asociados a tu
-        correo, corregirlos o eliminarlos por completo de nuestros sistemas. Para ejercer cualquiera de
-        estos derechos, escríbenos a través de nuestra
+        Como no recopilamos ni almacenamos datos personales identificables, no tenemos datos tuyos que
+        corregir o eliminar. Si tienes alguna duda sobre esta política, escríbenos a través de nuestra
         <a href="/contacto/" class="font-medium text-primary hover:underline">página de contacto</a>.
       </p>
 

@@ -1,0 +1,27 @@
+---
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+
+const signals = [
+  'El cálculo se realiza directamente en tu navegador.',
+  'No necesitas crear una cuenta.',
+  'El método de cálculo está documentado paso a paso.',
+  'Tu fecha de nacimiento no se almacena en nuestros servidores.',
+];
+---
+
+<section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">Por qué confiar en Arcania</h2>
+  <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      signals.map((text) => (
+        <Card class="text-center">
+          <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-surface-alt text-primary">
+            <Icon name="check" class="h-5 w-5" />
+          </div>
+          <p class="mt-3 text-sm text-ink-muted">{text}</p>
+        </Card>
+      ))
+    }
+  </div>
+</section>

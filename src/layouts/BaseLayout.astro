@@ -15,7 +15,6 @@ export interface Props {
   ogImage?: string;
   ogType?: 'website' | 'article';
   showMobileStickyBar?: boolean;
-  keywords?: string[];
   preloadImage?: string;
 }
 
@@ -26,7 +25,6 @@ const {
   ogImage,
   ogType,
   showMobileStickyBar = false,
-  keywords,
   preloadImage,
 } = Astro.props;
 ---
@@ -55,7 +53,6 @@ const {
       canonicalPath={canonicalPath}
       ogImage={ogImage}
       ogType={ogType}
-      keywords={keywords}
     />
     <SchemaOrganization />
     <SchemaWebSite />

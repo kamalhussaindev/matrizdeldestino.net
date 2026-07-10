@@ -2,24 +2,24 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaFAQ from '../components/seo/SchemaFAQ.astro';
-import SchemaSoftwareApp from '../components/seo/SchemaSoftwareApp.astro';
 import Hero from '../components/content/Hero.astro';
+import Button from '../components/ui/Button.astro';
 import ValuePropCards from '../components/content/ValuePropCards.astro';
 import ExampleResult from '../components/content/ExampleResult.astro';
 import BenefitsGrid from '../components/content/BenefitsGrid.astro';
 import HowItWorks from '../components/content/HowItWorks.astro';
-import Testimonials from '../components/content/Testimonials.astro';
+import TrustSignals from '../components/content/TrustSignals.astro';
 import ArcanoDelDia from '../components/content/ArcanoDelDia.astro';
 import FaqAccordion from '../components/content/FaqAccordion.astro';
 import RelatedCalculators from '../components/content/RelatedCalculators.astro';
 import BlogStrip from '../components/content/BlogStrip.astro';
-import CtaEmailCapture from '../components/content/CtaEmailCapture';
-import MatrixCalculator from '../components/calculator/MatrixCalculator';
 import { homeFaq } from '../data/faq';
 import { calculators } from '../data/calculators';
 
-// The homepage already IS the matriz-del-destino experience, so exclude it here.
-const relatedCalculators = calculators.filter((c) => c.slug !== 'matriz-del-destino');
+// The homepage is now a brand/informational hub (the calculator itself lives
+// on /matriz-del-destino/), so all calculators — including the main one —
+// belong in this rail.
+const relatedCalculators = calculators;
 
 const latestPosts = (await getCollection('blog'))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -33,23 +33,18 @@ const latestPosts = (await getCollection('blog'))
 ---
 
 <BaseLayout
-  title="Matriz del Destino: Calculadora Gratis Online | Arcania"
-  description="Calcula tu Matriz del Destino gratis con tu fecha de nacimiento. Descubre tus 22 arcanos, tu propósito y energías al instante. Sin registro."
+  title="Matriz del Destino: Significado, Arcanos y Calculadora | Arcania"
+  description="Descubre qué es la Matriz del Destino, el significado de sus 22 arcanos y cómo funciona este sistema de autoconocimiento. Calcula la tuya gratis."
   preloadImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
 >
   <SchemaFAQ slot="schema" qa={homeFaq} />
-  <SchemaSoftwareApp
-    slot="schema"
-    name="Calculadora de la Matriz del Destino"
-    description="Calculadora gratuita de la Matriz del Destino a partir de la fecha de nacimiento."
-  />
 
   <Hero
-    title="Calculadora de la Matriz del Destino"
-    subtitle="Descubre tus 22 arcanos, tu propósito y tus energías al instante, a partir de tu fecha de nacimiento."
+    title="Descubre la Matriz del Destino"
+    subtitle="Un sistema de autoconocimiento que revela tu personalidad, tu propósito y tus energías a partir de tu fecha de nacimiento y los 22 arcanos mayores."
     backgroundImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
   >
-    <MatrixCalculator client:visible />
+    <Button href="/matriz-del-destino/" size="lg">Calcular mi Matriz del Destino →</Button>
   </Hero>
 
   <div class="pt-8">
@@ -60,7 +55,7 @@ const latestPosts = (await getCollection('blog'))
   <ExampleResult />
   <BenefitsGrid />
   <HowItWorks />
-  <Testimonials />
+  <TrustSignals />
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
     <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Qué es la Matriz del Destino?</h2>
@@ -88,5 +83,21 @@ const latestPosts = (await getCollection('blog'))
   <FaqAccordion qa={homeFaq} />
   <RelatedCalculators items={relatedCalculators} />
   <BlogStrip posts={latestPosts} />
-  <CtaEmailCapture client:visible />
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <div class="rounded-2xl bg-gradient-to-br from-primary to-primary-dark px-6 py-10 text-center text-white sm:px-12">
+      <h2 class="font-heading text-2xl font-bold sm:text-3xl">El informe PDF está en camino</h2>
+      <p class="mx-auto mt-3 max-w-xl text-white/85">
+        Estamos preparando un informe descargable más completo. Esta función estará disponible
+        próximamente.
+      </p>
+      <button
+        type="button"
+        disabled
+        class="mx-auto mt-6 rounded-xl bg-white/10 px-6 py-3 text-sm font-semibold text-white/70 disabled:cursor-not-allowed"
+      >
+        Próximamente
+      </button>
+    </div>
+  </section>
 </BaseLayout>

@@ -5,7 +5,6 @@ export interface Props {
   canonicalPath?: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
-  keywords?: string[];
 }
 
 const {
@@ -14,7 +13,6 @@ const {
   canonicalPath = Astro.url.pathname,
   ogImage = '/og/default.png',
   ogType = 'website',
-  keywords,
 } = Astro.props;
 
 const canonicalURL = new URL(canonicalPath, Astro.site);
@@ -23,7 +21,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
 
 <title>{title}</title>
 <meta name="description" content={description} />
-{keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
 <link rel="canonical" href={canonicalURL} />
 
 <meta property="og:title" content={title} />
