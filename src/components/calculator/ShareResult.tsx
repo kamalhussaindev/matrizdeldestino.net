@@ -99,7 +99,7 @@ async function drawShareCard(canvas: HTMLCanvasElement, result: MatrixResult): P
 
   ctx.fillStyle = 'rgba(255,255,255,0.6)';
   ctx.font = '400 26px Inter, sans-serif';
-  ctx.fillText('Calcula la tuya gratis · matrizdeldestino.com', CARD_SIZE / 2, CARD_SIZE - 70);
+  ctx.fillText('Calcula la tuya gratis · matrizdeldestino.net', CARD_SIZE / 2, CARD_SIZE - 70);
 
   return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), 'image/png'));
 }

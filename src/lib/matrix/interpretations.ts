@@ -24,6 +24,14 @@ import arcana21 from '../../data/interpretations/arcana/21.json';
 import arcana22 from '../../data/interpretations/arcana/22.json';
 import positionsData from '../../data/interpretations/positions.json';
 
+export interface ArcanaPositionEssays {
+  puntoE: string;
+  colaKarmica: string;
+  lineaDinero: string;
+  lineaMasculina: string;
+  lineaFemenina: string;
+}
+
 export interface ArcanaContent {
   name: string;
   general: string;
@@ -31,6 +39,7 @@ export interface ArcanaContent {
   career: string;
   shadow: string;
   gift: string;
+  positions: ArcanaPositionEssays;
 }
 
 export type ArcanaFacet = Exclude<keyof ArcanaContent, 'name'>;

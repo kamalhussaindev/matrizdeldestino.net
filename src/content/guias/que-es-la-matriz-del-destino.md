@@ -3,7 +3,7 @@ slug: "que-es-la-matriz-del-destino"
 title: "¿Qué es la Matriz del Destino?"
 metaDescription: "Descubre qué es la Matriz del Destino, quién la creó y qué revela sobre tu personalidad, tu propósito y tus relaciones a partir de tu fecha de nacimiento."
 keywords: ["qué es la matriz del destino", "matriz del destino origen", "natalia ladini", "mapa del alma"]
-relatedGuias: ["como-calcular-la-matriz-del-destino", "como-leer-la-matriz-del-destino", "cola-karmica"]
+relatedGuias: ["como-calcular-la-matriz-del-destino", "como-leer-la-matriz-del-destino", "cola-karmica", "punto-e-zona-de-confort"]
 author: "Equipo Arcania"
 heroImage: "/images/guias/guia-que-es-la-matriz-del-destino.webp"
 ---

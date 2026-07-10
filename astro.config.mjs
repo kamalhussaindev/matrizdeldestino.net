@@ -7,8 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: replace with the real production domain before launch
-  site: 'https://matrizdeldestino.com',
+  site: 'https://matrizdeldestino.net',
   i18n: {
     defaultLocale: 'es',
     locales: ['es'],

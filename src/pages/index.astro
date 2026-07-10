@@ -9,6 +9,7 @@ import ExampleResult from '../components/content/ExampleResult.astro';
 import BenefitsGrid from '../components/content/BenefitsGrid.astro';
 import HowItWorks from '../components/content/HowItWorks.astro';
 import Testimonials from '../components/content/Testimonials.astro';
+import ArcanoDelDia from '../components/content/ArcanoDelDia.astro';
 import FaqAccordion from '../components/content/FaqAccordion.astro';
 import RelatedCalculators from '../components/content/RelatedCalculators.astro';
 import BlogStrip from '../components/content/BlogStrip.astro';
@@ -49,6 +50,10 @@ const latestPosts = (await getCollection('blog'))
   >
     <MatrixCalculator client:visible />
   </Hero>
+
+  <div class="pt-8">
+    <ArcanoDelDia />
+  </div>
 
   <ValuePropCards />
   <ExampleResult />

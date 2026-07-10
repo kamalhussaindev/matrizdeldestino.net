@@ -44,6 +44,11 @@ export const homeFaq: FaqItem[] = [
     answer:
       'No. El cálculo se hace por completo en tu dispositivo y no guardamos tu fecha de nacimiento en ningún servidor. Si decides descargar el informe en PDF, solo pedimos tu correo para enviártelo.',
   },
+  {
+    question: '¿Funciona la calculadora en España, México y Argentina?',
+    answer:
+      'Sí. La Matriz del Destino se calcula igual en cualquier país: solo depende de tu fecha de nacimiento, no de tu ubicación. Escribimos todo el contenido en español neutro para que se entienda con claridad en España, México, Argentina, Colombia, Chile, Perú y el resto de la comunidad hispanohablante.',
+  },
 ];
 
 export const calculatorFaq: FaqItem[] = [

@@ -1,0 +1,21 @@
+---
+import { getArcana } from '../../lib/matrix/interpretations';
+
+const now = new Date();
+const startOfYear = new Date(now.getFullYear(), 0, 0);
+const dayOfYear = Math.floor((now.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
+const numero = (dayOfYear % 22) + 1;
+const arcana = getArcana(numero);
+---
+
+<div class="mx-auto max-w-md px-4">
+  <a
+    href={`/arcanos/${numero}/`}
+    class="block rounded-2xl border border-primary/15 bg-surface-alt px-5 py-4 text-center transition-shadow hover:shadow-md"
+  >
+    <p class="text-xs font-semibold uppercase tracking-wide text-primary">
+      ✨ Arcano del día: {numero} · {arcana.name}
+    </p>
+    <p class="mt-1.5 text-sm text-ink-muted">{arcana.general}</p>
+  </a>
+</div>

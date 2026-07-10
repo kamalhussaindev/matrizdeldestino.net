@@ -1,5 +1,4 @@
 ---
-import Accordion from '../ui/Accordion';
 import type { FaqItem } from '../../data/faq';
 
 export interface Props {
@@ -15,10 +14,31 @@ const { heading = 'Preguntas frecuentes', qa } = Astro.props;
   <div class="mt-8 rounded-2xl border border-surface-alt bg-white px-2">
     {
       qa.map((item) => (
-        <Accordion title={item.question} client:visible>
-          {item.answer}
-        </Accordion>
+        <details class="faq-item group border-b border-surface-alt py-1 last:border-b-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-3 py-3 font-sans font-medium text-ink marker:content-none">
+            <span>{item.question}</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 shrink-0 text-primary transition-transform duration-200 group-open:rotate-180"
+              aria-hidden="true"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <p class="px-3 pb-4 text-ink-muted">{item.answer}</p>
+        </details>
       ))
     }
   </div>
 </section>
+
+<style>
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
