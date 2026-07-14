@@ -2,8 +2,11 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import type { MatrixResult } from '../../lib/matrix/types';
 import { getArcana } from '../../lib/matrix/interpretations';
 
+export type ShareMethod = 'whatsapp' | 'twitter' | 'copy' | 'native';
+
 export interface ShareResultProps {
   result: MatrixResult;
+  onShare?: (method: ShareMethod) => void;
 }
 
 const CARD_SIZE = 1080;
@@ -104,7 +107,7 @@ async function drawShareCard(canvas: HTMLCanvasElement, result: MatrixResult): P
   return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), 'image/png'));
 }
 
-export default function ShareResult({ result }: ShareResultProps) {
+export default function ShareResult({ result, onShare }: ShareResultProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [blob, setBlob] = useState<Blob | null>(null);
@@ -141,6 +144,7 @@ export default function ShareResult({ result }: ShareResultProps) {
     if (navigator.canShare?.(shareData)) {
       try {
         await navigator.share(shareData);
+        onShare?.('native');
       } catch {
         // User cancelled — nothing to do.
       }
@@ -157,6 +161,7 @@ export default function ShareResult({ result }: ShareResultProps) {
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/?text=${encodeURIComponent(`${shareText} ${pageUrl}`)}`, '_blank', 'noopener,noreferrer');
+    onShare?.('whatsapp');
   };
 
   const handleX = () => {
@@ -165,12 +170,14 @@ export default function ShareResult({ result }: ShareResultProps) {
       '_blank',
       'noopener,noreferrer',
     );
+    onShare?.('twitter');
   };
 
   const handleCopyLink = async () => {
     await navigator.clipboard.writeText(pageUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    onShare?.('copy');
   };
 
   const canNativeShare = typeof navigator !== 'undefined' && 'share' in navigator && !!blob;

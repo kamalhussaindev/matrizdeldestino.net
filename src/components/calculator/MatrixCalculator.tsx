@@ -1,13 +1,36 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import type { TargetedEvent } from 'preact';
 import { calculate } from '../../lib/matrix/calculate';
-import type { MatrixResult } from '../../lib/matrix/types';
+import type { MatrixPositions, MatrixResult } from '../../lib/matrix/types';
 import type { PositionKey } from '../../lib/matrix/interpretations';
 import MatrixChart from './MatrixChart';
 import ResultSummary from './ResultSummary';
 import PositionBreakdown from './PositionBreakdown';
 import InsightTabs from './InsightTabs';
-import ShareResult from './ShareResult';
+import ShareResult, { type ShareMethod } from './ShareResult';
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// Maps the tab labels InsightTabs renders to the stable slugs GA4 events use.
+const TAB_EVENT_NAMES: Record<string, string> = {
+  Propósito: 'proposito',
+  Relaciones: 'relaciones',
+  Carrera: 'carrera',
+  'Fortalezas y retos': 'retos',
+};
+
+// MatrixChart only ever selects the 5 cardinal points or one of the 8 purposes.
+function readChartPositionValue(positions: MatrixPositions, key: PositionKey): number {
+  if (key.startsWith('purposes.')) {
+    const purposeKey = key.slice('purposes.'.length) as keyof MatrixPositions['purposes'];
+    return positions.purposes[purposeKey];
+  }
+  return positions[key as 'A' | 'B' | 'C' | 'D' | 'E'];
+}
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONTHS = [
@@ -48,6 +71,43 @@ export default function MatrixCalculator({
   const [result, setResult] = useState<MatrixResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [activeKey, setActiveKey] = useState<PositionKey | null>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+
+    resultsRef.current?.focus();
+
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'calculator_completed', {
+        arcano_central: result.central,
+        method: 'birth_date',
+      });
+    }
+  }, [result]);
+
+  const handleChartSelect = (key: PositionKey) => {
+    setActiveKey(key);
+
+    if (result && typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'arcana_position_clicked', {
+        position: key,
+        arcano: readChartPositionValue(result.positions, key),
+      });
+    }
+  };
+
+  const handleShare = (method: ShareMethod) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'share_clicked', { share_method: method });
+    }
+  };
+
+  const handleTabChange = (tab: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'insight_tab_viewed', { tab: TAB_EVENT_NAMES[tab] ?? tab });
+    }
+  };
 
   const handleSubmit = (event: TargetedEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -171,12 +231,12 @@ export default function MatrixCalculator({
       </form>
 
       {result && (
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8" ref={resultsRef} tabIndex={-1} aria-live="polite">
           <ResultSummary result={result} />
-          <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={setActiveKey} />
+          <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={handleChartSelect} />
           <PositionBreakdown result={result} activeKey={activeKey} onSelectKey={setActiveKey} />
-          <InsightTabs result={result} />
-          <ShareResult result={result} />
+          <InsightTabs result={result} onTabChange={handleTabChange} />
+          <ShareResult result={result} onShare={handleShare} />
           <div class="rounded-2xl border border-accent/40 bg-gradient-to-br from-primary to-primary-dark p-6 text-white shadow-sm sm:p-8">
             <h2 class="font-heading text-xl font-bold">El informe PDF está en camino</h2>
             <p class="mt-2 text-sm text-white/85">

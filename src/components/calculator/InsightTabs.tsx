@@ -4,6 +4,7 @@ import { describePosition, getArcana } from '../../lib/matrix/interpretations';
 
 export interface InsightTabsProps {
   result: MatrixResult;
+  onTabChange?: (tab: string) => void;
 }
 
 const TABS = ['Propósito', 'Relaciones', 'Carrera', 'Fortalezas y retos'] as const;
@@ -11,9 +12,14 @@ type Tab = (typeof TABS)[number];
 
 const CORE_KEYS = ['A', 'B', 'C', 'D', 'E'] as const;
 
-export default function InsightTabs({ result }: InsightTabsProps) {
+export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
   const [active, setActive] = useState<Tab>('Propósito');
   const { positions } = result;
+
+  const handleTabClick = (tab: Tab) => {
+    setActive(tab);
+    onTabChange?.(tab);
+  };
 
   return (
     <div>
@@ -24,7 +30,7 @@ export default function InsightTabs({ result }: InsightTabsProps) {
             type="button"
             role="tab"
             aria-selected={active === tab}
-            onClick={() => setActive(tab)}
+            onClick={() => handleTabClick(tab)}
             class={`-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
               active === tab ? 'border-primary text-primary' : 'border-transparent text-ink-muted hover:text-ink'
             }`}
