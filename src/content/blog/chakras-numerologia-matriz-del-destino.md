@@ -29,4 +29,4 @@ Combinar chakras y numerología no es solo una curiosidad esotérica: te da un l
 
 ## Consulta tus propios chakras
 
-Puedes ver el desglose completo de tus siete chakras, con sus veintiún arcanos correspondientes, calculando tu matriz gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/). Si quieres profundizar en cómo se combinan con el resto de tu octagrama, nuestra guía sobre la [línea de bienestar](/guias/linea-de-bienestar/) explica cómo leer chakras y Punto E en conjunto.
+Puedes ver el desglose completo de tus siete chakras, con sus veintiún arcanos correspondientes, calculando tu matriz gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/). Si quieres el detalle posición por posición —qué describe cada uno de los siete chakras y cómo leer los tres arcanos de cada uno— nuestra guía completa sobre [los chakras en la Matriz del Destino](/guias/chakras-en-la-matriz-del-destino/) desarrolla esa lectura en profundidad. Y si quieres profundizar en cómo se combinan con el resto de tu octagrama, nuestra guía sobre la [línea de bienestar](/guias/linea-de-bienestar/) explica cómo leer chakras y Punto E en conjunto.

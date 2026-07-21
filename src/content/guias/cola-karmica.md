@@ -1,7 +1,7 @@
 ---
 slug: "cola-karmica"
-title: "Cola kármica en la Matriz del Destino"
-metaDescription: "Qué es la cola kármica en la Matriz del Destino, cómo se calcula y qué revela sobre los patrones que se repiten en tu vida."
+title: "Cola Kármica en la Matriz del Destino: Qué Es y Cómo Calcularla"
+metaDescription: "Descubre gratis qué revela tu cola kármica sobre los patrones que se repiten en tu vida, cómo se calcula y cómo empezar a transformarla."
 keywords: ["cola kármica matriz del destino", "qué es la cola kármica", "karma matriz del destino"]
 relatedGuias: ["como-leer-la-matriz-del-destino", "que-es-la-matriz-del-destino", "cuadrado-ancestral", "linea-del-dinero"]
 author: "Equipo Arcania"

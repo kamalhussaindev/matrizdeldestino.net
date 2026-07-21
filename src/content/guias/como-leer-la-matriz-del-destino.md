@@ -1,7 +1,7 @@
 ---
 slug: "como-leer-la-matriz-del-destino"
-title: "¿Cómo leer la Matriz del Destino?"
-metaDescription: "Guía práctica para interpretar cada posición de tu Matriz del Destino: personalidad, punto E, cola kármica, líneas y propósitos."
+title: "Cómo Leer la Matriz del Destino: Guía Completa"
+metaDescription: "Guía gratis y práctica para interpretar cada posición de tu Matriz del Destino: personalidad, punto E, cola kármica, líneas y propósitos."
 keywords: ["cómo leer la matriz del destino", "interpretar matriz del destino", "punto e zona de confort"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-calcular-la-matriz-del-destino", "cola-karmica"]
 author: "Equipo Arcania"

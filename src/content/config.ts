@@ -23,6 +23,7 @@ const arcanos = defineCollection({
     relatedArcanos: z.array(z.number().int().min(1).max(22)).default([]),
     datePublished: z.coerce.date().default(SITE_LAUNCH_DATE),
     heroImage: z.string().optional(),
+    faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
   }),
 });
 

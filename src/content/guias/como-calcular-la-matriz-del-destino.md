@@ -1,7 +1,7 @@
 ---
 slug: "como-calcular-la-matriz-del-destino"
-title: "¿Cómo calcular la Matriz del Destino?"
-metaDescription: "Aprende paso a paso cómo se calcula la Matriz del Destino a partir de tu fecha de nacimiento, con un ejemplo resuelto completo."
+title: "Cómo Calcular la Matriz del Destino Gratis: Paso a Paso"
+metaDescription: "Aprende gratis, paso a paso, cómo se calcula la Matriz del Destino a partir de tu fecha de nacimiento, con un ejemplo resuelto completo."
 keywords: ["cómo calcular la matriz del destino", "matriz del destino paso a paso", "reducción numerológica"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-leer-la-matriz-del-destino"]
 author: "Equipo Arcania"

@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import SchemaArticle from '../../components/seo/SchemaArticle.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
 import ArcanaCard from '../../components/content/ArcanaCard.astro';
 import TableOfContents from '../../components/content/TableOfContents.astro';
 import { getArcana } from '../../lib/matrix/interpretations';
@@ -33,17 +34,17 @@ const POSITION_SECTIONS = [
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-const { numero, nombre, metaDescription, relatedArcanos, datePublished, heroImage } = entry.data;
+const { numero, nombre, metaDescription, relatedArcanos, datePublished, heroImage, faqs } = entry.data;
 
 const tocHeadings = [
   ...headings.filter((h) => h.depth === 2),
   { depth: 2, slug: 'en-cada-posicion-de-la-matriz', text: 'En cada posición de la matriz' },
 ];
 
-const title = entry.data.title ?? `Arcano ${numero} en la Matriz del Destino: Significado | Arcania`;
+const title = entry.data.title ?? `Arcano ${numero} ${nombre}: Significado Completo | Matriz del Destino`;
 const description =
   metaDescription ??
-  `Descubre el significado del Arcano ${numero} (${nombre}) en tu Matriz del Destino: energía positiva y negativa, en el amor, el trabajo y la cola kármica.`;
+  `Descubre gratis el Arcano ${numero} ${nombre} en la Matriz del Destino: en el amor, el trabajo, zona de confort, cola kármica y línea del dinero.`;
 
 const allArcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - b.data.numero);
 const currentIndex = allArcanos.findIndex((e) => e.data.numero === numero);
@@ -79,6 +80,7 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
     dateModified={CONTENT_UPDATED}
     image={heroImage ? new URL(heroImage, Astro.site).toString() : undefined}
   />
+  {faqs.length > 0 && <SchemaFAQ slot="schema" qa={faqs} />}
 
   <Breadcrumbs items={breadcrumbItems} />
 
