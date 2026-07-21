@@ -20,7 +20,7 @@ La línea del dinero se deriva matemáticamente combinando tu Punto E (tu zona d
 
 ## Qué significa según tu arcano
 
-Cada uno de los [22 arcanos mayores](/arcanos/) describe una relación distinta con la prosperidad. Algunos ejemplos: si tu línea del dinero cae en el Arcano 1 (El Mago), tus ingresos probablemente dependan de tu capacidad de generar ideas y comunicar, más que de la constancia en un solo camino. Si cae en el Arcano 4 (El Emperador), tu prosperidad se construye con estructura, disciplina y proyectos de largo aliento. Si cae en el Arcano 10 (La Rueda de la Fortuna), es probable que tu relación con el dinero atraviese ciclos marcados —altibajos, giros inesperados— más que una línea recta y predecible. No hay un arcano "mejor" que otro en esta posición: cada uno describe una forma legítima, aunque distinta, de relacionarte con la abundancia. Puedes consultar el significado completo de tu arcano específico en su página dedicada dentro de nuestro catálogo de arcanos.
+Cada uno de los [22 arcanos mayores](/arcanos/) describe una relación distinta con la prosperidad. Algunos ejemplos: si tu línea del dinero cae en el [Arcano 1 (El Mago)](/arcanos/1/), tus ingresos probablemente dependan de tu capacidad de generar ideas y comunicar, más que de la constancia en un solo camino. Si cae en el [Arcano 4 (El Emperador)](/arcanos/4/), tu prosperidad se construye con estructura, disciplina y proyectos de largo aliento. Si cae en el [Arcano 10 (La Rueda de la Fortuna)](/arcanos/10/), es probable que tu relación con el dinero atraviese ciclos marcados —altibajos, giros inesperados— más que una línea recta y predecible. No hay un arcano "mejor" que otro en esta posición: cada uno describe una forma legítima, aunque distinta, de relacionarte con la abundancia. Puedes consultar el significado completo de tu arcano específico en su página dedicada dentro de nuestro catálogo de arcanos.
 
 ## Bloqueos frecuentes y cómo trabajarlos
 
@@ -31,3 +31,5 @@ Trabajar estos bloqueos no significa forzar una energía que no es la tuya, sino
 ## Calcula tu línea del dinero
 
 Si todavía no conoces tu línea del dinero, puedes calcularla gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/): además de esta posición, vas a ver el desglose completo de tu octagrama —tu Punto E, tu cola kármica, tus líneas masculina y femenina y tus cuatro propósitos— interpretado en conjunto. Entender tu línea del dinero de forma aislada es útil, pero cruzarla con el resto de tu matriz suele dar una lectura mucho más completa de tu relación real con la prosperidad.
+
+Calcula tu línea del dinero ahora: [Calculadora de la Matriz del Destino](/matriz-del-destino/).

@@ -1,19 +1,11 @@
 ---
 const siteURL = Astro.site ? new URL(Astro.site).toString() : '/';
 
-// SearchAction targets a future /buscar/ route (Tier-3 search, not built
-// yet) — forward-compatible scaffolding, same dormant-route pattern already
-// used by the Footer's arcana links ahead of Milestone 5.
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Arcania',
   url: siteURL,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${siteURL}buscar/?q={search_term_string}`,
-    'query-input': 'required name=search_term_string',
-  },
 };
 ---
 

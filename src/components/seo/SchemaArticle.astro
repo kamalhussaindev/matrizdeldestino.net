@@ -5,10 +5,12 @@ export interface Props {
   datePublished: Date;
   dateModified?: Date;
   authorName?: string;
+  image?: string;
 }
 
-const { headline, description, datePublished, dateModified, authorName = 'Equipo Arcania' } = Astro.props;
+const { headline, description, datePublished, dateModified, authorName = 'Equipo Arcania', image } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).toString();
+const authorURL = new URL('/sobre-nosotros/', Astro.site).toString();
 
 const schema = {
   '@context': 'https://schema.org',
@@ -16,11 +18,13 @@ const schema = {
   headline,
   description,
   url,
+  image: image || new URL('/og/default.png', Astro.site).toString(),
   datePublished: datePublished.toISOString(),
   dateModified: (dateModified ?? datePublished).toISOString(),
   author: {
     '@type': 'Organization',
     name: authorName,
+    url: authorURL,
   },
 };
 ---

@@ -59,6 +59,7 @@ const breadcrumbItems = [
     description={metaDescription}
     datePublished={datePublished}
     dateModified={CONTENT_UPDATED}
+    image={heroImage ? new URL(heroImage, Astro.site).toString() : undefined}
   />
 
   <Breadcrumbs items={breadcrumbItems} />

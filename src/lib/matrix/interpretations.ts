@@ -81,7 +81,10 @@ export function getPositionFraming(key: PositionKey): string {
  * facet copy (arcana/{value}.json) for each value at that position — the
  * position × arcana combinatorial rendering that's the product's
  * differentiation (BUILD-SPEC.md §7.3). Arrays (masculine/feminine/
- * karmicTail) get one sentence per value, joined.
+ * karmicTail) get one sentence per distinct value, joined — deduplicated
+ * since these 3-point chains can repeat the same arcano (e.g. a chain's
+ * first and last point resolving to the same value), which would otherwise
+ * print that arcano's facet text twice in the same sentence.
  */
 export function describePosition(
   key: PositionKey,
@@ -89,7 +92,7 @@ export function describePosition(
   facet: ArcanaFacet = 'general',
 ): string {
   const framing = getPositionFraming(key);
-  const values = Array.isArray(value) ? value : [value];
+  const values = Array.isArray(value) ? [...new Set(value)] : [value];
   const facets = values.map((v) => getArcana(v)[facet]).join(' ');
   return `${framing} ${facets}`.trim();
 }
