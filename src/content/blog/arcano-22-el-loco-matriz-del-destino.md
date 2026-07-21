@@ -1,7 +1,7 @@
 ---
 slug: "arcano-22-el-loco-matriz-del-destino"
-title: "Arcano 22 El Loco: Cómo Vivir Esta Energía en Tu Vida Cotidiana"
-metaDescription: "El Arcano 22 El Loco no se trata solo de entender su significado, sino de reconocerlo en acción. Señales de que está activo en tu vida y cómo trabajarlo día a día."
+title: "Arcano 22 El Loco en la Matriz del Destino: Significado y Cómo Vivirlo"
+metaDescription: "Descubre el significado completo del Arcano 22 El Loco en la Matriz del Destino: energía positiva, negativa, en el amor, el trabajo y cómo vivir esta energía en tu vida."
 publishDate: 2026-07-15
 author: "Equipo Arcania"
 tags: ["arcanos", "arcano 22", "el loco", "matriz del destino"]
