@@ -12,33 +12,33 @@ import { calculators } from '../../data/calculators';
 
 const breadcrumbItems = [
   { label: 'Matriz del Destino', href: '/matriz-del-destino/' },
-  { label: 'Compatibilidad de pareja' },
+  { label: 'Couple Compatibility' },
 ];
 
 const relatedCalculators = calculators.filter((c) => c.slug !== 'compatibilidad');
 ---
 
 <BaseLayout
-  title="Matriz del Destino: Compatibilidad de Pareja Gratis | Arcania"
-  description="Descubre la compatibilidad de tu pareja con la Matriz del Destino. Compara arcanos, energías y propósito de ambos gratis, sin registro."
+  title="Free Destiny Matrix Compatibility Calculator | Arcania"
+  description="Compare your Matriz del Destino with your partner's. Discover your shared energies, relationship dynamics and compatibility — free, instant, no sign up."
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaFAQ slot="schema" qa={compatibilityFaq} />
   <SchemaSoftwareApp
     slot="schema"
-    name="Calculadora de Compatibilidad de la Matriz del Destino"
-    description="Calculadora gratuita de compatibilidad de pareja según la Matriz del Destino de ambas personas."
+    name="Matriz del Destino Compatibility Calculator"
+    description="Free couple compatibility calculator based on both people's Matriz del Destino."
   />
 
   <Breadcrumbs items={breadcrumbItems} />
 
   <div class="mx-auto max-w-3xl px-4 sm:px-6">
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
-      Matriz del Destino: Compatibilidad de Pareja
+      Matriz del Destino: Couple Compatibility
     </h1>
     <p class="mt-4 text-lg text-ink-muted">
-      Calcula la Matriz del Destino de ambas personas y descubre qué arcanos comparten, en qué energías
-      se complementan y qué dice su combinación sobre la relación.
+      Calculate both people's Matriz del Destino and discover which arcana they share, which energies
+      complement each other, and what their combination says about the relationship.
     </p>
   </div>
 
@@ -47,18 +47,18 @@ const relatedCalculators = calculators.filter((c) => c.slug !== 'compatibilidad'
   </div>
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Cómo funciona la compatibilidad?</h2>
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">How does compatibility work?</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
       <p>
-        Calculamos la Matriz del Destino de cada persona por separado, con el mismo método que usa
-        nuestra <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">calculadora principal</a>.
-        Después comparamos sus arcanos centrales y el resto de sus posiciones principales para identificar
-        coincidencias y diferencias entre ambas energías.
+        We calculate each person's Matriz del Destino separately, using the same method as our
+        <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">main calculator</a>.
+        We then compare their central arcana and the rest of their main positions to identify matches and
+        differences between the two energies.
       </p>
       <p>
-        Un arcano compartido en una posición clave suele señalar una afinidad natural en esa área de la
-        vida. Una diferencia no es una mala señal: casi siempre indica complementariedad, es decir, que
-        cada persona aporta algo que la otra no tiene.
+        A shared arcana in a key position usually signals a natural affinity in that area of life. A
+        difference isn't a bad sign: it almost always indicates complementarity — that each person brings
+        something the other doesn't have.
       </p>
     </div>
   </section>
@@ -67,8 +67,8 @@ const relatedCalculators = calculators.filter((c) => c.slug !== 'compatibilidad'
 
   <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
     <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
-      Esta calculadora es una herramienta de autoconocimiento y no debe interpretarse como una forma de
-      adivinación o predicción del futuro de la relación.
+      This calculator is a self-knowledge tool and should not be interpreted as a form of divination or
+      fortune-telling about the relationship's future.
     </p>
   </section>
 
