@@ -5,24 +5,24 @@ import Icon from '../ui/Icon.astro';
 const items = [
   {
     icon: 'sparkle' as const,
-    title: 'Autoconocimiento',
-    body: 'Descubre tu personalidad, tus talentos y tu propósito a partir de un mapa único calculado con tu fecha de nacimiento.',
+    title: 'Self-Knowledge',
+    body: 'Discover your personality, talents, and life purpose from a unique map calculated from your date of birth.',
   },
   {
     icon: 'compass' as const,
-    title: '22 Arcanos',
-    body: 'Cada posición de tu matriz se interpreta cruzando su significado con el de uno de los 22 arcanos mayores del tarot.',
+    title: '22 Arcana',
+    body: 'Each position in your matrix is interpreted by crossing its meaning with one of the 22 major arcana of the tarot.',
   },
   {
     icon: 'check' as const,
-    title: 'Gratis',
-    body: 'El cálculo completo de tu matriz es 100% gratuito, sin registro y sin límite de usos.',
+    title: 'Free',
+    body: 'Your complete matrix calculation is 100% free, no registration required, unlimited uses.',
   },
 ];
 ---
 
 <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-  <h2 class="sr-only">Por qué usar Arcania</h2>
+  <h2 class="sr-only">Why Use Arcania</h2>
   <div class="grid gap-6 sm:grid-cols-3">
     {
       items.map((item) => (

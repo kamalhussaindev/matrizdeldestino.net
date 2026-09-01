@@ -5,147 +5,147 @@ export interface FaqItem {
 
 export const homeFaq: FaqItem[] = [
   {
-    question: '¿Qué es la Matriz del Destino?',
+    question: 'What is the Matriz del Destino?',
     answer:
-      'Es un sistema de autoconocimiento creado por la numeróloga Natalia Ladini en 2006, que combina numerología, los 22 arcanos mayores del tarot y la energía de los chakras. A partir de tu fecha de nacimiento, construye un mapa —el octagrama— que describe tu personalidad, tus talentos, tus relaciones y tu propósito de vida.',
+      'A self-knowledge system created by numerologist Natalia Ladini in 2006 that combines numerology, the 22 major arcana of the tarot, and chakra energy. From your date of birth it builds a map — the octagram — describing your personality, talents, relationships, and life purpose.',
   },
   {
-    question: '¿Cómo se calcula mi Matriz del Destino?',
+    question: 'How is my Matriz del Destino calculated?',
     answer:
-      'Reducimos el día, el mes y el año de tu nacimiento a números del 1 al 22 (si el resultado supera 22, sumamos sus dígitos). Con esos tres valores construimos el resto de las posiciones del octagrama: tu punto central, tus líneas y tus propósitos. Todo el cálculo ocurre en tu navegador; no enviamos tu fecha a ningún servidor.',
+      'We reduce your day, month, and year of birth to numbers from 1 to 22 (if the result exceeds 22, we add its digits). From those three values we build the remaining octagram positions: your central point, your lines, and your purposes. All calculation happens in your browser — your date is never sent to any server.',
   },
   {
-    question: '¿Necesito pagar para ver mi resultado?',
+    question: 'Do I need to pay to see my result?',
     answer:
-      'No. El cálculo completo —octagrama, líneas, propósitos e interpretación de cada posición— es 100% gratis y no requiere registro.',
+      'No. The complete calculation — octagram, lines, purposes, and interpretation of every position — is 100% free and requires no registration.',
   },
   {
-    question: '¿Es lo mismo que el tarot o la numerología tradicional?',
+    question: 'Is it the same as tarot or traditional numerology?',
     answer:
-      'Comparte elementos con ambos —usa los 22 arcanos mayores y una lógica de reducción numerológica—, pero es un sistema propio con su propia estructura (el octagrama) y su propio método de cálculo, distinto de una tirada de tarot o de una carta numerológica clásica.',
+      'It shares elements with both — it uses the 22 major arcana and a numerological reduction logic — but it is its own system with its own structure (the octagram) and its own calculation method, distinct from a tarot spread or a classic numerology chart.',
   },
   {
-    question: '¿Qué tan preciso es este cálculo?',
+    question: 'How accurate is the calculation?',
     answer:
-      'La fórmula que usamos reproduce el modelo estándar de puntos y propósitos de la Matriz del Destino, para que tu resultado coincida con el que verías en otras calculadoras reconocidas. Como toda herramienta de autoconocimiento, ofrece una interpretación simbólica, no una medición científica.',
+      "The formula we use reproduces the standard model of points and purposes of the Matriz del Destino so your result matches what you'd see in other recognised calculators. Like all self-knowledge tools, it offers a symbolic interpretation, not a scientific measurement.",
   },
   {
-    question: '¿Puedo calcular la matriz de otra persona?',
+    question: "Can I calculate someone else's matrix?",
     answer:
-      'Sí. Solo necesitas su fecha de nacimiento (el nombre es opcional, solo se usa para personalizar el resultado en pantalla). También tenemos una calculadora específica de compatibilidad de pareja y una versión pensada para niños y niñas.',
+      'Yes. You only need their date of birth (the name is optional). We also have a dedicated compatibility calculator for couples and a version designed for children.',
   },
   {
-    question: '¿Qué significa el arcano central o punto E?',
+    question: 'What does the central arcana or point E mean?',
     answer:
-      'Es la síntesis de tu día, mes y año de nacimiento, y representa tu zona de confort: la energía en la que te sientes más a gusto y hacia la que tiendes a volver una y otra vez a lo largo de la vida.',
+      'It is the synthesis of your day, month, and year of birth and represents your comfort zone — the energy you feel most at home in and return to again and again throughout life.',
   },
   {
-    question: '¿Mis datos quedan guardados o son públicos?',
+    question: 'Is my data stored or public?',
     answer:
-      'No. El cálculo se hace por completo en tu dispositivo y no guardamos tu fecha de nacimiento en ningún servidor.',
+      'No. The calculation happens entirely on your device and we never store your date of birth on any server.',
   },
   {
-    question: '¿Funciona la calculadora en España, México y Argentina?',
+    question: 'Does the calculator work worldwide?',
     answer:
-      'Sí. La Matriz del Destino se calcula igual en cualquier país: solo depende de tu fecha de nacimiento, no de tu ubicación. Escribimos todo el contenido en español neutro para que se entienda con claridad en España, México, Argentina, Colombia, Chile, Perú y el resto de la comunidad hispanohablante.',
+      'Yes. The Matriz del Destino is calculated the same way in any country — it depends only on your date of birth, not your location.',
   },
 ];
 
 export const calculatorFaq: FaqItem[] = [
   {
-    question: '¿Qué información necesito para calcular mi matriz?',
+    question: 'What information do I need to calculate my matrix?',
     answer:
-      'Únicamente tu fecha de nacimiento completa (día, mes y año). El nombre es opcional y solo se usa para personalizar el resultado que ves en pantalla; no forma parte del cálculo.',
+      "Just your full date of birth (day, month, and year). Your name is optional and is only used to personalise the result you see on screen — it isn't part of the calculation.",
   },
   {
-    question: '¿Por qué se usan 22 arcanos y no otro número?',
+    question: 'Why are there 22 arcana and not some other number?',
     answer:
-      'La Matriz del Destino toma los 22 arcanos mayores del tarot —de El Loco a El Mundo— como su alfabeto simbólico. Por eso cada posición del octagrama siempre se reduce a un número entre 1 y 22: cada valor corresponde a la energía de un arcano específico.',
+      'The Matriz del Destino takes the 22 major arcana of the tarot — from The Fool to The World — as its symbolic alphabet. That is why every position in the octagram always reduces to a number between 1 and 22: each value corresponds to the energy of a specific arcana.',
   },
   {
-    question: '¿Qué es la cola kármica?',
+    question: 'What is the karmic tail?',
     answer:
-      'Es una secuencia de tres arcanos, ubicada en la parte inferior de tu matriz, que describe patrones que se repiten de forma casi automática en tu vida —a veces heredados de tu historia familiar— y que esta herramienta te ayuda a identificar para poder trabajarlos conscientemente.',
+      'It is a sequence of three arcana, located at the bottom of your matrix, that describes patterns which repeat almost automatically in your life — sometimes inherited from your family history — which this tool helps you identify so you can work on them consciously.',
   },
   {
-    question: '¿Qué es el punto E o zona de confort?',
+    question: 'What is point E, or the comfort zone?',
     answer:
-      'Es el arcano central de tu matriz, resultado de sumar tu día, mes, año y su propia síntesis. Representa la energía en la que te sientes más cómodo y a la que regresas naturalmente, incluso cuando la vida te empuja hacia otros retos.',
+      'It is the central arcana of your matrix, the result of adding your day, month, year, and their own synthesis. It represents the energy you feel most comfortable in and naturally return to, even when life pushes you toward other challenges.',
   },
   {
-    question: '¿Qué es la línea del dinero?',
+    question: 'What is the money line?',
     answer:
-      'Es la posición que describe tu relación con la prosperidad: cómo tiendes a generar, recibir y administrar recursos, y qué bloqueos energéticos conviene que tengas presentes en tu vida profesional y financiera.',
+      'It is the position that describes your relationship with prosperity: how you tend to generate, receive, and manage resources, and which energetic blocks are worth keeping in mind in your professional and financial life.',
   },
   {
-    question: '¿Puedo interpretar mi matriz sin ayuda de un experto?',
+    question: "Can I interpret my matrix without an expert's help?",
     answer:
-      'Sí. Diseñamos cada posición para que se explique por sí misma: combinamos el significado de esa posición con el del arcano que te tocó ahí, en lenguaje claro y sin tecnicismos.',
+      'Yes. We designed every position to explain itself: we combine the meaning of that position with the arcana that landed there, in clear language with no jargon.',
   },
   {
-    question: '¿La Matriz del Destino cambia con el tiempo?',
+    question: 'Does the Matriz del Destino change over time?',
     answer:
-      'Tu matriz personal —la que se calcula con tu fecha de nacimiento— es fija y no cambia. Lo que sí evoluciona es tu forma de relacionarte con esas energías a medida que las trabajas conscientemente a lo largo de la vida.',
+      "Your personal matrix — the one calculated from your date of birth — is fixed and does not change. What does evolve is how you relate to those energies as you work with them consciously throughout your life.",
   },
   {
-    question: '¿De dónde viene este método?',
+    question: 'Where does this method come from?',
     answer:
-      'Fue desarrollado por la numeróloga rusa Natalia Ladini en 2006, integrando numerología, los arcanos mayores del tarot y la tradición de los chakras. En nuestra página de método explicamos con transparencia cómo replicamos ese cálculo.',
+      'It was developed by Russian numerologist Natalia Ladini in 2006, integrating numerology, the major arcana of the tarot, and the chakra tradition. On our method page we explain transparently how we replicate that calculation.',
   },
 ];
 
 export const compatibilityFaq: FaqItem[] = [
   {
-    question: '¿Cómo se calcula la compatibilidad de pareja?',
+    question: 'How is couple compatibility calculated?',
     answer:
-      'Calculamos la Matriz del Destino de cada persona por separado, a partir de sus fechas de nacimiento, y luego comparamos sus arcanos centrales y sus posiciones principales para identificar energías compartidas y energías complementarias entre ambos.',
+      "We calculate each person's Matriz del Destino separately, from their dates of birth, then compare their central arcana and main positions to identify shared and complementary energies between the two of you.",
   },
   {
-    question: '¿Qué significa que compartamos un arcano?',
+    question: 'What does it mean if we share an arcana?',
     answer:
-      'Cuando dos personas tienen el mismo arcano en una posición clave —por ejemplo, el mismo punto central— suele indicar una afinidad natural en esa área de la vida: se reconocen fácilmente en esa energía compartida.',
+      'When two people have the same arcana in a key position — for example, the same central point — it usually indicates a natural affinity in that area of life: you recognise each other easily in that shared energy.',
   },
   {
-    question: '¿Un arcano distinto en el centro significa que no somos compatibles?',
+    question: "Does a different arcana at the centre mean we aren't compatible?",
     answer:
-      'No. Energías distintas no significan incompatibilidad, sino complementariedad: cada persona aporta algo que la otra no tiene, lo cual también puede ser una base sólida para la relación si ambos aprenden a valorar esa diferencia.',
+      'No. Different energies do not mean incompatibility — they mean complementarity: each person brings something the other does not have, which can also be a solid foundation for the relationship if you both learn to value that difference.',
   },
   {
-    question: '¿Necesito el consentimiento de la otra persona?',
+    question: "Do I need the other person's consent?",
     answer:
-      'Solo necesitas su fecha de nacimiento para calcular su matriz. Como con cualquier información personal, te recomendamos usar esta herramienta con el conocimiento y el consentimiento de la otra persona.',
+      "You only need their date of birth to calculate their matrix. As with any personal information, we recommend using this tool with the other person's knowledge and consent.",
   },
   {
-    question: '¿Sirve para amistades o solo para parejas románticas?',
+    question: 'Does it work for friendships, or only romantic couples?',
     answer:
-      'Sirve para cualquier vínculo entre dos personas —pareja, amistad, sociedad de negocios o familia—. La comparación de energías es la misma; lo que cambia es el contexto en el que decidas interpretarla.',
+      'It works for any bond between two people — romantic partners, friendships, business partnerships, or family. The energy comparison is the same; what changes is the context you choose to interpret it in.',
   },
 ];
 
 export const childFaq: FaqItem[] = [
   {
-    question: '¿A partir de qué edad puedo calcular la matriz de mi hijo/a?',
+    question: "From what age can I calculate my child's matrix?",
     answer:
-      'Puedes calcularla desde el nacimiento. La matriz se construye únicamente con la fecha de nacimiento, así que es igual de válida para un bebé que para un adolescente.',
+      'You can calculate it from birth. The matrix is built solely from the date of birth, so it is just as valid for a baby as for a teenager.',
   },
   {
-    question: '¿Para qué sirve conocer la matriz infantil?',
+    question: "What's the point of knowing a child's matrix?",
     answer:
-      'Te ayuda a entender los talentos naturales, las energías dominantes y las posibles tendencias de tu hijo/a desde una edad temprana, para acompañarlo de una manera más consciente de su forma particular de ser, sin forzar comparaciones con otros niños.',
+      "It helps you understand your child's natural talents, dominant energies, and possible tendencies from an early age, so you can support them in a way that is more conscious of their particular way of being, without forcing comparisons with other children.",
   },
   {
-    question: '¿Debo compartir el resultado con mi hijo/a?',
+    question: 'Should I share the result with my child?',
     answer:
-      'Depende de su edad y madurez. Con niños pequeños, el resultado suele ser más útil como guía para los padres; con adolescentes, compartirlo puede abrir una conversación valiosa sobre sus propios talentos e intereses.',
+      'It depends on their age and maturity. For young children, the result is usually more useful as guidance for parents; for teenagers, sharing it can open up a valuable conversation about their own talents and interests.',
   },
   {
-    question: '¿Reemplaza una evaluación psicológica o vocacional?',
+    question: 'Does it replace a psychological or vocational assessment?',
     answer:
-      'No. Es una herramienta de autoconocimiento y acompañamiento, no un diagnóstico clínico ni una evaluación profesional. Si tienes dudas sobre el desarrollo de tu hijo/a, siempre es mejor consultar con un especialista.',
+      "No. It is a self-knowledge and support tool, not a clinical diagnosis or a professional assessment. If you have concerns about your child's development, it is always best to consult a specialist.",
   },
   {
-    question: '¿Puedo calcular la matriz de varios hijos?',
+    question: 'Can I calculate the matrix for more than one child?',
     answer:
-      'Sí, puedes calcular la matriz de cada uno de tus hijos las veces que quieras; el cálculo es gratuito y no requiere registro ni límite de usos.',
+      'Yes, you can calculate the matrix for each of your children as many times as you like; the calculation is free and has no registration or usage limit.',
   },
 ];

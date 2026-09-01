@@ -15,22 +15,22 @@ export interface CalculatorMeta {
 export const calculators: CalculatorMeta[] = [
   {
     slug: 'matriz-del-destino',
-    label: 'Calculadora principal',
-    description: 'Calcula tu propia Matriz del Destino completa.',
+    label: 'Main Calculator',
+    description: 'Calculate your complete personal Matriz del Destino.',
     href: '/matriz-del-destino/',
     icon: 'sparkle',
   },
   {
     slug: 'compatibilidad',
-    label: 'Compatibilidad de pareja',
-    description: 'Compara tu matriz con la de tu pareja y descubre energías compartidas.',
+    label: 'Compatibility Calculator',
+    description: "Compare your matrix with your partner's and discover shared energies.",
     href: '/matriz-del-destino/compatibilidad/',
     icon: 'users',
   },
   {
     slug: 'matriz-infantil',
-    label: 'Matriz infantil',
-    description: 'Descubre los talentos y el propósito de tu hijo/a desde pequeño.',
+    label: 'Child Matrix',
+    description: "Discover your child's talents and purpose from an early age.",
     href: '/matriz-del-destino/matriz-infantil/',
     icon: 'child',
   },
