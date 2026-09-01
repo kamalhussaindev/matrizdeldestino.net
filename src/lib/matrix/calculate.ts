@@ -19,16 +19,16 @@ export function calculate(input: MatrixInput): MatrixResult {
   const { day, month, year } = input;
 
   if (!Number.isInteger(day) || !Number.isInteger(month) || !Number.isInteger(year)) {
-    throw new Error('La fecha de nacimiento debe contener números enteros.');
+    throw new Error('Date of birth must contain whole numbers.');
   }
 
   if (!isValidCalendarDate(day, month, year)) {
-    throw new Error('La fecha de nacimiento no es válida.');
+    throw new Error('Date of birth is not valid.');
   }
 
   const birthDate = new Date(year, month - 1, day);
   if (birthDate.getTime() > Date.now()) {
-    throw new Error('La fecha de nacimiento no puede estar en el futuro.');
+    throw new Error('Date of birth cannot be in the future.');
   }
 
   const a = toArcana(day);

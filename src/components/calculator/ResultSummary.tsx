@@ -6,10 +6,10 @@ export interface ResultSummaryProps {
 }
 
 const ROWS: { key: 'A' | 'B' | 'C' | 'D'; label: string }[] = [
-  { key: 'A', label: 'Personalidad' },
-  { key: 'B', label: 'Talentos' },
-  { key: 'C', label: 'Energía generacional' },
-  { key: 'D', label: 'Misión' },
+  { key: 'A', label: 'Personality' },
+  { key: 'B', label: 'Talents' },
+  { key: 'C', label: 'Generational Energy' },
+  { key: 'D', label: 'Mission' },
 ];
 
 export default function ResultSummary({ result }: ResultSummaryProps) {
@@ -19,10 +19,10 @@ export default function ResultSummary({ result }: ResultSummaryProps) {
   return (
     <div class="rounded-2xl border border-surface-alt bg-white p-6 shadow-sm sm:p-8">
       <p class="text-sm font-medium text-ink-muted">
-        {displayName ? `La Matriz del Destino de ${displayName}` : 'Tu Matriz del Destino'}
+        {displayName ? `${displayName}'s Matriz del Destino` : 'Your Matriz del Destino'}
       </p>
       <h2 class="mt-1 font-heading text-2xl font-bold text-ink sm:text-3xl">
-        Arcano {result.central} · {central.name}
+        Arcana {result.central} · {central.name}
       </h2>
       <p class="mt-3 text-base text-ink-muted">{central.general}</p>
 

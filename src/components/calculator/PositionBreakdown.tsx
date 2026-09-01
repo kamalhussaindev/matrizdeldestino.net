@@ -19,23 +19,23 @@ function buildItems(result: MatrixResult): BreakdownItem[] {
   const { positions } = result;
 
   const simple: { key: PositionKey; title: string; value: number | number[] }[] = [
-    { key: 'A', title: 'A · Personalidad', value: positions.A },
-    { key: 'B', title: 'B · Talentos', value: positions.B },
-    { key: 'C', title: 'C · Energía generacional', value: positions.C },
-    { key: 'D', title: 'D · Misión terrenal', value: positions.D },
-    { key: 'E', title: 'E · Zona de confort', value: positions.E },
-    { key: 'masculine', title: 'Línea masculina / paterna', value: positions.masculine },
-    { key: 'feminine', title: 'Línea femenina / materna', value: positions.feminine },
-    { key: 'karmicTail', title: 'Cola kármica', value: positions.karmicTail },
-    { key: 'money', title: 'Línea del dinero', value: positions.money },
-    { key: 'purposes.personal', title: 'Propósito personal', value: positions.purposes.personal },
-    { key: 'purposes.social', title: 'Propósito social', value: positions.purposes.social },
-    { key: 'purposes.general', title: 'Propósito general', value: positions.purposes.general },
-    { key: 'purposes.planetary', title: 'Propósito planetario', value: positions.purposes.planetary },
-    { key: 'purposes.sky', title: 'Punto cielo', value: positions.purposes.sky },
-    { key: 'purposes.earth', title: 'Punto tierra', value: positions.purposes.earth },
-    { key: 'purposes.male', title: 'Punto masculino', value: positions.purposes.male },
-    { key: 'purposes.female', title: 'Punto femenino', value: positions.purposes.female },
+    { key: 'A', title: 'A · Personality', value: positions.A },
+    { key: 'B', title: 'B · Talents', value: positions.B },
+    { key: 'C', title: 'C · Generational Energy', value: positions.C },
+    { key: 'D', title: 'D · Earthly Mission', value: positions.D },
+    { key: 'E', title: 'E · Comfort Zone', value: positions.E },
+    { key: 'masculine', title: 'Masculine / Paternal Line', value: positions.masculine },
+    { key: 'feminine', title: 'Feminine / Maternal Line', value: positions.feminine },
+    { key: 'karmicTail', title: 'Karmic Tail', value: positions.karmicTail },
+    { key: 'money', title: 'Money Line', value: positions.money },
+    { key: 'purposes.personal', title: 'Personal Purpose', value: positions.purposes.personal },
+    { key: 'purposes.social', title: 'Social Purpose', value: positions.purposes.social },
+    { key: 'purposes.general', title: 'General Purpose', value: positions.purposes.general },
+    { key: 'purposes.planetary', title: 'Planetary Purpose', value: positions.purposes.planetary },
+    { key: 'purposes.sky', title: 'Sky Point', value: positions.purposes.sky },
+    { key: 'purposes.earth', title: 'Earth Point', value: positions.purposes.earth },
+    { key: 'purposes.male', title: 'Masculine Point', value: positions.purposes.male },
+    { key: 'purposes.female', title: 'Feminine Point', value: positions.purposes.female },
   ];
 
   return simple.map(({ key, title, value }) => ({
@@ -101,7 +101,7 @@ export default function PositionBreakdown({ result, activeKey, onSelectKey }: Po
                     href={`/arcanos/${value}/`}
                     class="rounded-full bg-surface-alt px-3 py-1 text-xs font-medium text-primary hover:bg-accent hover:text-ink"
                   >
-                    Lee más sobre el Arcano {value} →
+                    Read more about Arcana {value} →
                   </a>
                 ))}
               </div>
@@ -145,13 +145,13 @@ export default function PositionBreakdown({ result, activeKey, onSelectKey }: Po
               <li key={chakra.name} class="flex flex-wrap items-center gap-2 text-sm">
                 <span class="w-28 shrink-0 font-medium text-ink">{chakra.name}</span>
                 <a href={`/arcanos/${chakra.physical}/`} class="rounded-full bg-surface-alt px-2 py-0.5 text-xs text-primary hover:bg-accent hover:text-ink">
-                  Físico {chakra.physical}
+                  Physical {chakra.physical}
                 </a>
                 <a href={`/arcanos/${chakra.energy}/`} class="rounded-full bg-surface-alt px-2 py-0.5 text-xs text-primary hover:bg-accent hover:text-ink">
-                  Energía {chakra.energy}
+                  Energy {chakra.energy}
                 </a>
                 <a href={`/arcanos/${chakra.emotion}/`} class="rounded-full bg-surface-alt px-2 py-0.5 text-xs text-primary hover:bg-accent hover:text-ink">
-                  Emoción {chakra.emotion}
+                  Emotion {chakra.emotion}
                 </a>
               </li>
             ))}
