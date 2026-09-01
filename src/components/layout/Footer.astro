@@ -1,55 +1,55 @@
 ---
 // [MARCA] placeholder — replace "Arcania" with the final brand name.
 const calculadoras = [
-  { label: 'Matriz del destino', href: '/matriz-del-destino/' },
-  { label: 'Compatibilidad de pareja', href: '/matriz-del-destino/compatibilidad/' },
-  { label: 'Matriz infantil', href: '/matriz-del-destino/matriz-infantil/' },
-  { label: 'Todas las calculadoras', href: '/calculadoras/' },
+  { label: 'Matriz del Destino', href: '/matriz-del-destino/' },
+  { label: 'Couple Compatibility', href: '/matriz-del-destino/compatibilidad/' },
+  { label: 'Child Matrix', href: '/matriz-del-destino/matriz-infantil/' },
+  { label: 'All Calculators', href: '/calculadoras/' },
 ];
 
 const guias = [
-  { label: '¿Qué es la Matriz del Destino?', href: '/guias/que-es-la-matriz-del-destino/' },
-  { label: 'Cómo calcular tu matriz', href: '/guias/como-calcular-la-matriz-del-destino/' },
-  { label: 'Cómo leer tu matriz', href: '/guias/como-leer-la-matriz-del-destino/' },
-  { label: 'Cola kármica', href: '/guias/cola-karmica/' },
-  { label: 'Cuadrado ancestral', href: '/guias/cuadrado-ancestral/' },
-  { label: 'Ejemplo completo', href: '/guias/ejemplo-completo-matriz-del-destino/' },
-  { label: 'Línea de bienestar', href: '/guias/linea-de-bienestar/' },
-  { label: 'Punto E y zona de confort', href: '/guias/punto-e-zona-de-confort/' },
-  { label: 'Línea del dinero', href: '/guias/linea-del-dinero/' },
+  { label: 'What is the Matriz del Destino?', href: '/guias/que-es-la-matriz-del-destino/' },
+  { label: 'How to calculate your matrix', href: '/guias/como-calcular-la-matriz-del-destino/' },
+  { label: 'How to read your matrix', href: '/guias/como-leer-la-matriz-del-destino/' },
+  { label: 'Karmic tail', href: '/guias/cola-karmica/' },
+  { label: 'Ancestral square', href: '/guias/cuadrado-ancestral/' },
+  { label: 'Complete example', href: '/guias/ejemplo-completo-matriz-del-destino/' },
+  { label: 'Wellbeing line', href: '/guias/linea-de-bienestar/' },
+  { label: 'Point E and comfort zone', href: '/guias/punto-e-zona-de-confort/' },
+  { label: 'Money line', href: '/guias/linea-del-dinero/' },
 ];
 
 const empresa = [
-  { label: 'Sobre nosotros', href: '/sobre-nosotros/' },
-  { label: 'Nuestro método', href: '/metodo/' },
-  { label: 'Contacto', href: '/contacto/' },
-  { label: 'Privacidad', href: '/privacidad/' },
-  { label: 'Términos', href: '/terminos/' },
+  { label: 'About us', href: '/sobre-nosotros/' },
+  { label: 'Our method', href: '/metodo/' },
+  { label: 'Contact', href: '/contacto/' },
+  { label: 'Privacy', href: '/privacidad/' },
+  { label: 'Terms', href: '/terminos/' },
 ];
 
 const ARCANA_NAMES = [
-  'El Mago',
-  'La Sacerdotisa',
-  'La Emperatriz',
-  'El Emperador',
-  'El Hierofante',
-  'Los Enamorados',
-  'El Carro',
-  'La Fuerza',
-  'El Ermitaño',
-  'La Rueda de la Fortuna',
-  'La Justicia',
-  'El Colgado',
-  'La Muerte',
-  'La Templanza',
-  'El Diablo',
-  'La Torre',
-  'La Estrella',
-  'La Luna',
-  'El Sol',
-  'El Juicio',
-  'El Mundo',
-  'El Loco',
+  'The Magician',
+  'The High Priestess',
+  'The Empress',
+  'The Emperor',
+  'The Hierophant',
+  'The Lovers',
+  'The Chariot',
+  'Strength',
+  'The Hermit',
+  'Wheel of Fortune',
+  'Justice',
+  'The Hanged Man',
+  'Death',
+  'Temperance',
+  'The Devil',
+  'The Tower',
+  'The Star',
+  'The Moon',
+  'The Sun',
+  'Judgement',
+  'The World',
+  'The Fool',
 ];
 
 const arcanos = Array.from({ length: 22 }, (_, i) => i + 1);
@@ -60,7 +60,7 @@ const year = new Date().getFullYear();
 <footer class="border-t border-surface-alt bg-white">
   <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4">
     <div>
-      <h2 class="font-heading text-sm font-semibold text-ink">Calculadoras</h2>
+      <h2 class="font-heading text-sm font-semibold text-ink">Calculators</h2>
       <ul class="mt-4 flex flex-col gap-2">
         {
           calculadoras.map((item) => (
@@ -75,7 +75,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h2 class="font-heading text-sm font-semibold text-ink">Arcanos</h2>
+      <h2 class="font-heading text-sm font-semibold text-ink">Arcana</h2>
       <ul class="mt-4 grid grid-cols-2 gap-x-3 gap-y-2">
         {
           arcanos.map((n) => (
@@ -88,12 +88,12 @@ const year = new Date().getFullYear();
         }
       </ul>
       <a href="/arcanos/" class="mt-4 inline-block text-sm font-medium text-primary hover:underline">
-        Ver todos los arcanos →
+        View all arcana →
       </a>
     </div>
 
     <div>
-      <h2 class="font-heading text-sm font-semibold text-ink">Guías</h2>
+      <h2 class="font-heading text-sm font-semibold text-ink">Guides</h2>
       <ul class="mt-4 flex flex-col gap-2">
         {
           guias.map((item) => (
@@ -108,7 +108,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h2 class="font-heading text-sm font-semibold text-ink">Empresa</h2>
+      <h2 class="font-heading text-sm font-semibold text-ink">Company</h2>
       <ul class="mt-4 flex flex-col gap-2">
         {
           empresa.map((item) => (
@@ -125,11 +125,10 @@ const year = new Date().getFullYear();
 
   <div class="border-t border-surface-alt px-4 py-6 sm:px-6">
     <p class="mx-auto max-w-6xl text-xs text-ink-muted">
-      © {year} Arcania. Herramienta de autoconocimiento; no sustituye asesoría profesional.
+      © {year} Arcania. Self-knowledge tool; not a substitute for professional advice.
     </p>
     <p class="mx-auto mt-2 max-w-6xl text-xs text-ink-muted">
-      Herramienta disponible para toda la comunidad hispanohablante: España, México, Argentina, Colombia,
-      Chile, Perú y más.
+      Available worldwide.
     </p>
   </div>
 </footer>

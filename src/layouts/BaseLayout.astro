@@ -30,7 +30,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,7 +63,7 @@ const {
     <slot name="schema" />
   </head>
   <body class="flex min-h-screen flex-col">
-    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+    <a href="#contenido" class="skip-link">Skip to content</a>
     <Header />
     <main id="contenido" class:list={['flex-1', { 'pb-20 md:pb-0': showMobileStickyBar }]}>
       <slot />

@@ -19,18 +19,18 @@ export interface Props {
 // exist and this section renders them instead.
 const defaultPosts: BlogPostPreview[] = [
   {
-    title: 'Próximamente',
-    excerpt: 'Estamos preparando artículos sobre numerología, arcanos y autoconocimiento.',
+    title: 'Coming soon',
+    excerpt: 'We are preparing articles on numerology, arcana, and self-knowledge.',
     href: '/blog/',
   },
   {
-    title: 'Próximamente',
-    excerpt: 'Muy pronto encontrarás aquí guías prácticas para interpretar tu matriz.',
+    title: 'Coming soon',
+    excerpt: "You'll soon find practical guides here for interpreting your matrix.",
     href: '/blog/',
   },
   {
-    title: 'Próximamente',
-    excerpt: 'Historias y ejemplos reales de lectura de la Matriz del Destino.',
+    title: 'Coming soon',
+    excerpt: 'Real stories and examples of Matriz del Destino readings.',
     href: '/blog/',
   },
 ];
@@ -39,7 +39,7 @@ const { posts = defaultPosts } = Astro.props;
 ---
 
 <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">Del blog</h2>
+  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">From the Blog</h2>
   <div class="mt-10 grid gap-6 sm:grid-cols-3">
     {
       posts.map((post) => (
