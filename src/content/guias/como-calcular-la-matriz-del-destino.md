@@ -1,53 +1,53 @@
 ---
 slug: "como-calcular-la-matriz-del-destino"
-title: "Cómo Calcular la Matriz del Destino Gratis: Paso a Paso"
-metaDescription: "Aprende gratis, paso a paso, cómo se calcula la Matriz del Destino a partir de tu fecha de nacimiento, con un ejemplo resuelto completo."
-keywords: ["cómo calcular la matriz del destino", "matriz del destino paso a paso", "reducción numerológica"]
+title: "How to Calculate Your Matriz del Destino Step by Step"
+metaDescription: "Learn how to calculate your Matriz del Destino manually step by step. Full explanation of the method with examples."
+keywords: ["how to calculate the matriz del destino", "matriz del destino step by step", "numerological reduction"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-leer-la-matriz-del-destino"]
-author: "Equipo Arcania"
+author: "Arcania Team"
 heroImage: "/images/guias/guia-como-calcular-la-matriz-del-destino.webp"
 ---
 
-Nuestra [calculadora](/matriz-del-destino/) hace todo este proceso de forma automática e instantánea, pero entender la lógica detrás del cálculo te ayuda a confiar en tu resultado y a interpretarlo con más criterio. Aquí lo explicamos paso a paso, con un ejemplo resuelto.
+Our [calculator](/matriz-del-destino/) handles this whole process automatically and instantly, but understanding the logic behind the calculation helps you trust your result and interpret it with more insight. Here it is, explained step by step, with a worked example.
 
-## El principio: reducir todo a un número entre 1 y 22
+## The principle: reduce everything to a number between 1 and 22
 
-Todo el sistema se apoya en una sola regla de reducción: si un número es mayor a 22, sumas sus dígitos hasta obtener un valor entre 1 y 22. Por ejemplo, 27 se reduce a 2 + 7 = 9. Si el resultado sigue siendo mayor a 22 —algo que ocurre pocas veces— vuelves a sumar sus dígitos. Cada uno de estos 22 valores posibles corresponde a uno de los 22 arcanos mayores del tarot.
+The entire system rests on a single reduction rule: if a number is greater than 22, you add its digits until you reach a value between 1 and 22. For example, 27 reduces to 2 + 7 = 9. If the result is still greater than 22 — which happens rarely — you add its digits again. Each of these 22 possible values corresponds to one of the 22 major arcana of the tarot.
 
-## Paso 1: calcula el Punto A (tu día de nacimiento)
+## Step 1: calculate Point A (your day of birth)
 
-Toma tu día de nacimiento tal cual. Si es 22 o menos, se queda igual. Si es mayor —por ejemplo, si naciste el día 27 de cualquier mes— lo reduces: 2 + 7 = 9.
+Take your day of birth as it is. If it's 22 or less, it stays the same. If it's higher — say, if you were born on the 27th of any month — you reduce it: 2 + 7 = 9.
 
-## Paso 2: calcula el Punto B (tu mes de nacimiento)
+## Step 2: calculate Point B (your month of birth)
 
-Se usa directamente, sin reducir, ya que los meses van del 1 al 12 y siempre caen dentro del rango válido.
+This is used directly, with no reduction, since months run from 1 to 12 and always fall within the valid range.
 
-## Paso 3: calcula el Punto C (tu año de nacimiento)
+## Step 3: calculate Point C (your year of birth)
 
-Suma todos los dígitos de tu año de nacimiento y reduce el resultado de la misma forma. Por ejemplo, para 1994: 1 + 9 + 9 + 4 = 23, y 23 se reduce a 2 + 3 = 5.
+Add up all the digits of your year of birth and reduce the result the same way. For example, for 1994: 1 + 9 + 9 + 4 = 23, and 23 reduces to 2 + 3 = 5.
 
-## Paso 4: calcula el Punto D (tu misión terrenal)
+## Step 4: calculate Point D (your earthly mission)
 
-Suma los tres valores anteriores —A + B + C— y reduce el resultado si es necesario.
+Add the three previous values — A + B + C — and reduce the result if necessary.
 
-## Paso 5: calcula el Punto E (tu zona de confort)
+## Step 5: calculate Point E (your comfort zone)
 
-Suma A + B + C + D y reduce el resultado. Este es tu arcano central, el que aparece en el corazón de tu octagrama.
+Add A + B + C + D and reduce the result. This is your central arcana, the one that appears at the heart of your octagram.
 
-## Ejemplo resuelto: 15 de mayo de 1990
+## Worked example: May 15, 1990
 
-- Punto A (día): 15 → se queda igual, 15.
-- Punto B (mes): 5 → se queda igual, 5.
-- Punto C (año): 1 + 9 + 9 + 0 = 19 → se queda igual, 19.
-- Punto D: 15 + 5 + 19 = 39 → se reduce a 3 + 9 = 12.
-- Punto E: 15 + 5 + 19 + 12 = 51 → se reduce a 5 + 1 = 6.
+- Point A (day): 15 → stays the same, 15.
+- Point B (month): 5 → stays the same, 5.
+- Point C (year): 1 + 9 + 9 + 0 = 19 → stays the same, 19.
+- Point D: 15 + 5 + 19 = 39 → reduces to 3 + 9 = 12.
+- Point E: 15 + 5 + 19 + 12 = 51 → reduces to 5 + 1 = 6.
 
-El arcano central de esta fecha es el 6 —Los Enamorados—, lo que sugiere una zona de confort ligada a la elección consciente, la conexión auténtica y la alineación de valores.
+The central arcana for this date is 6 — The Lovers — which suggests a comfort zone tied to conscious choice, authentic connection, and the alignment of values.
 
-## Paso 6: el cuadrado ancestral y el resto de las posiciones
+## Step 6: the ancestral square and the rest of the positions
 
-A partir de estos cinco valores (A, B, C, D y E) se construye el segundo cuadrado —el cuadrado ancestral o diagonal—, combinando parejas de puntos adyacentes. De ahí se derivan, con la misma lógica de suma y reducción, el resto de las posiciones de tu matriz: tu cola kármica, tus líneas masculina y femenina, tu línea del dinero, tus chakras y tus cuatro propósitos (personal, social, general y planetario). Es un árbol de sumas encadenadas —cada nuevo valor se construye a partir de los anteriores— que puedes ver desglosado por completo, posición por posición, en el resultado de nuestra calculadora.
+From these five values (A, B, C, D, and E), the second square — the ancestral or diagonal square — is built by combining pairs of adjacent points. From there, using the same logic of addition and reduction, the rest of the positions in your matrix are derived: your karmic tail, your masculine and feminine lines, your money line, your chakras, and your four purposes (personal, social, general, and planetary). It's a tree of chained sums — each new value is built from the previous ones — which you can see broken down completely, position by position, in your calculator result.
 
-## ¿Por qué usar la calculadora si ya sé el método?
+## Why use the calculator if I already know the method?
 
-Porque el árbol completo de posiciones tiene más de veinte pasos encadenados, y un solo error de suma en cualquier punto intermedio cambia todos los valores que dependen de él. Nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) aplica exactamente esta lógica, sin errores, y además cruza cada posición con la interpretación del arcano que le corresponde —algo que hacer a mano requeriría consultar el significado de cada uno de los 22 arcanos por separado. Una vez que tengas tu resultado, te recomendamos leer nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) para sacarle el máximo provecho.
+Because the complete tree of positions has more than twenty chained steps, and a single addition error at any intermediate point changes every value that depends on it. Our [Matriz del Destino calculator](/matriz-del-destino/) applies exactly this logic, error-free, and also cross-references each position with the interpretation of its corresponding arcana — something that, done by hand, would require looking up the meaning of each of the 22 arcana separately. Once you have your result, we recommend reading our guide on [how to read the Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) to get the most out of it.

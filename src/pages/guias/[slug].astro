@@ -40,7 +40,7 @@ const relatedEntries = relatedGuias
   .filter((e): e is CollectionEntry<'guias'> => Boolean(e));
 
 const breadcrumbItems = [
-  { label: 'Guías', href: '/guias/' },
+  { label: 'Guides', href: '/guias/' },
   { label: title },
 ];
 ---
@@ -69,7 +69,7 @@ const breadcrumbItems = [
       heroImage && (
         <Image
           src={heroImage}
-          alt={`${title} — Guía Arcania`}
+          alt={`${title} — Arcania Guide`}
           width={1200}
           height={500}
           widths={[600, 900, 1200]}
@@ -89,10 +89,10 @@ const breadcrumbItems = [
     </div>
 
     <a href="/matriz-del-destino/" class="mt-4 inline-block font-medium text-primary hover:underline">
-      Calcula tu Matriz del Destino →
+      Calculate Your Matriz del Destino →
     </a>
 
-    <TableOfContents headings={headings.filter((h) => h.depth === 2)} label="En esta guía:" />
+    <TableOfContents headings={headings.filter((h) => h.depth === 2)} label="In this guide:" />
 
     <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
       <Content />
@@ -101,7 +101,7 @@ const breadcrumbItems = [
     {
       relatedEntries.length > 0 && (
         <section class="py-12">
-          <h2 class="font-heading text-2xl font-bold text-ink">Guías relacionadas</h2>
+          <h2 class="font-heading text-2xl font-bold text-ink">Related Guides</h2>
           <div class="mt-6 grid gap-4 sm:grid-cols-2">
             {relatedEntries.map((related) => (
               <Card href={`/guias/${related.slug}/`}>
