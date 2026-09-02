@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaSoftwareApp from '../../components/seo/SchemaSoftwareApp.astro';
+import FaqAccordion from '../../components/content/FaqAccordion.astro';
+import RelatedCalculators from '../../components/content/RelatedCalculators.astro';
+import SoulUrgeCalculator from '../../components/calculator/SoulUrgeCalculator';
+import { soulUrgeFaq } from '../../data/faq';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [
+  { label: 'Calculators', href: '/calculadoras/' },
+  { label: 'Soul Urge Number' },
+];
+
+const relatedCalculators = calculators.filter((c) => c.slug !== 'soul-urge-number');
+---
+
+<BaseLayout
+  title="Free Soul Urge Number Calculator — Heart's Desire Number | Arcania"
+  description="Calculate your soul urge number (heart's desire number) free from your birth name. Discover your deepest inner motivation and what truly drives you."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaFAQ slot="schema" qa={soulUrgeFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Soul Urge Number Calculator"
+    description="Free soul urge (heart's desire) number calculator based on the vowels in your full birth name."
+  />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Soul Urge Number Calculator</h1>
+    <div class="mt-4 flex flex-col gap-3 text-lg text-ink-muted">
+      <p>
+        Your soul urge number — also known as your heart's desire number — reveals what you truly want at
+        your core, beneath your outward habits and behaviour. Enter your full birth name below to
+        calculate yours instantly, for free.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6">
+    <SoulUrgeCalculator client:visible />
+  </div>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">How it's calculated</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        We take only the vowels — A, E, I, O, U, and Y — from your full birth name and convert each to
+        its numerology value (A=1, E=5, I=9, O=6, U=3, Y=7). We add all of those values together, then
+        reduce the total to a single digit by repeatedly summing its digits, stopping early if the total
+        lands on the master number 11 or 22.
+      </p>
+      <p>
+        In numerology, vowels are considered to represent your inner self, while consonants represent how
+        others see you — which is why the soul urge number focuses specifically on the vowels. All
+        calculation happens instantly in your browser; we never store your name.
+      </p>
+    </div>
+  </section>
+
+  <FaqAccordion qa={soulUrgeFaq} />
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
+      This calculator is a self-knowledge tool and should not be interpreted as a form of divination or
+      fortune-telling. Want a deeper reading? Try the full
+      <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">Matriz del Destino calculator →</a>
+    </p>
+  </section>
+
+  <RelatedCalculators items={relatedCalculators} />
+</BaseLayout>

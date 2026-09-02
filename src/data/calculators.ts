@@ -34,4 +34,32 @@ export const calculators: CalculatorMeta[] = [
     href: '/matriz-del-destino/matriz-infantil/',
     icon: 'child',
   },
+  {
+    slug: 'life-path-number',
+    label: 'Life Path Number',
+    description: 'Discover your core numerology number from your date of birth.',
+    href: '/calculadoras/life-path-number/',
+    icon: 'compass',
+  },
+  {
+    slug: 'personal-year-number',
+    label: 'Personal Year Number',
+    description: "Find your numerology theme and forecast for 2026.",
+    href: '/calculadoras/personal-year-number/',
+    icon: 'sparkle',
+  },
+  {
+    slug: 'karmic-debt-number',
+    label: 'Karmic Debt Number',
+    description: 'Check your chart for the four recognised karmic debt numbers.',
+    href: '/calculadoras/karmic-debt-number/',
+    icon: 'infinity',
+  },
+  {
+    slug: 'soul-urge-number',
+    label: 'Soul Urge Number',
+    description: "Uncover your heart's deepest desire from your birth name.",
+    href: '/calculadoras/soul-urge-number/',
+    icon: 'heart',
+  },
 ];

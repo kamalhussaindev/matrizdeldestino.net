@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import SchemaSoftwareApp from '../../components/seo/SchemaSoftwareApp.astro';
+import FaqAccordion from '../../components/content/FaqAccordion.astro';
+import RelatedCalculators from '../../components/content/RelatedCalculators.astro';
+import KarmicDebtCalculator from '../../components/calculator/KarmicDebtCalculator';
+import { karmicDebtFaq } from '../../data/faq';
+import { calculators } from '../../data/calculators';
+
+const breadcrumbItems = [
+  { label: 'Calculators', href: '/calculadoras/' },
+  { label: 'Karmic Debt Number' },
+];
+
+const relatedCalculators = calculators.filter((c) => c.slug !== 'karmic-debt-number');
+---
+
+<BaseLayout
+  title="Free Karmic Debt Number Calculator | Arcania"
+  description="Calculate your karmic debt number free. Discover if you carry karmic debt 13, 14, 16, or 19 and what it means for your life path and spiritual growth."
+>
+  <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
+  <SchemaFAQ slot="schema" qa={karmicDebtFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Karmic Debt Number Calculator"
+    description="Free karmic debt number calculator based on date of birth, checking for the four recognised karmic debt numbers: 13, 14, 16, and 19."
+  />
+
+  <Breadcrumbs items={breadcrumbItems} />
+
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Karmic Debt Number Calculator</h1>
+    <div class="mt-4 flex flex-col gap-3 text-lg text-ink-muted">
+      <p>
+        Karmic debt numbers — 13, 14, 16, and 19 — point to specific lessons some numerologists believe
+        carry over from a past life. Enter your date of birth to check your chart for all four, instantly
+        and for free.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6">
+    <KarmicDebtCalculator client:visible />
+  </div>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">How it's calculated</h2>
+    <div class="mt-4 flex flex-col gap-4 text-ink-muted">
+      <p>
+        We check two positions in your chart. First, your birth day itself: if you were born on the
+        13th, 14th, 16th, or 19th of any month, that's a karmic debt from your day. Second, your life
+        path calculation: we add together every digit of your day, month, and year of birth, and if that
+        total — before its final reduction — equals 13, 14, 16, or 19, that's a karmic debt in your life
+        path.
+      </p>
+      <p>
+        It's possible to have zero, one, or two karmic debt numbers. All calculation happens instantly in
+        your browser; we never store your date of birth.
+      </p>
+    </div>
+  </section>
+
+  <FaqAccordion qa={karmicDebtFaq} />
+
+  <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+    <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
+      This calculator is a self-knowledge tool and should not be interpreted as a form of divination or
+      fortune-telling. Want a deeper reading? Try the full
+      <a href="/matriz-del-destino/" class="font-medium text-primary hover:underline">Matriz del Destino calculator →</a>
+    </p>
+  </section>
+
+  <RelatedCalculators items={relatedCalculators} />
+</BaseLayout>
