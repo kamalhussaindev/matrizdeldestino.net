@@ -9,8 +9,8 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://matrizdeldestino.net',
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es'],
+    defaultLocale: 'en',
+    locales: ['en'],
     routing: {
       prefixDefaultLocale: false,
     },
