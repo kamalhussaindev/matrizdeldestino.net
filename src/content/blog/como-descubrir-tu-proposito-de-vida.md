@@ -1,32 +1,32 @@
 ---
 slug: "como-descubrir-tu-proposito-de-vida"
-title: "Cómo descubrir tu propósito de vida con la Matriz del Destino"
-metaDescription: "Tu Matriz del Destino describe cuatro capas de propósito: personal, social, general y planetario. Así se leen juntas para entender hacia dónde te dirige tu energía."
+title: "How to Discover Your Life Purpose with the Matriz del Destino"
+metaDescription: "Your Matriz del Destino describes four layers of purpose: personal, social, general, and planetary. Here's how to read them together to understand where your energy is headed."
 publishDate: 2026-02-03
-author: "Equipo Arcania"
-tags: ["propósito", "autoconocimiento"]
+author: "Arcania Team"
+tags: ["purpose", "self-knowledge"]
 featured: true
 heroImage: "/images/blog/blog-como-descubrir-tu-proposito-de-vida.webp"
 ---
 
-"¿Cuál es mi propósito de vida?" es probablemente la pregunta que más nos hacen quienes calculan su Matriz del Destino por primera vez. La buena noticia es que el sistema no da una sola respuesta genérica: describe cuatro capas distintas de propósito, que conviene leer juntas para entender el panorama completo.
+"What is my life purpose?" is probably the question we get asked most by people calculating their Matriz del Destino for the first time. The good news is that the system doesn't give a single generic answer: it describes four distinct layers of purpose, which are best read together to understand the full picture.
 
-## No es un único número: son cuatro capas
+## It's not one single number: it's four layers
 
-Tu matriz calcula un **propósito personal**, un **propósito social**, un **propósito general** y un **propósito planetario**. Cada uno responde a una pregunta distinta: qué necesitas resolver para ti mismo, cómo te vinculas con tu entorno cercano, qué tipo de contribución más amplia estás llamado a hacer, y cuál es tu aporte a algo todavía mayor. Leerlos en ese orden —de adentro hacia afuera— suele ser mucho más revelador que empezar por el más abstracto.
+Your matrix calculates a **personal purpose**, a **social purpose**, a **general purpose**, and a **planetary purpose**. Each answers a different question: what you need to resolve for yourself, how you connect with your close environment, what kind of broader contribution you're called to make, and what your contribution is to something even greater. Reading them in that order — from the inside out — tends to be far more revealing than starting with the most abstract one.
 
-Por ejemplo, si tu propósito personal corresponde al [Arcano 1: El Mago](/arcanos/1/), es probable que tu tarea sea aprender a concretar ideas en vez de dispersarte entre demasiados proyectos a la vez; si en cambio te tocó el [Arcano 9: El Ermitaño](/arcanos/9/), es más probable que tu propósito pase por encontrarte contigo mismo antes de involucrarte plenamente con los demás.
+For example, if your personal purpose corresponds to [Arcana 1: The Magician](/arcanos/1/), your task is likely to learn how to turn ideas into reality instead of scattering your energy across too many projects at once; if instead you got [Arcana 9: The Hermit](/arcanos/9/), your purpose is more likely about meeting yourself before fully engaging with others.
 
-## Por qué conviene empezar por el propósito personal
+## Why it's best to start with your personal purpose
 
-Es tentador querer saltar directo al "propósito planetario" porque suena más grandioso, pero en la práctica es el que menos guía da en el día a día. El propósito personal, en cambio, suele señalar algo muy concreto que necesitas trabajar o sanar en ti mismo antes de poder sostener cualquier propósito más amplio. Es la base sobre la que se construye el resto.
+It's tempting to want to jump straight to the "planetary purpose" because it sounds grander, but in practice it's the one that offers the least day-to-day guidance. Your personal purpose, on the other hand, tends to point to something very concrete that you need to work on or heal within yourself before you can sustain any broader purpose. It's the foundation the rest is built on.
 
-## El propósito no es lo mismo que "la carrera perfecta"
+## Purpose isn't the same as "the perfect career"
 
-Un error común es esperar que el propósito personal indique una profesión específica. No suele funcionar así: describe más bien una energía o una cualidad que necesitas desarrollar —por ejemplo, aprender a confiar en tu intuición, o a sostener un liderazgo sereno— y esa energía puede expresarse en decenas de profesiones distintas. Por eso interpretar el propósito junto con tu Punto D (tu misión terrenal) suele dar una lectura mucho más útil que mirar cualquiera de los dos por separado.
+A common mistake is expecting your personal purpose to point to a specific profession. It usually doesn't work that way: it describes more of an energy or a quality you need to develop — for example, learning to trust your intuition, or to hold calm leadership — and that energy can express itself through dozens of different professions. That's why interpreting your purpose together with your Point D (your earthly mission) tends to give a much more useful reading than looking at either one on its own.
 
-## Cómo verlo en tu propia matriz
+## How to see it in your own matrix
 
-Y si tu propósito planetario señala el [Arcano 21: El Mundo](/arcanos/21/), tu aporte colectivo probablemente tenga que ver con ayudar a otros a integrar y cerrar ciclos de forma consciente.
+And if your planetary purpose points to [Arcana 21: The World](/arcanos/21/), your collective contribution likely has to do with helping others integrate and consciously close cycles.
 
-Si aún no has calculado tu resultado, puedes hacerlo gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/): vas a encontrar tus cuatro propósitos ya interpretados en la pestaña "Propósito" de tu resultado, combinados con el significado del arcano que le corresponde a cada uno. Si quieres profundizar en la lógica completa detrás de cada posición, te recomendamos también nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/).
+If you haven't calculated your result yet, you can do it for free with our [Matriz del Destino calculator](/matriz-del-destino/): you'll find your four purposes already interpreted in the "Purpose" tab of your result, combined with the meaning of the arcana that corresponds to each one. If you want to go deeper into the full logic behind each position, we also recommend our guide on [how to read the Matriz del Destino](/guias/como-leer-la-matriz-del-destino/).

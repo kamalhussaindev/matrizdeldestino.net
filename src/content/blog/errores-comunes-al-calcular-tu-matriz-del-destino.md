@@ -1,34 +1,34 @@
 ---
 slug: "errores-comunes-al-calcular-tu-matriz-del-destino"
-title: "5 errores comunes al calcular tu Matriz del Destino"
-metaDescription: "Los errores más frecuentes al calcular o interpretar la Matriz del Destino: desde confundir el mes con el día hasta esperar una predicción exacta del futuro."
+title: "5 Common Mistakes When Calculating Your Matriz del Destino"
+metaDescription: "The most frequent mistakes when calculating or interpreting the Matriz del Destino: from mixing up the month and the day to expecting an exact prediction of the future."
 publishDate: 2026-02-17
-author: "Equipo Arcania"
-tags: ["errores comunes", "cómo calcular"]
+author: "Arcania Team"
+tags: ["common mistakes", "how to calculate"]
 featured: false
 heroImage: "/images/blog/blog-errores-comunes-calcular-matriz-del-destino.webp"
 ---
 
-Después de ver miles de resultados, notamos que casi todos los errores al calcular o interpretar la Matriz del Destino se repiten. Aquí van los cinco más comunes, para que tu lectura salga bien desde el principio.
+After seeing thousands of results, we've noticed that almost every mistake people make when calculating or interpreting the Matriz del Destino repeats itself. Here are the five most common ones, so your reading gets off to a good start from the beginning.
 
-## 1. Confundir el formato de la fecha
+## 1. Mixing up the date format
 
-El error más frecuente ni siquiera es numerológico: es de formato. Muchas calculadoras piden la fecha como texto libre, y es fácil escribir el mes donde va el día (o al revés), cambiando el resultado completo sin darte cuenta. Por eso nuestra calculadora te pide el día, el mes y el año por separado, en menús claramente etiquetados —así se elimina de raíz cualquier ambigüedad de formato.
+The most frequent mistake isn't even numerological — it's a formatting issue. Many calculators ask for the date as free text, and it's easy to type the month where the day should go (or the other way around), changing the entire result without you noticing. That's why our calculator asks for the day, month, and year separately, in clearly labeled menus — that removes any format ambiguity at the root.
 
-## 2. Reducir el mes cuando no corresponde
+## 2. Reducing the month when you shouldn't
 
-El Punto B —tu mes de nacimiento— nunca se reduce, porque los meses van del 1 al 12 y siempre están dentro del rango válido de un arcano. Es un error común aplicar la regla de reducción también aquí "por costumbre", cuando en realidad solo el día y el año pasan por ese proceso.
+Point B — your month of birth — is never reduced, because months run from 1 to 12 and always fall within an arcana's valid range. It's a common mistake to apply the reduction rule here too, "out of habit," when in reality only the day and the year go through that process.
 
-## 3. Sumar mal los dígitos del año
+## 3. Adding up the year's digits incorrectly
 
-Al calcular el Punto C, hay que sumar **todos** los dígitos del año, uno por uno —no solo los dos últimos—. Para 1994, es 1 + 9 + 9 + 4, no 9 + 4. Es un error pequeño pero que cambia por completo el resto de la matriz, ya que casi todas las demás posiciones dependen de este valor.
+When calculating Point C, you need to add up **all** the digits of the year, one by one — not just the last two. For 1994, that's 1 + 9 + 9 + 4, not 9 + 4. It's a small mistake, but one that completely changes the rest of the matrix, since almost every other position depends on this value.
 
-## 4. Esperar una predicción exacta del futuro
+## 4. Expecting an exact prediction of the future
 
-Este es un error de expectativa, no de cálculo. La Matriz del Destino es una herramienta de autoconocimiento simbólico, no un oráculo. Describe energías, tendencias y patrones —no fechas, eventos ni resultados garantizados—. Quien la usa esperando una predicción literal suele terminar decepcionado; quien la usa como punto de partida para la reflexión personal, en cambio, suele sacarle mucho más provecho.
+This is a mistake of expectation, not of calculation. The Matriz del Destino is a tool for symbolic self-knowledge, not an oracle. It describes energies, tendencies, and patterns — not dates, events, or guaranteed outcomes. Someone who uses it expecting a literal prediction usually ends up disappointed; someone who uses it as a starting point for personal reflection, on the other hand, tends to get much more out of it.
 
-## 5. Leer una sola posición y quedarse ahí
+## 5. Reading a single position and stopping there
 
-Es tentador calcular tu matriz, mirar solo tu arcano central y cerrar la pestaña. Pero el verdadero valor del sistema está en cruzar varias posiciones entre sí: tu Punto E junto con tu cola kármica, tu línea del dinero junto con tu propósito personal. Por ejemplo, tener el [Arcano 16: La Torre](/arcanos/16/) en tu cola kármica se lee muy distinto si tu Punto E es un arcano estable como el [Arcano 4: El Emperador](/arcanos/4/) que si también es una energía de cambio constante. Leídas en conjunto cuentan una historia mucho más completa que cualquier posición aislada. Nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) explica en qué orden conviene leerlas.
+It's tempting to calculate your matrix, look only at your central arcana, and close the tab. But the real value of the system lies in cross-referencing several positions with each other: your Point E together with your karmic tail, your money line together with your personal purpose. For example, having [Arcana 16: The Tower](/arcanos/16/) in your karmic tail reads very differently if your Point E is a stable arcana like [Arcana 4: The Emperor](/arcanos/4/) than if it's also an energy of constant change. Read together, they tell a much more complete story than any isolated position. Our guide on [how to read the Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) explains the order in which it's best to read them.
 
-¿Quieres calcular la tuya sin cometer ninguno de estos errores? Nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) hace todo el cálculo por ti, de forma automática y gratuita.
+Want to calculate yours without making any of these mistakes? Our [Matriz del Destino calculator](/matriz-del-destino/) does the whole calculation for you, automatically and for free.

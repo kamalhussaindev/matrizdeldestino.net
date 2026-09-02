@@ -34,7 +34,7 @@ const ogImageCandidate = `/og/og-blog-${entry.slug}.png`;
 const ogImagePath = fileURLToPath(new URL(`../../../public${ogImageCandidate}`, import.meta.url));
 const ogImage = existsSync(ogImagePath) ? ogImageCandidate : '/og/default.png';
 
-const dateFormatter = new Intl.DateTimeFormat('es', { dateStyle: 'long' });
+const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' });
 
 const postURL = new URL(Astro.url.pathname, Astro.site).toString();
 const whatsappShareURL = `https://wa.me/?text=${encodeURIComponent(`${title} ${postURL}`)}`;
@@ -73,7 +73,7 @@ const breadcrumbItems = [
       heroImage && (
         <Image
           src={heroImage}
-          alt={`${title} — Blog Arcania`}
+          alt={`${title} — Arcania Blog`}
           width={1200}
           height={630}
           widths={[600, 900, 1200]}
@@ -89,7 +89,7 @@ const breadcrumbItems = [
     <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-muted">
       <Image
         src="/images/team/equipo-arcania-numerologia-espiritual.webp"
-        alt="Equipo Arcania"
+        alt="Arcania Team"
         width={40}
         height={40}
         loading="lazy"
@@ -116,11 +116,11 @@ const breadcrumbItems = [
     </div>
 
     <a href="/matriz-del-destino/" class="mt-8 inline-block font-medium text-primary hover:underline">
-      Calcula tu Matriz del Destino →
+      Calculate Your Matriz del Destino →
     </a>
 
     <div class="mt-8 flex flex-col gap-3 border-t border-surface-alt pt-8">
-      <p class="text-sm font-medium text-ink">¿Te resultó útil? Compártelo:</p>
+      <p class="text-sm font-medium text-ink">Found this useful? Share it:</p>
       <div class="flex flex-wrap gap-2">
         <a
           href={whatsappShareURL}
@@ -143,7 +143,7 @@ const breadcrumbItems = [
           id="copy-link-button"
           class="rounded-full border border-surface-alt px-4 py-2 text-sm font-medium text-ink hover:border-primary hover:text-primary"
         >
-          Copiar enlace
+          Copy link
         </button>
       </div>
     </div>
@@ -151,24 +151,24 @@ const breadcrumbItems = [
     <div class="mt-8 flex flex-col gap-4 rounded-2xl border-l-4 border-accent bg-surface-alt p-6 sm:flex-row sm:items-start">
       <Image
         src="/images/team/equipo-arcania-numerologia-espiritual.webp"
-        alt="Equipo Arcania"
+        alt="Arcania Team"
         width={64}
         height={64}
         loading="lazy"
         class="h-16 w-16 shrink-0 rounded-full object-cover"
       />
       <div>
-        <p class="font-heading text-base font-semibold text-ink">Equipo Arcania</p>
+        <p class="font-heading text-base font-semibold text-ink">Arcania Team</p>
         <p class="mt-2 text-sm text-ink-muted">
-          Somos un equipo apasionado por el autoconocimiento y la numerología espiritual. Combinamos el método de
-          la Matriz del Destino con interpretaciones accesibles para ayudarte a descubrir tu propósito de vida.
+          We're a team passionate about self-knowledge and spiritual numerology. We combine the Matriz del
+          Destino method with accessible interpretations to help you discover your life purpose.
         </p>
         <div class="mt-3 flex flex-wrap gap-4 text-sm font-medium">
           <a href="/metodo/" class="text-primary hover:underline">
-            Conoce nuestro método →
+            Learn about our method →
           </a>
           <a href="/sobre-nosotros/" class="text-primary hover:underline">
-            Sobre nosotros →
+            About us →
           </a>
         </div>
       </div>
@@ -181,7 +181,7 @@ const breadcrumbItems = [
   button?.addEventListener('click', async () => {
     await navigator.clipboard.writeText(window.location.href);
     const original = button.textContent;
-    button.textContent = '¡Enlace copiado!';
+    button.textContent = 'Link copied!';
     setTimeout(() => {
       button.textContent = original;
     }, 2000);

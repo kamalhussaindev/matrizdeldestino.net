@@ -1,28 +1,28 @@
 ---
 slug: "anillo-de-edades-matriz-del-destino"
-title: "El Anillo de Edades en la Matriz del Destino: guía completa"
-metaDescription: "Qué es el anillo de edades en la tradición de la Matriz del Destino y en qué se diferencia de las posiciones fijas que calcula nuestra herramienta."
+title: "The Age Ring in the Matriz del Destino: Complete Guide"
+metaDescription: "What the age ring is in the Matriz del Destino tradition and how it differs from the fixed positions calculated by our tool."
 publishDate: 2026-03-17
-author: "Equipo Arcania"
-tags: ["anillo de edades", "método"]
+author: "Arcania Team"
+tags: ["age ring", "method"]
 featured: false
 heroImage: "/images/arcanos/arcano-10-la-rueda-de-la-fortuna-matriz-del-destino.webp"
 ---
 
-Si investigaste sobre la Matriz del Destino más allá de lo básico, es probable que te hayas topado con el término "anillo de edades" en algún sitio o video. Aquí te explicamos qué es este concepto dentro de la tradición del método, y cómo se diferencia de las posiciones que sí calculamos hoy en nuestra herramienta.
+If you've researched the Matriz del Destino beyond the basics, you've probably come across the term "age ring" on some site or video. Here we explain what this concept is within the tradition of the method, and how it differs from the positions we actually calculate today in our tool.
 
-## Qué es el anillo de edades tradicionalmente
+## What the age ring traditionally is
 
-En algunas variantes de la Matriz del Destino, el anillo de edades es una capa adicional del sistema que asigna arcanos a distintos tramos de edad a lo largo de la vida de una persona —por ejemplo, bloques de siete o diez años— formando una especie de línea de tiempo energética alrededor del octagrama central. La idea de fondo es que, además de tu personalidad y tu propósito general (que no cambian), existirían "temporadas" de vida con energías propias, cada una regida por un arcano distinto según la edad que tengas en ese momento.
+In some variants of the Matriz del Destino, the age ring is an additional layer of the system that assigns arcana to different age brackets throughout a person's life — for example, blocks of seven or ten years — forming a kind of energetic timeline around the central octagram. The underlying idea is that, in addition to your personality and your overall purpose (which don't change), there would be "seasons" of life with their own energies, each governed by a different arcana depending on your age at that moment.
 
-## Por qué no es lo mismo que tu matriz central
+## Why it isn't the same as your central matrix
 
-Es importante diferenciar el anillo de edades del resto de tu Matriz del Destino: tu Punto E, tu cola kármica, tus líneas masculina y femenina y tus propósitos son fijos —se calculan una sola vez, a partir de tu fecha de nacimiento, y no cambian nunca. El anillo de edades, en cambio, tal como lo describen algunas fuentes, sería la única capa del sistema pensada para variar con el tiempo, no como un dato fijo sino como una progresión.
+It's important to distinguish the age ring from the rest of your Matriz del Destino: your Point E, your karmic tail, your masculine and feminine lines, and your purposes are fixed — they're calculated once, from your date of birth, and never change. The age ring, on the other hand, as described by some sources, would be the only layer of the system meant to vary over time, not as a fixed piece of data but as a progression.
 
-## Qué ofrece nuestra calculadora hoy
+## What our calculator offers today
 
-Actualmente, nuestra calculadora se enfoca en el octagrama central completo: los puntos A, B, C, D, tu Punto E, tus líneas masculina y femenina, tu cola kármica, tu línea del dinero, tus chakras y tus cuatro propósitos —toda la estructura fija de tu matriz personal. El anillo de edades, al ser una capa temporal y menos estandarizada entre las distintas fuentes que describen el método, todavía no forma parte de nuestro cálculo automático, y preferimos ser honestos al respecto antes que ofrecer una interpretación sin la base sólida que sí tenemos para el resto de tu matriz.
+Currently, our calculator focuses on the complete central octagram: points A, B, C, D, your Point E, your masculine and feminine lines, your karmic tail, your money line, your chakras, and your four purposes — the entire fixed structure of your personal matrix. The age ring, being a temporal layer that's less standardised across the different sources describing the method, isn't yet part of our automatic calculation, and we prefer to be honest about that rather than offer an interpretation without the solid foundation we do have for the rest of your matrix.
 
-## Qué puedes hacer mientras tanto
+## What you can do in the meantime
 
-Si te interesa este concepto, lo más recomendable es tratarlo como información complementaria y no como sustituto de tu matriz central. Todo lo que sí calculamos hoy —tu octagrama completo— ya te da una lectura profunda y verificada de tu personalidad, tus talentos, tus relaciones y tu propósito de vida. Puedes calcular ese resultado completo gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/), y explorar el significado de cada arcano en nuestro [catálogo de los 22 arcanos](/arcanos/).
+If this concept interests you, the best approach is to treat it as complementary information rather than a substitute for your central matrix. Everything we do calculate today — your complete octagram — already gives you a deep, verified reading of your personality, your talents, your relationships, and your life purpose. You can calculate that complete result for free in our [Matriz del Destino calculator](/matriz-del-destino/), and explore the meaning of each arcana in our [catalogue of the 22 arcana](/arcanos/).

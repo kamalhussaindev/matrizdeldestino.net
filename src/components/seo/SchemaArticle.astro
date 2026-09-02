@@ -8,7 +8,7 @@ export interface Props {
   image?: string;
 }
 
-const { headline, description, datePublished, dateModified, authorName = 'Equipo Arcania', image } = Astro.props;
+const { headline, description, datePublished, dateModified, authorName = 'Arcania Team', image } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).toString();
 const authorURL = new URL('/sobre-nosotros/', Astro.site).toString();
 
