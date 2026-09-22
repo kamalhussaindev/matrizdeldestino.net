@@ -7,12 +7,7 @@ import MatrixResults from './MatrixResults';
 import MatrixChart from './MatrixChart';
 import ResultSummary from './ResultSummary';
 import type { ShareMethod } from './ShareResult';
-import {
-  trackCalculatorCompleted,
-  trackPositionClicked,
-  trackShare,
-  trackTabViewed,
-} from './analytics';
+import { trackCalculatorCompleted, trackPositionClicked, trackShare, trackTabViewed } from './analytics';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONTHS = [
@@ -237,142 +232,148 @@ export default function UnifiedCalculator() {
 
   return (
     <div class="calculator-wrapper">
-      <div class="calculator-tabs" role="tablist" aria-label="Tipo de cálculo">
-        <button
-          type="button"
-          role="tab"
-          id="tab-personal"
-          aria-selected={activeTab === 'personal'}
-          aria-controls="panel-personal"
-          class={activeTab === 'personal' ? 'active' : ''}
-          onClick={() => setActiveTab('personal')}
-        >
-          Personal
-        </button>
-        <button
-          type="button"
-          role="tab"
-          id="tab-compatibilidad"
-          aria-selected={activeTab === 'compatibilidad'}
-          aria-controls="panel-compatibilidad"
-          class={activeTab === 'compatibilidad' ? 'active' : ''}
-          onClick={() => setActiveTab('compatibilidad')}
-        >
-          Compatibilidad
-        </button>
+      {/* The card floats on the dark hero band; results break out below it. */}
+      <div class="calculator-card">
+        <div class="calculator-inner">
+          <div class="calculator-tabs" role="tablist" aria-label="Tipo de cálculo">
+            <button
+              type="button"
+              role="tab"
+              id="tab-personal"
+              aria-selected={activeTab === 'personal'}
+              aria-controls="panel-personal"
+              class={activeTab === 'personal' ? 'active' : ''}
+              onClick={() => setActiveTab('personal')}
+            >
+              Personal
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-compatibilidad"
+              aria-selected={activeTab === 'compatibilidad'}
+              aria-controls="panel-compatibilidad"
+              class={activeTab === 'compatibilidad' ? 'active' : ''}
+              onClick={() => setActiveTab('compatibilidad')}
+            >
+              Compatibilidad
+            </button>
+          </div>
+
+          {activeTab === 'personal' && (
+            <div role="tabpanel" id="panel-personal" aria-labelledby="tab-personal">
+              <form class="calculator-form" noValidate onSubmit={handlePersonalSubmit}>
+                <div class="input-row">
+                  <DateSelects
+                    idPrefix="calc-date"
+                    legend="Fecha de nacimiento"
+                    state={person}
+                    invalid={Boolean(error)}
+                    onChange={(patch) => setPerson((prev) => ({ ...prev, ...patch }))}
+                  />
+                </div>
+                <div class="input-row">
+                  <div class="input-group">
+                    <label class="input-label" for="calc-name">
+                      Nombre (opcional)
+                    </label>
+                    <input
+                      id="calc-name"
+                      type="text"
+                      placeholder="—"
+                      value={person.name}
+                      onInput={(event) =>
+                        setPerson((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
+                      }
+                    />
+                  </div>
+                </div>
+
+                {error && (
+                  <p class="calculator-error" role="alert">
+                    {error}
+                  </p>
+                )}
+
+                <button type="submit" class="calculate-btn">
+                  Calcular mi matriz →
+                </button>
+                <TrustBadges />
+              </form>
+            </div>
+          )}
+
+          {activeTab === 'compatibilidad' && (
+            <div role="tabpanel" id="panel-compatibilidad" aria-labelledby="tab-compatibilidad">
+              <form class="calculator-form" noValidate onSubmit={handleCompatSubmit}>
+                <div class="input-row">
+                  <DateSelects
+                    idPrefix="compat-date-a"
+                    legend="Persona 1 — Fecha de nacimiento"
+                    state={personA}
+                    invalid={Boolean(compatError)}
+                    onChange={(patch) => setPersonA((prev) => ({ ...prev, ...patch }))}
+                  />
+                </div>
+                <div class="input-row">
+                  <DateSelects
+                    idPrefix="compat-date-b"
+                    legend="Persona 2 — Fecha de nacimiento"
+                    state={personB}
+                    invalid={Boolean(compatError)}
+                    onChange={(patch) => setPersonB((prev) => ({ ...prev, ...patch }))}
+                  />
+                </div>
+
+                {/* Names are optional and only personalise the comparison copy,
+                so they share one row instead of adding two full-height rows
+                that would push the submit button past the fold. */}
+                <div class="input-row input-row--split">
+                  <div class="input-group">
+                    <label class="input-label" for="compat-name-a">
+                      Nombres (opcional)
+                    </label>
+                    <input
+                      id="compat-name-a"
+                      type="text"
+                      placeholder="Persona 1"
+                      value={personA.name}
+                      onInput={(event) =>
+                        setPersonA((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
+                      }
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label sr-only" for="compat-name-b">
+                      Persona 2 — Nombre (opcional)
+                    </label>
+                    <input
+                      id="compat-name-b"
+                      type="text"
+                      placeholder="Persona 2"
+                      value={personB.name}
+                      onInput={(event) =>
+                        setPersonB((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
+                      }
+                    />
+                  </div>
+                </div>
+
+                {compatError && (
+                  <p class="calculator-error" role="alert">
+                    {compatError}
+                  </p>
+                )}
+
+                <button type="submit" class="calculate-btn">
+                  Calcular compatibilidad →
+                </button>
+                <TrustBadges />
+              </form>
+            </div>
+          )}
+        </div>
       </div>
-
-      {activeTab === 'personal' && (
-        <div role="tabpanel" id="panel-personal" aria-labelledby="tab-personal">
-          <form class="calculator-form" noValidate onSubmit={handlePersonalSubmit}>
-            <div class="input-row">
-              <DateSelects
-                idPrefix="calc-date"
-                legend="Fecha de nacimiento"
-                state={person}
-                invalid={Boolean(error)}
-                onChange={(patch) => setPerson((prev) => ({ ...prev, ...patch }))}
-              />
-            </div>
-            <div class="input-row">
-              <div class="input-group">
-                <label class="input-label" for="calc-name">
-                  Nombre (opcional)
-                </label>
-                <input
-                  id="calc-name"
-                  type="text"
-                  placeholder="—"
-                  value={person.name}
-                  onInput={(event) =>
-                    setPerson((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
-                  }
-                />
-              </div>
-            </div>
-
-            {error && (
-              <p class="calculator-error" role="alert">
-                {error}
-              </p>
-            )}
-
-            <button type="submit" class="calculate-btn">
-              Calcular mi matriz →
-            </button>
-            <TrustBadges />
-          </form>
-        </div>
-      )}
-
-      {activeTab === 'compatibilidad' && (
-        <div role="tabpanel" id="panel-compatibilidad" aria-labelledby="tab-compatibilidad">
-          <form class="calculator-form" noValidate onSubmit={handleCompatSubmit}>
-            <div class="input-row">
-              <DateSelects
-                idPrefix="compat-date-a"
-                legend="Persona 1 — Fecha de nacimiento"
-                state={personA}
-                invalid={Boolean(compatError)}
-                onChange={(patch) => setPersonA((prev) => ({ ...prev, ...patch }))}
-              />
-            </div>
-            <div class="input-row">
-              <div class="input-group">
-                <label class="input-label" for="compat-name-a">
-                  Persona 1 — Nombre (opcional)
-                </label>
-                <input
-                  id="compat-name-a"
-                  type="text"
-                  placeholder="—"
-                  value={personA.name}
-                  onInput={(event) =>
-                    setPersonA((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
-                  }
-                />
-              </div>
-            </div>
-
-            <div class="input-row">
-              <DateSelects
-                idPrefix="compat-date-b"
-                legend="Persona 2 — Fecha de nacimiento"
-                state={personB}
-                invalid={Boolean(compatError)}
-                onChange={(patch) => setPersonB((prev) => ({ ...prev, ...patch }))}
-              />
-            </div>
-            <div class="input-row">
-              <div class="input-group">
-                <label class="input-label" for="compat-name-b">
-                  Persona 2 — Nombre (opcional)
-                </label>
-                <input
-                  id="compat-name-b"
-                  type="text"
-                  placeholder="—"
-                  value={personB.name}
-                  onInput={(event) =>
-                    setPersonB((prev) => ({ ...prev, name: (event.target as HTMLInputElement).value }))
-                  }
-                />
-              </div>
-            </div>
-
-            {compatError && (
-              <p class="calculator-error" role="alert">
-                {compatError}
-              </p>
-            )}
-
-            <button type="submit" class="calculate-btn">
-              Calcular compatibilidad →
-            </button>
-            <TrustBadges />
-          </form>
-        </div>
-      )}
 
       {result && activeTab === 'personal' && (
         <div class="results-section">

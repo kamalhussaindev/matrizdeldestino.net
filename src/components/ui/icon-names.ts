@@ -15,4 +15,6 @@ export type IconName =
   | 'coins'
   | 'infinity'
   | 'users'
-  | 'child';
+  | 'child'
+  | 'star'
+  | 'shield';

@@ -38,11 +38,27 @@ export default function MatrixResults({
   containerRef,
 }: MatrixResultsProps) {
   return (
-    <div class="flex flex-col gap-8" ref={containerRef} tabIndex={-1} aria-live="polite">
+    <div class="flex flex-col gap-6" ref={containerRef} tabIndex={-1} aria-live="polite">
       <ResultSummary result={result} />
-      <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={onChartSelect} />
+
+      {/* The chart and the tabs have no chrome of their own, so they get a
+          panel here — otherwise they float on the page background between
+          two carded sections and the result stops reading as one object. */}
+      <section class="card-surface p-5 sm:p-8">
+        <header class="mb-2 text-center">
+          <h3 class="font-heading text-lg font-semibold text-ink">Tu octagrama</h3>
+          <p class="mt-1 text-sm text-ink-muted">Haz clic en cualquier punto para leer su interpretación.</p>
+        </header>
+        <MatrixChart positions={result.positions} activeKey={activeKey} onSelect={onChartSelect} />
+      </section>
+
       <PositionBreakdown result={result} activeKey={activeKey} onSelectKey={onSelectKey} />
-      <InsightTabs result={result} onTabChange={onTabChange} />
+
+      <section class="card-surface p-5 sm:p-8">
+        <h3 class="mb-4 font-heading text-lg font-semibold text-ink">Tu lectura por temas</h3>
+        <InsightTabs result={result} onTabChange={onTabChange} />
+      </section>
+
       <ShareResult result={result} onShare={onShare} />
     </div>
   );

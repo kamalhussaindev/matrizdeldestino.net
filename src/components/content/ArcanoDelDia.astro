@@ -8,14 +8,21 @@ const numero = (dayOfYear % 22) + 1;
 const arcana = getArcana(numero);
 ---
 
-<div class="mx-auto max-w-md px-4">
+<div class="mx-auto max-w-2xl px-4">
   <a
     href={`/arcanos/${numero}/`}
-    class="block rounded-2xl border border-primary/15 bg-surface-alt px-5 py-4 text-center transition-shadow hover:shadow-md"
+    class="card-surface card-surface-hover flex items-center gap-4 p-4 sm:gap-5 sm:p-5"
   >
-    <p class="text-xs font-semibold uppercase tracking-wide text-primary">
-      ✨ Arcano del día: {numero} · {arcana.name}
-    </p>
-    <p class="mt-1.5 text-sm text-ink-muted">{arcana.general}</p>
+    <div
+      class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark font-heading text-xl font-bold text-white shadow-sm"
+      aria-hidden="true"
+    >
+      {numero}
+    </div>
+    <div class="min-w-0">
+      <p class="text-[11px] font-bold uppercase tracking-[0.1em] text-primary-light">Arcano del día</p>
+      <p class="mt-0.5 font-heading text-base font-semibold text-ink">{arcana.name}</p>
+      <p class="mt-1 line-clamp-2 text-sm text-ink-muted">{arcana.general}</p>
+    </div>
   </a>
 </div>

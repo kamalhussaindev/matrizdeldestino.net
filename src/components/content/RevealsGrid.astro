@@ -1,0 +1,68 @@
+---
+import Icon from '../ui/Icon.astro';
+import type { IconName } from '../ui/icon-names';
+
+// Sits directly under the calculator on purpose. Every competitor in this
+// niche puts a block like this much further down, but it answers the
+// question a hesitating visitor actually has — "what do I get if I type my
+// birthday in?" — so it belongs at the first scroll, not the fourth.
+const items: { icon: IconName; title: string; body: string }[] = [
+  {
+    icon: 'sparkle',
+    title: 'Tu arcano central',
+    body: 'La energía en la que te sientes en casa y a la que vuelves una y otra vez.',
+  },
+  {
+    icon: 'infinity',
+    title: 'Tu cola kármica',
+    body: 'Los patrones heredados que se repiten hasta que aprendes a reconocerlos.',
+  },
+  {
+    icon: 'heart',
+    title: 'Tu línea del amor',
+    body: 'Cómo te vinculas, qué buscas y qué tiendes a repetir en tus relaciones.',
+  },
+  {
+    icon: 'coins',
+    title: 'Tu línea del dinero',
+    body: 'Tu relación con la prosperidad y los bloqueos que vale la pena trabajar.',
+  },
+  {
+    icon: 'compass',
+    title: 'Tu propósito de vida',
+    body: 'Hacia dónde apunta tu energía cuando dejas de remar en contra.',
+  },
+  {
+    icon: 'star',
+    title: 'Tus talentos ocultos',
+    body: 'Las capacidades que traes de serie y que casi nunca usas a fondo.',
+  },
+];
+---
+
+<section class="section max-w-6xl">
+  <div class="mx-auto max-w-2xl text-center">
+    <p class="section-eyebrow">Qué obtienes</p>
+    <h2 class="mt-3 font-heading text-2xl font-bold text-ink sm:text-3xl">
+      Todo lo que revela tu matriz
+    </h2>
+    <p class="mt-3 text-ink-muted">
+      Un solo dato —tu fecha de nacimiento— y el octagrama completo con sus 22 arcanos,
+      posición por posición.
+    </p>
+  </div>
+
+  <ul class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      items.map((item) => (
+        <li class="card-surface card-surface-hover p-6">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/8 text-primary">
+            <Icon name={item.icon} class="h-5 w-5" />
+          </div>
+          <h3 class="mt-4 font-heading text-lg font-semibold text-ink">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">{item.body}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

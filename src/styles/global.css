@@ -103,58 +103,137 @@ img[loading='lazy'].loaded {
   opacity: 1;
 }
 
-/* ─────────────────────────────────────────────────────────────
-   Calculator (homepage)
+/* ═══════════════════════════════════════════════════════════════
+   HERO BAND
+   A dark "night sky" field that the calculator card floats on.
+   Competitors in this niche are almost all flat white; the contrast
+   here is what makes the one thing users came to do unmissable.
+   Built from gradients only — no image, so it costs nothing on LCP.
+   ═══════════════════════════════════════════════════════════════ */
 
-   Mapped onto the project tokens rather than the raw hex values
-   from the design brief, so the calculator stays on the existing
-   deep-violet/gold palette instead of introducing a second indigo.
-   ───────────────────────────────────────────────────────────── */
+.hero-band {
+  --hero-band-h: 600px;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (min-width: 640px) {
+  .hero-band {
+    --hero-band-h: 660px;
+  }
+}
+
+/* The dark field is a fixed-height backdrop, not a container. The section
+   itself grows when results render, but the band stays a band and the
+   calculator card overlaps its lower edge. */
+.hero-band::before,
+.hero-band::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Layer order matters: the first background paints on top, so the stars are
+   listed before the opaque base gradient or they disappear under it. */
+.hero-band::before {
+  height: var(--hero-band-h);
+  background:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1.5px 1.5px at 78% 12%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 33% 42%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 88% 28%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1.5px 1.5px at 62% 58%, rgba(228, 197, 88, 0.5), transparent),
+    radial-gradient(1px 1px at 22% 66%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 52% 24%, rgba(228, 197, 88, 0.35), transparent),
+    radial-gradient(1px 1px at 8% 52%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1.5px 1.5px at 93% 62%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(60% 55% at 50% 0%, rgba(124, 58, 237, 0.55), transparent 70%),
+    linear-gradient(165deg, #2e1065 0%, #4c1d95 55%, #34107a 100%);
+}
+
+/* Softens the seam where the band meets the page surface. */
+.hero-band::after {
+  height: var(--hero-band-h);
+  background: linear-gradient(to bottom, transparent calc(100% - 140px), var(--color-surface) 100%);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(228, 197, 88, 0.35);
+  background: rgba(228, 197, 88, 0.1);
+  color: var(--color-accent-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CALCULATOR
+   Mapped onto the project tokens, not the raw hex from the brief, so
+   the calculator stays on the deep-violet/gold palette.
+   ═══════════════════════════════════════════════════════════════ */
 
 .calculator-wrapper {
   width: 100%;
-  padding: 0 1rem;
 }
 
-/* The form column stays narrow and centred; results need more room,
-   so they break out to a wider column below (see .results-section). */
-.calculator-tabs,
-.calculator-form {
-  max-width: 520px;
+/* The form column stays narrow and centred; results need more room, so
+   they break out to a wider column below (see .results-section). */
+.calculator-card {
+  max-width: 560px;
   margin-inline: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow:
+    0 1px 2px rgba(23, 8, 60, 0.08),
+    0 12px 32px -8px rgba(23, 8, 60, 0.35),
+    0 32px 64px -24px rgba(23, 8, 60, 0.45);
+}
+
+.calculator-inner {
+  border-radius: 14px;
+  padding: 22px;
+}
+
+@media (min-width: 640px) {
+  .calculator-inner {
+    padding: 28px;
+  }
 }
 
 .calculator-tabs {
   display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  background: var(--color-surface);
 }
 
 .calculator-tabs button {
   flex: 1;
-  padding: 10px 24px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--color-ink-muted);
   font-family: var(--font-sans);
   font-size: 14px;
-  font-weight: 500;
-  border: 1px solid var(--color-surface-alt);
-  background: #fff;
-  color: var(--color-ink-muted);
+  font-weight: 600;
   cursor: pointer;
   transition:
     background-color 0.15s ease,
     color 0.15s ease,
-    border-color 0.15s ease;
-}
-
-.calculator-tabs button:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-/* Pulled left by 1px so the shared edge is a single hairline; the
-   active tab is raised so its border wins over its neighbour's. */
-.calculator-tabs button:last-child {
-  border-radius: 0 8px 8px 0;
-  margin-left: -1px;
+    box-shadow 0.15s ease;
 }
 
 .calculator-tabs button:hover {
@@ -162,23 +241,22 @@ img[loading='lazy'].loaded {
 }
 
 .calculator-tabs button.active {
-  position: relative;
-  z-index: 1;
-  background: color-mix(in srgb, var(--color-primary) 7%, white);
+  background: #fff;
   color: var(--color-primary);
-  border-color: var(--color-primary);
+  box-shadow: 0 1px 3px rgba(23, 8, 60, 0.12);
 }
 
 .input-row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-@media (max-width: 480px) {
-  .input-row {
-    flex-direction: column;
-  }
+/* Two fields on one line. Items bottom-align so a field whose label is
+   visually hidden still lines up with the one that shows its label. */
+.input-row--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: end;
 }
 
 .input-group {
@@ -189,9 +267,10 @@ img[loading='lazy'].loaded {
 .input-label {
   display: block;
   font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--color-ink-muted);
-  margin-bottom: 6px;
-  font-weight: 500;
+  margin-bottom: 7px;
 }
 
 .input-group input,
@@ -199,74 +278,151 @@ img[loading='lazy'].loaded {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--color-surface-alt);
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: var(--font-sans);
   font-size: 15px;
   color: var(--color-ink);
-  background: #fafafa;
-  transition: border-color 0.15s;
+  background: var(--color-surface);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    background-color 0.15s;
   box-sizing: border-box;
+}
+
+.input-group select {
+  appearance: none;
+  /* Room for the chevron drawn below. */
+  padding-right: 34px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-ink-muted) 50%),
+    linear-gradient(135deg, var(--color-ink-muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% + 2px),
+    calc(100% - 13px) calc(50% + 2px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
 }
 
 .input-group input:focus,
 .input-group select:focus {
   outline: none;
-  border-color: var(--color-primary);
-  background: white;
+  border-color: var(--color-primary-light);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
-/* Day / month / year sit on one row at every width — stacking them
+/* Day / month / year stay on one row at every width — stacking them
    would push the submit button below the fold on small phones. */
 .date-selects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1.35fr 1fr;
   gap: 8px;
 }
 
 .date-selects select {
-  padding-inline: 10px;
+  padding-inline: 12px 30px;
 }
 
 .calculator-error {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
   font-size: 14px;
   color: #b91c1c;
 }
 
 .calculate-btn {
   width: 100%;
-  padding: 14px;
-  background: var(--color-primary);
-  color: white;
+  margin-top: 4px;
+  padding: 15px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+  color: white;
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s;
+  box-shadow: 0 4px 14px -4px rgba(76, 29, 149, 0.55);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
 }
 
 .calculate-btn:hover {
-  background: var(--color-primary-dark);
+  filter: brightness(1.07);
+  box-shadow: 0 8px 22px -6px rgba(76, 29, 149, 0.6);
+  transform: translateY(-1px);
+}
+
+.calculate-btn:active {
+  transform: translateY(0);
 }
 
 .trust-badges {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 12px;
+  gap: 8px 18px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-surface-alt);
 }
 
 .trust-badges span {
   font-size: 12px;
+  font-weight: 500;
   color: var(--color-ink-muted);
 }
 
 .results-section {
   max-width: 64rem;
-  margin: 2rem auto 0;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-surface-alt);
+  margin: 2.5rem auto 0;
+  padding: 0 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION RHYTHM
+   ═══════════════════════════════════════════════════════════════ */
+
+.section {
+  margin-inline: auto;
+  padding: 3.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}
+
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+}
+
+.card-surface {
+  border: 1px solid var(--color-surface-alt);
+  border-radius: 16px;
+  background: #fff;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+a.card-surface:hover,
+.card-surface-hover:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-primary) 25%, transparent);
+  box-shadow: 0 10px 28px -12px rgba(23, 8, 60, 0.3);
 }
