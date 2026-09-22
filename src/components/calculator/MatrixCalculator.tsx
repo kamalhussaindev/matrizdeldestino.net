@@ -17,10 +17,10 @@ declare global {
 
 // Maps the tab labels InsightTabs renders to the stable slugs GA4 events use.
 const TAB_EVENT_NAMES: Record<string, string> = {
-  Purpose: 'proposito',
-  Relationships: 'relaciones',
-  Career: 'carrera',
-  'Strengths and Challenges': 'retos',
+  Propósito: 'proposito',
+  Relaciones: 'relaciones',
+  Carrera: 'carrera',
+  'Fortalezas y retos': 'retos',
 };
 
 // MatrixChart only ever selects the 5 cardinal points or one of the 8 purposes.
@@ -34,18 +34,18 @@ function readChartPositionValue(positions: MatrixPositions, key: PositionKey): n
 
 const CURRENT_YEAR = new Date().getFullYear();
 const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre',
 ];
 const DAYS = Array.from({ length: 31 }, (_, i) => i + 1);
 const YEARS = Array.from({ length: CURRENT_YEAR - 1900 + 1 }, (_, i) => CURRENT_YEAR - i);
@@ -60,9 +60,9 @@ export interface MatrixCalculatorProps {
 }
 
 export default function MatrixCalculator({
-  nameLabel = 'Name (optional)',
-  namePlaceholder = 'Your name',
-  submitLabel = 'Calculate My Matrix →',
+  nameLabel = 'Nombre (opcional)',
+  namePlaceholder = 'Tu nombre',
+  submitLabel = 'Calcular mi matriz →',
 }: MatrixCalculatorProps) {
   const [name, setName] = useState('');
   const [day, setDay] = useState('');
@@ -113,7 +113,7 @@ export default function MatrixCalculator({
     event.preventDefault();
 
     if (!day || !month || !year) {
-      setError('Select your day, month, and year of birth.');
+      setError('Selecciona tu día, mes y año de nacimiento.');
       return;
     }
 
@@ -129,7 +129,7 @@ export default function MatrixCalculator({
       setActiveKey(null);
     } catch (err) {
       setResult(null);
-      setError(err instanceof Error ? err.message : "We couldn't calculate your matrix. Check your date.");
+      setError(err instanceof Error ? err.message : 'No pudimos calcular tu matriz. Verifica tu fecha.');
     }
   };
 
@@ -152,7 +152,7 @@ export default function MatrixCalculator({
           </div>
           <div>
             <span id="calc-date-label" class="text-sm font-medium text-ink">
-              Date of birth{' '}
+              Fecha de nacimiento{' '}
               <span class="text-primary" aria-hidden="true">
                 *
               </span>
@@ -165,42 +165,42 @@ export default function MatrixCalculator({
               class="grid grid-cols-3 gap-2"
             >
               <select
-                aria-label="Day"
+                aria-label="Día"
                 required
                 value={day}
                 onInput={(event) => setDay((event.target as HTMLSelectElement).value)}
                 class={selectClass}
               >
                 <option value="" disabled>
-                  Day
+                  Día
                 </option>
                 {DAYS.map((d) => (
                   <option value={d}>{d}</option>
                 ))}
               </select>
               <select
-                aria-label="Month"
+                aria-label="Mes"
                 required
                 value={month}
                 onInput={(event) => setMonth((event.target as HTMLSelectElement).value)}
                 class={selectClass}
               >
                 <option value="" disabled>
-                  Month
+                  Mes
                 </option>
                 {MONTHS.map((label, index) => (
                   <option value={index + 1}>{label}</option>
                 ))}
               </select>
               <select
-                aria-label="Year"
+                aria-label="Año"
                 required
                 value={year}
                 onInput={(event) => setYear((event.target as HTMLSelectElement).value)}
                 class={selectClass}
               >
                 <option value="" disabled>
-                  Year
+                  Año
                 </option>
                 {YEARS.map((y) => (
                   <option value={y}>{y}</option>
@@ -224,9 +224,9 @@ export default function MatrixCalculator({
         </button>
 
         <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-ink-muted">
-          <span class="rounded-full bg-surface-alt px-3 py-1">100% free</span>
-          <span class="rounded-full bg-surface-alt px-3 py-1">No registration</span>
-          <span class="rounded-full bg-surface-alt px-3 py-1">Instant result</span>
+          <span class="rounded-full bg-surface-alt px-3 py-1">100% gratis</span>
+          <span class="rounded-full bg-surface-alt px-3 py-1">Sin registro</span>
+          <span class="rounded-full bg-surface-alt px-3 py-1">Resultado al instante</span>
         </div>
       </form>
 
@@ -238,16 +238,17 @@ export default function MatrixCalculator({
           <InsightTabs result={result} onTabChange={handleTabChange} />
           <ShareResult result={result} onShare={handleShare} />
           <div class="rounded-2xl border border-accent/40 bg-gradient-to-br from-primary to-primary-dark p-6 text-white shadow-sm sm:p-8">
-            <h2 class="font-heading text-xl font-bold">The PDF Report is Coming</h2>
+            <h2 class="font-heading text-xl font-bold">El informe PDF está en camino</h2>
             <p class="mt-2 text-sm text-white/85">
-              We are preparing a more complete downloadable report. This feature will be available soon.
+              Estamos preparando un informe descargable más completo. Esta función estará disponible
+              próximamente.
             </p>
             <button
               type="button"
               disabled
               class="mt-4 rounded-xl bg-white/10 px-6 py-3 text-sm font-semibold text-white/70 disabled:cursor-not-allowed"
             >
-              Coming soon
+              Próximamente
             </button>
           </div>
         </div>

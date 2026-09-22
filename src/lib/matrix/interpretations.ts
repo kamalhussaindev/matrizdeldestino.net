@@ -54,7 +54,7 @@ const ARCANA_BY_NUMBER: Record<Arcana, ArcanaContent> = {
 
 export function getArcana(n: Arcana): ArcanaContent {
   const content = ARCANA_BY_NUMBER[n];
-  if (!content) throw new Error(`No interpretation available for arcana ${n}.`);
+  if (!content) throw new Error(`No hay interpretación para el arcano ${n}.`);
   return content;
 }
 

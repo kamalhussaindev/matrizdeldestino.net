@@ -10,6 +10,7 @@ import SchemaArticle from '../../components/seo/SchemaArticle.astro';
 import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { readingTime } from '../../lib/readingTime';
+import { INDEXABLE_BLOG_SLUGS } from '../../data/indexable';
 
 const CONTENT_UPDATED = new Date('2026-07-09');
 
@@ -34,7 +35,7 @@ const ogImageCandidate = `/og/og-blog-${entry.slug}.png`;
 const ogImagePath = fileURLToPath(new URL(`../../../public${ogImageCandidate}`, import.meta.url));
 const ogImage = existsSync(ogImagePath) ? ogImageCandidate : '/og/default.png';
 
-const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' });
+const dateFormatter = new Intl.DateTimeFormat('es', { dateStyle: 'long' });
 
 const postURL = new URL(Astro.url.pathname, Astro.site).toString();
 const whatsappShareURL = `https://wa.me/?text=${encodeURIComponent(`${title} ${postURL}`)}`;
@@ -53,6 +54,7 @@ const breadcrumbItems = [
   ogImage={ogImage}
   preloadImage={heroImage}
   showMobileStickyBar
+  noindex={!INDEXABLE_BLOG_SLUGS.includes(entry.slug)}
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaArticle
@@ -73,7 +75,7 @@ const breadcrumbItems = [
       heroImage && (
         <Image
           src={heroImage}
-          alt={`${title} — Arcania Blog`}
+          alt={`${title} — Blog de Arcania`}
           width={1200}
           height={630}
           widths={[600, 900, 1200]}
@@ -89,7 +91,7 @@ const breadcrumbItems = [
     <div class="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink-muted">
       <Image
         src="/images/team/equipo-arcania-numerologia-espiritual.webp"
-        alt="Arcania Team"
+        alt="Equipo de Arcania"
         width={40}
         height={40}
         loading="lazy"
@@ -116,11 +118,11 @@ const breadcrumbItems = [
     </div>
 
     <a href="/matriz-del-destino/" class="mt-8 inline-block font-medium text-primary hover:underline">
-      Calculate Your Matriz del Destino →
+      Calcula tu Matriz del Destino →
     </a>
 
     <div class="mt-8 flex flex-col gap-3 border-t border-surface-alt pt-8">
-      <p class="text-sm font-medium text-ink">Found this useful? Share it:</p>
+      <p class="text-sm font-medium text-ink">¿Te resultó útil? Compártelo:</p>
       <div class="flex flex-wrap gap-2">
         <a
           href={whatsappShareURL}
@@ -143,7 +145,7 @@ const breadcrumbItems = [
           id="copy-link-button"
           class="rounded-full border border-surface-alt px-4 py-2 text-sm font-medium text-ink hover:border-primary hover:text-primary"
         >
-          Copy link
+          Copiar enlace
         </button>
       </div>
     </div>
@@ -151,24 +153,25 @@ const breadcrumbItems = [
     <div class="mt-8 flex flex-col gap-4 rounded-2xl border-l-4 border-accent bg-surface-alt p-6 sm:flex-row sm:items-start">
       <Image
         src="/images/team/equipo-arcania-numerologia-espiritual.webp"
-        alt="Arcania Team"
+        alt="Equipo de Arcania"
         width={64}
         height={64}
         loading="lazy"
         class="h-16 w-16 shrink-0 rounded-full object-cover"
       />
       <div>
-        <p class="font-heading text-base font-semibold text-ink">Arcania Team</p>
+        <p class="font-heading text-base font-semibold text-ink">Equipo de Arcania</p>
         <p class="mt-2 text-sm text-ink-muted">
-          We're a team passionate about self-knowledge and spiritual numerology. We combine the Matriz del
-          Destino method with accessible interpretations to help you discover your life purpose.
+          Somos un equipo apasionado por el autoconocimiento y la numerología espiritual. Combinamos el
+          método de la Matriz del Destino con interpretaciones accesibles para ayudarte a descubrir tu
+          propósito de vida.
         </p>
         <div class="mt-3 flex flex-wrap gap-4 text-sm font-medium">
           <a href="/metodo/" class="text-primary hover:underline">
-            Learn about our method →
+            Conoce nuestro método →
           </a>
           <a href="/sobre-nosotros/" class="text-primary hover:underline">
-            About us →
+            Sobre nosotros →
           </a>
         </div>
       </div>
@@ -181,7 +184,7 @@ const breadcrumbItems = [
   button?.addEventListener('click', async () => {
     await navigator.clipboard.writeText(window.location.href);
     const original = button.textContent;
-    button.textContent = 'Link copied!';
+    button.textContent = '¡Enlace copiado!';
     setTimeout(() => {
       button.textContent = original;
     }, 2000);

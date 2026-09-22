@@ -16,6 +16,7 @@ export interface Props {
   ogType?: 'website' | 'article';
   showMobileStickyBar?: boolean;
   preloadImage?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -26,11 +27,12 @@ const {
   ogType,
   showMobileStickyBar = false,
   preloadImage,
+  noindex = false,
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,12 +51,17 @@ const {
       </style>
     </noscript>
 
+    <link rel="alternate" hreflang="es" href="https://matrizdeldestino.net/" />
+    <link rel="alternate" hreflang="en" href="https://mymatrixofdestiny.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://mymatrixofdestiny.com/" />
+
     <SEOHead
       title={title}
       description={description}
       canonicalPath={canonicalPath}
       ogImage={ogImage}
       ogType={ogType}
+      noindex={noindex}
     />
     <SchemaOrganization />
     <SchemaWebSite />
@@ -63,7 +70,7 @@ const {
     <slot name="schema" />
   </head>
   <body class="flex min-h-screen flex-col">
-    <a href="#contenido" class="skip-link">Skip to content</a>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
     <Header />
     <main id="contenido" class:list={['flex-1', { 'pb-20 md:pb-0': showMobileStickyBar }]}>
       <slot />

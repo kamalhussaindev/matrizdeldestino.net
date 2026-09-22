@@ -34,10 +34,10 @@ const OUTER_RADIUS = 47;
 // Clockwise from the top. Cardinal points (A/B/C/D) sit opposite each other;
 // the diagonal square (F/G/H/I) fills the gaps between them.
 const CARDINAL_NODES: Omit<ChartNode, 'value' | 'ring'>[] = [
-  { key: 'B', label: 'B · Talents', angleDeg: 0, radius: INNER_RADIUS },
-  { key: 'C', label: 'C · Generational Energy', angleDeg: 90, radius: INNER_RADIUS },
-  { key: 'D', label: 'D · Mission', angleDeg: 180, radius: INNER_RADIUS },
-  { key: 'A', label: 'A · Personality', angleDeg: 270, radius: INNER_RADIUS },
+  { key: 'B', label: 'B · Talentos', angleDeg: 0, radius: INNER_RADIUS },
+  { key: 'C', label: 'C · Energía generacional', angleDeg: 90, radius: INNER_RADIUS },
+  { key: 'D', label: 'D · Misión', angleDeg: 180, radius: INNER_RADIUS },
+  { key: 'A', label: 'A · Personalidad', angleDeg: 270, radius: INNER_RADIUS },
 ];
 
 const DIAGONAL_NODES: Omit<DiagonalNode, 'value'>[] = [
@@ -48,14 +48,14 @@ const DIAGONAL_NODES: Omit<DiagonalNode, 'value'>[] = [
 ];
 
 const OUTER_NODES: Omit<ChartNode, 'value' | 'ring'>[] = [
-  { key: 'purposes.personal', label: 'Personal Purpose', angleDeg: 0, radius: OUTER_RADIUS },
-  { key: 'purposes.social', label: 'Social Purpose', angleDeg: 45, radius: OUTER_RADIUS },
-  { key: 'purposes.general', label: 'General Purpose', angleDeg: 90, radius: OUTER_RADIUS },
-  { key: 'purposes.planetary', label: 'Planetary Purpose', angleDeg: 135, radius: OUTER_RADIUS },
-  { key: 'purposes.sky', label: 'Sky Point', angleDeg: 180, radius: OUTER_RADIUS },
-  { key: 'purposes.earth', label: 'Earth Point', angleDeg: 225, radius: OUTER_RADIUS },
-  { key: 'purposes.male', label: 'Masculine Point', angleDeg: 270, radius: OUTER_RADIUS },
-  { key: 'purposes.female', label: 'Feminine Point', angleDeg: 315, radius: OUTER_RADIUS },
+  { key: 'purposes.personal', label: 'Propósito personal', angleDeg: 0, radius: OUTER_RADIUS },
+  { key: 'purposes.social', label: 'Propósito social', angleDeg: 45, radius: OUTER_RADIUS },
+  { key: 'purposes.general', label: 'Propósito general', angleDeg: 90, radius: OUTER_RADIUS },
+  { key: 'purposes.planetary', label: 'Propósito planetario', angleDeg: 135, radius: OUTER_RADIUS },
+  { key: 'purposes.sky', label: 'Punto cielo', angleDeg: 180, radius: OUTER_RADIUS },
+  { key: 'purposes.earth', label: 'Punto tierra', angleDeg: 225, radius: OUTER_RADIUS },
+  { key: 'purposes.male', label: 'Punto masculino', angleDeg: 270, radius: OUTER_RADIUS },
+  { key: 'purposes.female', label: 'Punto femenino', angleDeg: 315, radius: OUTER_RADIUS },
 ];
 
 const toXY = (angleDeg: number, radius: number) => {
@@ -84,7 +84,7 @@ export default function MatrixChart({ positions, activeKey, onSelect }: MatrixCh
   const nodes: ChartNode[] = useMemo(() => {
     const inner = CARDINAL_NODES.map((n) => ({ ...n, value: readValue(positions, n.key), ring: 'inner' as const }));
     const outer = OUTER_NODES.map((n) => ({ ...n, value: readValue(positions, n.key), ring: 'outer' as const }));
-    const center: ChartNode = { key: 'E', label: 'E · Comfort Zone', value: positions.E, angleDeg: 0, radius: 0, ring: 'center' };
+    const center: ChartNode = { key: 'E', label: 'E · Zona de confort', value: positions.E, angleDeg: 0, radius: 0, ring: 'center' };
     return [...inner, center, ...outer];
   }, [positions]);
 
@@ -187,7 +187,7 @@ export default function MatrixChart({ positions, activeKey, onSelect }: MatrixCh
               onFocus={() => setFocusedKey(node.key)}
               onKeyDown={(event) => handleKeyDown(event, node.key)}
               aria-pressed={isActive}
-              aria-label={`${node.label}: arcana ${node.value}`}
+              aria-label={`${node.label}: arcano ${node.value}`}
               class={[
                 'absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-2 font-heading font-bold shadow-sm transition-transform hover:scale-105 focus-visible:scale-105',
                 isCenter

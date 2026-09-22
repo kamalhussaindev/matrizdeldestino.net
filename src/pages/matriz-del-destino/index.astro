@@ -17,33 +17,33 @@ const relatedCalculators = calculators.filter((c) => c.slug !== 'matriz-del-dest
 ---
 
 <BaseLayout
-  title="Free Matriz del Destino Calculator — Instant Reading | Arcania"
-  description="Free Matriz del Destino calculator in English. Enter your date of birth and get your complete octagram, 22 arcana, karmic tail, life purpose, and lines instantly."
+  title="Calculadora Matriz del Destino Gratis — Resultado Instantáneo | Arcania"
+  description="Calculadora de la Matriz del Destino gratis en español. Ingresa tu fecha de nacimiento y obtén tu octagrama completo, 22 arcanos, cola kármica y propósito de vida al instante."
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaFAQ slot="schema" qa={calculatorFaq} />
   <SchemaSoftwareApp
     slot="schema"
-    name="Matriz del Destino Calculator"
-    description="Free Matriz del Destino calculator based on date of birth, with an interpretation of every position in the octagram."
+    name="Calculadora de la Matriz del Destino"
+    description="Calculadora gratuita de la Matriz del Destino a partir de la fecha de nacimiento, con interpretación de cada posición del octagrama."
   />
 
   <Breadcrumbs items={breadcrumbItems} />
 
   <div class="mx-auto max-w-3xl px-4 sm:px-6">
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
-      Free Matriz del Destino Calculator
+      Calculadora de la Matriz del Destino Gratis
     </h1>
     <div class="mt-4 flex flex-col gap-3 text-lg text-ink-muted">
       <p>
-        Calculate your complete Matriz del Destino from your date of birth: your octagram, your
-        masculine and feminine lines, your karmic tail, your money line, and your personal, social,
-        general, and planetary purposes.
+        Calcula tu Matriz del Destino completa a partir de tu fecha de nacimiento: tu octagrama, tus
+        líneas masculina y femenina, tu cola kármica, tu línea del dinero y tus propósitos personal,
+        social, general y planetario.
       </p>
       <p>
-        The result is calculated instantly, directly in your browser, with no registration and no cost.
-        Below the calculator you'll find a complete explanation of the method and how to interpret each
-        position.
+        El resultado se calcula al instante, directamente en tu navegador, sin registro y sin costo. A
+        continuación de la calculadora encontrarás una explicación completa del método y cómo
+        interpretar cada posición.
       </p>
     </div>
   </div>
@@ -53,92 +53,92 @@ const relatedCalculators = calculators.filter((c) => c.slug !== 'matriz-del-dest
   </div>
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">What is the Matriz del Destino?</h2>
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Qué es la Matriz del Destino?</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
       <p>
-        The Matriz del Destino — also known as the soul matrix or soul map — is a self-knowledge system
-        created in 2006 by Russian numerologist Natalia Ladini. It integrates numerology, the 22 major
-        arcana of the tarot, the chakra tradition, and the geometry of an octagram (an eight-pointed star
-        formed by two overlapping squares) to build a symbolic diagnosis of your personality and life
-        path.
+        La Matriz del Destino —también conocida como matriz del alma o mapa del alma— es un sistema de
+        autoconocimiento creado en 2006 por la numeróloga rusa Natalia Ladini. Integra la numerología,
+        los 22 arcanos mayores del tarot, la tradición de los chakras y la geometría de un octagrama
+        (una estrella de ocho puntas formada por dos cuadrados superpuestos) para construir un
+        diagnóstico simbólico de tu personalidad y tu camino de vida.
       </p>
       <p>
-        The first square — the central square — describes your personality, your talents, the
-        generational energy you inherit, and your earthly mission. The second — the ancestral or
-        diagonal square — adds a layer of energies inherited from your family lineage. From the
-        intersection of both emerge your point E (your comfort zone), your karmic tail, your masculine
-        and feminine lines, your money line, and your personal, social, general, and planetary purposes.
+        El primer cuadrado —el cuadrado central— describe tu personalidad, tus talentos, la energía
+        generacional que heredas y tu misión terrenal. El segundo —el cuadrado ancestral o diagonal—
+        añade una capa de energías heredadas de tu linaje familiar. Del cruce de ambos surgen tu punto
+        E (tu zona de confort), tu cola kármica, tus líneas masculina y femenina, tu línea del dinero y
+        tus propósitos personal, social, general y planetario.
       </p>
       <p>
-        Unlike a tarot spread, the arcana here aren't drawn at random — they're derived mathematically
-        from your date of birth, so your matrix is always the same and you can come back to check it
-        whenever you like.
+        A diferencia de una tirada de tarot, aquí los arcanos no se sortean: se derivan matemáticamente
+        de tu fecha de nacimiento, por lo que tu matriz es siempre la misma y puedes volver a consultarla
+        cuando quieras.
       </p>
     </div>
   </section>
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">How is it calculated?</h2>
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Cómo se calcula?</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
-      <p>Our calculator does all of this automatically, but here's how the method works step by step:</p>
+      <p>Nuestra calculadora hace todo esto automáticamente, pero así funciona el método paso a paso:</p>
       <ol class="flex list-decimal flex-col gap-3 pl-5">
         <li>
-          <strong class="text-ink">Point A (day):</strong> your day of birth is taken and, if it exceeds
-          22, its digits are reduced until reaching a number between 1 and 22 — each value corresponds to
-          one of the 22 major arcana.
+          <strong class="text-ink">Punto A (día):</strong> se toma tu día de nacimiento y, si supera 22,
+          se reducen sus dígitos hasta llegar a un número entre 1 y 22 —cada valor corresponde a uno de
+          los 22 arcanos mayores.
         </li>
         <li>
-          <strong class="text-ink">Point B (month):</strong> your month of birth is used directly
-          (1 to 12).
+          <strong class="text-ink">Punto B (mes):</strong> se usa directamente tu mes de nacimiento
+          (del 1 al 12).
         </li>
         <li>
-          <strong class="text-ink">Point C (year):</strong> all the digits of your year of birth are
-          added together and the result is reduced the same way.
+          <strong class="text-ink">Punto C (año):</strong> se suman todos los dígitos de tu año de
+          nacimiento y el resultado se reduce de la misma forma.
         </li>
         <li>
-          <strong class="text-ink">Point D (mission):</strong> the reduced sum of A + B + C.
+          <strong class="text-ink">Punto D (misión):</strong> es la suma reducida de A + B + C.
         </li>
         <li>
-          <strong class="text-ink">Point E (comfort zone):</strong> the reduced sum of A + B + C + D,
-          your central arcana.
+          <strong class="text-ink">Punto E (zona de confort):</strong> es la suma reducida de
+          A + B + C + D, tu arcano central.
         </li>
         <li>
-          <strong class="text-ink">Ancestral square and lines:</strong> from these five values, the rest
-          of the positions are derived — the masculine and feminine lines, the karmic tail, the money
-          line, the chakras, and the four purposes.
+          <strong class="text-ink">Cuadrado ancestral y líneas:</strong> a partir de estos cinco valores
+          se derivan el resto de posiciones —las líneas masculina y femenina, la cola kármica, la línea
+          del dinero, los chakras y los cuatro propósitos.
         </li>
       </ol>
       <p>
-        If you're interested in the full detail of every formula, we explain it with complete
-        transparency on our <a href="/metodo/" class="font-medium text-primary hover:underline">method</a> page.
+        Si te interesa el detalle completo de cada fórmula, lo explicamos con total transparencia en
+        nuestra página de <a href="/metodo/" class="font-medium text-primary hover:underline">método</a>.
       </p>
     </div>
   </section>
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">How to interpret your result</h2>
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">Cómo interpretar tu resultado</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
       <p>
-        Each position in your matrix is interpreted by combining two layers: what that position
-        represents (for example, "your money line") and the meaning of the arcana that landed there.
-        That's why two people with the same central arcana can experience it differently depending on
-        which other positions it appears in.
+        Cada posición de tu matriz se interpreta combinando dos capas: lo que esa posición representa
+        (por ejemplo, "tu línea del dinero") y el significado del arcano que te tocó en ella. Por eso
+        dos personas con el mismo arcano central pueden vivirlo de forma distinta según en qué otras
+        posiciones aparezca.
       </p>
       <p>
-        Below the interactive octagram you'll find the position-by-position breakdown, and further down,
-        tabs organised by theme — purpose, relationships, career, and strengths and challenges — so you
-        can read your result according to what you want to explore first.
+        Debajo del octagrama interactivo encontrarás el desglose posición por posición, y más abajo,
+        pestañas organizadas por tema —propósito, relaciones, carrera, y fortalezas y retos— para leer
+        tu resultado según lo que te interese explorar primero.
       </p>
     </div>
   </section>
 
-  <FaqAccordion heading="Frequently Asked Questions" qa={calculatorFaq} />
+  <FaqAccordion heading="Preguntas frecuentes" qa={calculatorFaq} />
 
   <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
     <p class="rounded-xl bg-surface-alt px-5 py-4 text-sm text-ink-muted">
-      This calculator is a self-knowledge tool and should not be interpreted as a form of divination or
-      fortune-telling. We invite you to use it as a starting point for personal reflection, not as a
-      definitive diagnosis.
+      Esta calculadora es una herramienta de autoconocimiento y no debe interpretarse como una forma de
+      adivinación o predicción del futuro. Te invitamos a usarla como punto de partida para la
+      reflexión personal, no como un diagnóstico definitivo.
     </p>
   </section>
 

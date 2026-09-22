@@ -15,15 +15,19 @@ import RelatedCalculators from '../components/content/RelatedCalculators.astro';
 import BlogStrip from '../components/content/BlogStrip.astro';
 import { homeFaq } from '../data/faq';
 import { calculators } from '../data/calculators';
+import { INDEXABLE_BLOG_SLUGS } from '../data/indexable';
 
 // The homepage is now a brand/informational hub (the calculator itself lives
 // on /matriz-del-destino/), so all calculators — including the main one —
 // belong in this rail.
 const relatedCalculators = calculators;
 
+// Only the indexable posts are linked from here: the homepage is one of the
+// 8 indexed pages, so its outbound links should feed the other 7, not the
+// noindexed archive.
 const latestPosts = (await getCollection('blog'))
+  .filter((post) => INDEXABLE_BLOG_SLUGS.includes(post.slug))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 3)
   .map((post) => ({
     title: post.data.title,
     excerpt: post.data.metaDescription,
@@ -33,18 +37,19 @@ const latestPosts = (await getCollection('blog'))
 ---
 
 <BaseLayout
-  title="Matriz del Destino Calculator — Free English Reading | Arcania"
-  description="Calculate your Matriz del Destino free in English. Discover your 22 arcana, karmic tail, life purpose, love line and money line — instant results, no sign up."
+  title="Matriz del Destino — Calculadora Gratis con los 22 Arcanos | Arcania"
+  description="Calcula tu Matriz del Destino gratis con fecha de nacimiento. Descubre tus 22 arcanos, cola kármica, línea del amor y propósito de vida al instante."
+  canonicalPath="/"
   preloadImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
 >
   <SchemaFAQ slot="schema" qa={homeFaq} />
 
   <Hero
-    title="Discover Your Matriz del Destino"
-    subtitle="A self-knowledge system that reveals your personality, purpose, and energies from your date of birth and the 22 major arcana."
+    title="Descubre Tu Matriz del Destino"
+    subtitle="Un sistema de autoconocimiento que revela tu personalidad, propósito y energías a partir de tu fecha de nacimiento y los 22 arcanos mayores."
     backgroundImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
   >
-    <Button href="/matriz-del-destino/" size="lg">Calculate My Matriz del Destino →</Button>
+    <Button href="/matriz-del-destino/" size="lg">Calcular Mi Matriz del Destino →</Button>
   </Hero>
 
   <div class="pt-8">
@@ -58,22 +63,23 @@ const latestPosts = (await getCollection('blog'))
   <TrustSignals />
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">What is the Matriz del Destino?</h2>
+    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Qué es la Matriz del Destino?</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
       <p>
-        The Matriz del Destino is a self-knowledge system created in 2006 by Russian numerologist Natalia
-        Ladini. It combines numerology, the 22 major arcana of the tarot, and chakra energy to build a
-        symbolic map — the octagram — from a single piece of data: your date of birth.
+        La Matriz del Destino es un sistema de autoconocimiento creado en 2006 por la numeróloga rusa
+        Natalia Ladini. Combina numerología, los 22 arcanos mayores del tarot y energía de los chakras
+        para construir un mapa simbólico — el octagrama — a partir de un solo dato: tu fecha de
+        nacimiento.
       </p>
       <p>
-        The method reduces your day, month, and year of birth to numbers from 1 to 22, then distributes
-        them across the positions of the octagram. Each position represents a different aspect of your
-        life — personality, talents, purpose, relationships, and your relationship with money —
-        interpreted by crossing its meaning with the corresponding arcana.
+        El método reduce tu día, mes y año de nacimiento a números del 1 al 22, y los distribuye en las
+        posiciones del octagrama. Cada posición representa un aspecto distinto de tu vida —
+        personalidad, talentos, propósito, relaciones y tu relación con el dinero — interpretado
+        cruzando su significado con el arcano correspondiente.
       </p>
       <p>
-        Want to go deeper? Visit our complete guide on <a href="/guias/que-es-la-matriz-del-destino/" class="font-medium text-primary hover:underline">what the Matriz del Destino is</a>,
-        or explore the meaning of each of the <a href="/arcanos/" class="font-medium text-primary hover:underline">22 major arcana</a>.
+        ¿Quieres profundizar? Visita nuestra guía completa sobre <a href="/guias/que-es-la-matriz-del-destino/" class="font-medium text-primary hover:underline">qué es la Matriz del Destino</a>
+        o aprende <a href="/guias/como-calcular-la-matriz-del-destino/" class="font-medium text-primary hover:underline">cómo calcularla paso a paso</a>.
       </p>
     </div>
   </section>
@@ -84,16 +90,17 @@ const latestPosts = (await getCollection('blog'))
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
     <div class="rounded-2xl bg-gradient-to-br from-primary to-primary-dark px-6 py-10 text-center text-white sm:px-12">
-      <h2 class="font-heading text-2xl font-bold sm:text-3xl">The PDF Report is Coming</h2>
+      <h2 class="font-heading text-2xl font-bold sm:text-3xl">El Informe PDF Está en Camino</h2>
       <p class="mx-auto mt-3 max-w-xl text-white/85">
-        We are preparing a more complete downloadable report. This feature will be available soon.
+        Estamos preparando un informe descargable más completo. Esta función estará disponible
+        próximamente.
       </p>
       <button
         type="button"
         disabled
         class="mx-auto mt-6 rounded-xl bg-white/10 px-6 py-3 text-sm font-semibold text-white/70 disabled:cursor-not-allowed"
       >
-        Coming soon
+        Próximamente
       </button>
     </div>
   </section>

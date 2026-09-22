@@ -19,28 +19,32 @@ export interface Props {
 // exist and this section renders them instead.
 const defaultPosts: BlogPostPreview[] = [
   {
-    title: 'Coming soon',
-    excerpt: 'We are preparing articles on numerology, arcana, and self-knowledge.',
+    title: 'Próximamente',
+    excerpt: 'Estamos preparando artículos sobre numerología, arcanos y autoconocimiento.',
     href: '/blog/',
   },
   {
-    title: 'Coming soon',
-    excerpt: "You'll soon find practical guides here for interpreting your matrix.",
+    title: 'Próximamente',
+    excerpt: 'Pronto encontrarás aquí guías prácticas para interpretar tu matriz.',
     href: '/blog/',
   },
   {
-    title: 'Coming soon',
-    excerpt: 'Real stories and examples of Matriz del Destino readings.',
+    title: 'Próximamente',
+    excerpt: 'Historias y ejemplos reales de lecturas de la Matriz del Destino.',
     href: '/blog/',
   },
 ];
 
 const { posts = defaultPosts } = Astro.props;
+
+// The rail is fed a variable number of cards (the homepage links only the
+// indexable posts), so the column count follows the card count.
+const gridCols = posts.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-3';
 ---
 
 <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">From the Blog</h2>
-  <div class="mt-10 grid gap-6 sm:grid-cols-3">
+  <h2 class="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">Del Blog</h2>
+  <div class={`mt-10 grid gap-6 ${gridCols}`}>
     {
       posts.map((post) => (
         <Card href={post.href} class="overflow-hidden">

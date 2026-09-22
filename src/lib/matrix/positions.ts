@@ -113,13 +113,13 @@ export function buildMoneyPoint(raw: RawPoints): Arcana {
  * before this ships as real content.
  */
 const CHAKRA_NAMES = [
-  'Root',
-  'Sacral',
-  'Solar Plexus',
-  'Heart',
-  'Throat',
-  'Third Eye',
-  'Crown',
+  'Raíz',
+  'Sacro',
+  'Plexo solar',
+  'Corazón',
+  'Garganta',
+  'Tercer ojo',
+  'Corona',
 ] as const;
 
 export function buildChakras(raw: RawPoints): ChakraPosition[] {

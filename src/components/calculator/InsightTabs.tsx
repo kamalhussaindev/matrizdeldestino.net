@@ -7,13 +7,13 @@ export interface InsightTabsProps {
   onTabChange?: (tab: string) => void;
 }
 
-const TABS = ['Purpose', 'Relationships', 'Career', 'Strengths and Challenges'] as const;
+const TABS = ['Propósito', 'Relaciones', 'Carrera', 'Fortalezas y retos'] as const;
 type Tab = (typeof TABS)[number];
 
 const CORE_KEYS = ['A', 'B', 'C', 'D', 'E'] as const;
 
 export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
-  const [active, setActive] = useState<Tab>('Purpose');
+  const [active, setActive] = useState<Tab>('Propósito');
   const { positions } = result;
 
   const handleTabClick = (tab: Tab) => {
@@ -23,7 +23,7 @@ export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
 
   return (
     <div>
-      <div role="tablist" aria-label="Aspects of your matrix" class="flex flex-wrap gap-1 border-b border-surface-alt">
+      <div role="tablist" aria-label="Aspectos de tu matriz" class="flex flex-wrap gap-1 border-b border-surface-alt">
         {TABS.map((tab) => (
           <button
             key={tab}
@@ -41,7 +41,7 @@ export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
       </div>
 
       <div role="tabpanel" class="py-4 text-ink-muted">
-        {active === 'Purpose' && (
+        {active === 'Propósito' && (
           <div class="flex flex-col gap-3">
             <p>{describePosition('E', positions.E)}</p>
             <p>{describePosition('purposes.personal', positions.purposes.personal)}</p>
@@ -50,7 +50,7 @@ export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
           </div>
         )}
 
-        {active === 'Relationships' && (
+        {active === 'Relaciones' && (
           <div class="flex flex-col gap-3">
             <p>{describePosition('masculine', positions.masculine, 'love')}</p>
             <p>{describePosition('feminine', positions.feminine, 'love')}</p>
@@ -58,17 +58,17 @@ export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
           </div>
         )}
 
-        {active === 'Career' && (
+        {active === 'Carrera' && (
           <div class="flex flex-col gap-3">
             <p>{describePosition('D', positions.D, 'career')}</p>
             <p>{describePosition('money', positions.money, 'career')}</p>
           </div>
         )}
 
-        {active === 'Strengths and Challenges' && (
+        {active === 'Fortalezas y retos' && (
           <div class="grid gap-6 sm:grid-cols-2">
             <div>
-              <h3 class="font-heading text-sm font-semibold text-ink">Strengths</h3>
+              <h3 class="font-heading text-sm font-semibold text-ink">Fortalezas</h3>
               <ul class="mt-2 flex flex-col gap-2">
                 {CORE_KEYS.map((key) => (
                   <li key={key}>{getArcana(positions[key]).gift}</li>
@@ -76,7 +76,7 @@ export default function InsightTabs({ result, onTabChange }: InsightTabsProps) {
               </ul>
             </div>
             <div>
-              <h3 class="font-heading text-sm font-semibold text-ink">Challenges</h3>
+              <h3 class="font-heading text-sm font-semibold text-ink">Retos</h3>
               <ul class="mt-2 flex flex-col gap-2">
                 {CORE_KEYS.map((key) => (
                   <li key={key}>{getArcana(positions[key]).shadow}</li>

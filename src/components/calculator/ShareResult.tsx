@@ -53,7 +53,7 @@ async function drawShareCard(canvas: HTMLCanvasElement, result: MatrixResult): P
   ctx.fillStyle = 'rgba(255,255,255,0.85)';
   ctx.font = '400 32px Inter, sans-serif';
   ctx.fillText(
-    displayName ? `${displayName}'s Matriz del Destino` : 'My Matriz del Destino',
+    displayName ? `La Matriz del Destino de ${displayName}` : 'Mi Matriz del Destino',
     CARD_SIZE / 2,
     195,
   );
@@ -102,7 +102,7 @@ async function drawShareCard(canvas: HTMLCanvasElement, result: MatrixResult): P
 
   ctx.fillStyle = 'rgba(255,255,255,0.6)';
   ctx.font = '400 26px Inter, sans-serif';
-  ctx.fillText('Calculate yours free · matrizdeldestino.net', CARD_SIZE / 2, CARD_SIZE - 70);
+  ctx.fillText('Calcula la tuya gratis · matrizdeldestino.net', CARD_SIZE / 2, CARD_SIZE - 70);
 
   return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), 'image/png'));
 }
@@ -134,13 +134,13 @@ export default function ShareResult({ result, onShare }: ShareResultProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
 
-  const shareText = `I discovered my Matriz del Destino! My central arcana is ${result.central} — ${getArcana(result.central).name}. Calculate yours free:`;
+  const shareText = `¡Descubrí mi Matriz del Destino! Mi arcano central es el ${result.central} — ${getArcana(result.central).name}. Calcula la tuya gratis:`;
   const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const handleNativeShare = async () => {
     if (!blob) return;
     const file = new File([blob], 'matriz-del-destino.png', { type: 'image/png' });
-    const shareData = { files: [file], title: 'My Matriz del Destino', text: shareText };
+    const shareData = { files: [file], title: 'Mi Matriz del Destino', text: shareText };
     if (navigator.canShare?.(shareData)) {
       try {
         await navigator.share(shareData);
@@ -184,7 +184,7 @@ export default function ShareResult({ result, onShare }: ShareResultProps) {
 
   return (
     <div class="rounded-2xl border border-surface-alt bg-white p-6 shadow-sm sm:p-8">
-      <h2 class="font-heading text-xl font-bold text-ink">Share Your Result</h2>
+      <h2 class="font-heading text-xl font-bold text-ink">Comparte tu resultado</h2>
       <canvas ref={canvasRef} class="hidden" aria-hidden="true" />
 
       {previewUrl ? (
@@ -192,7 +192,7 @@ export default function ShareResult({ result, onShare }: ShareResultProps) {
           src={previewUrl}
           width={CARD_SIZE}
           height={CARD_SIZE}
-          alt={`Shareable card for your Matriz del Destino, central arcana ${result.central}`}
+          alt={`Tarjeta para compartir tu Matriz del Destino, arcano central ${result.central}`}
           class="mx-auto mt-4 aspect-square w-full max-w-xs rounded-xl shadow-md"
         />
       ) : (
@@ -206,7 +206,7 @@ export default function ShareResult({ result, onShare }: ShareResultProps) {
             onClick={handleNativeShare}
             class="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent hover:text-ink"
           >
-            Share
+            Compartir
           </button>
         )}
         <button
@@ -228,18 +228,18 @@ export default function ShareResult({ result, onShare }: ShareResultProps) {
           onClick={handleDownload}
           class="rounded-full border-2 border-primary px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary hover:text-white"
         >
-          Download image
+          Descargar imagen
         </button>
         <button
           type="button"
           onClick={handleCopyLink}
           class="rounded-full border-2 border-primary px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary hover:text-white"
         >
-          {copied ? 'Link copied!' : 'Copy link'}
+          {copied ? '¡Enlace copiado!' : 'Copiar enlace'}
         </button>
       </div>
       <p class="mt-3 text-center text-xs text-ink-muted">
-        For Instagram: download the image and share it from the app — Instagram doesn't allow sharing directly from the browser.
+        Para Instagram: descarga la imagen y compártela desde la app — Instagram no permite compartir directamente desde el navegador.
       </p>
     </div>
   );

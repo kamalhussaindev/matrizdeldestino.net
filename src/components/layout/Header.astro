@@ -4,9 +4,9 @@ import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
 
 const navItems = [
-  { label: 'Calculator', href: '/matriz-del-destino/' },
-  { label: 'Arcana', href: '/arcanos/' },
-  { label: 'Guides', href: '/guias/' },
+  { label: 'Calculadora', href: '/matriz-del-destino/' },
+  { label: 'Arcanos', href: '/arcanos/' },
+  { label: 'Guías', href: '/guias/' },
   { label: 'Blog', href: '/blog/' },
 ];
 ---
@@ -28,7 +28,7 @@ const navItems = [
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input sr-only" />
 
-    <nav aria-label="Main" class="hidden items-center gap-8 md:flex">
+    <nav aria-label="Principal" class="hidden items-center gap-8 md:flex">
       {
         navItems.map((item) => (
           <a href={item.href} class="text-sm font-medium text-ink hover:text-primary">
@@ -36,20 +36,20 @@ const navItems = [
           </a>
         ))
       }
-      <Button href="/matriz-del-destino/" size="sm">Calculate Free</Button>
+      <Button href="/matriz-del-destino/" size="sm">Calcular Gratis</Button>
     </nav>
 
     <label
       for="nav-toggle"
       class="toggle-label cursor-pointer rounded-lg p-2 hover:bg-surface-alt md:hidden"
-      aria-label="Open menu"
+      aria-label="Abrir menú"
     >
       <Icon name="menu" class="icon-menu h-6 w-6" />
       <Icon name="close" class="icon-close hidden h-6 w-6" />
     </label>
   </div>
 
-  <nav aria-label="Main mobile" class="mobile-nav hidden flex-col gap-1 border-t border-surface-alt px-4 py-4 md:hidden">
+  <nav aria-label="Principal móvil" class="mobile-nav hidden flex-col gap-1 border-t border-surface-alt px-4 py-4 md:hidden">
     {
       navItems.map((item) => (
         <a href={item.href} class="rounded-lg px-2 py-2 text-sm font-medium text-ink hover:bg-surface-alt">
@@ -57,7 +57,7 @@ const navItems = [
         </a>
       ))
     }
-    <Button href="/matriz-del-destino/" size="sm" class="mt-2 w-full">Calculate Free</Button>
+    <Button href="/matriz-del-destino/" size="sm" class="mt-2 w-full">Calcular Gratis</Button>
   </nav>
 </header>
 

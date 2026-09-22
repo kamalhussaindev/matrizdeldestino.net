@@ -10,6 +10,8 @@ import SchemaArticle from '../../components/seo/SchemaArticle.astro';
 import Card from '../../components/ui/Card.astro';
 import TableOfContents from '../../components/content/TableOfContents.astro';
 import { readingTime } from '../../lib/readingTime';
+import SchemaFAQ from '../../components/seo/SchemaFAQ.astro';
+import { INDEXABLE_GUIA_SLUGS } from '../../data/indexable';
 
 const CONTENT_UPDATED = new Date('2026-07-09');
 
@@ -27,7 +29,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-const { title, metaDescription, author, relatedGuias, datePublished, heroImage } = entry.data;
+const { title, metaDescription, author, relatedGuias, datePublished, heroImage, faqs } = entry.data;
 const minutesToRead = readingTime(entry.body);
 
 const ogImageCandidate = `/og/og-guia-${entry.slug}.png`;
@@ -40,7 +42,7 @@ const relatedEntries = relatedGuias
   .filter((e): e is CollectionEntry<'guias'> => Boolean(e));
 
 const breadcrumbItems = [
-  { label: 'Guides', href: '/guias/' },
+  { label: 'Guías', href: '/guias/' },
   { label: title },
 ];
 ---
@@ -51,6 +53,7 @@ const breadcrumbItems = [
   ogImage={ogImage}
   preloadImage={heroImage}
   showMobileStickyBar
+  noindex={!INDEXABLE_GUIA_SLUGS.includes(entry.slug)}
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaArticle
@@ -61,6 +64,7 @@ const breadcrumbItems = [
     dateModified={CONTENT_UPDATED}
     image={heroImage ? new URL(heroImage, Astro.site).toString() : undefined}
   />
+  {faqs.length > 0 && <SchemaFAQ slot="schema" qa={faqs} />}
 
   <Breadcrumbs items={breadcrumbItems} />
 
@@ -69,7 +73,7 @@ const breadcrumbItems = [
       heroImage && (
         <Image
           src={heroImage}
-          alt={`${title} — Arcania Guide`}
+          alt={`${title} — Guía de Arcania`}
           width={1200}
           height={500}
           widths={[600, 900, 1200]}
@@ -89,10 +93,10 @@ const breadcrumbItems = [
     </div>
 
     <a href="/matriz-del-destino/" class="mt-4 inline-block font-medium text-primary hover:underline">
-      Calculate Your Matriz del Destino →
+      Calcula tu Matriz del Destino →
     </a>
 
-    <TableOfContents headings={headings.filter((h) => h.depth === 2)} label="In this guide:" />
+    <TableOfContents headings={headings.filter((h) => h.depth === 2)} label="En esta guía:" />
 
     <div class="prose prose-headings:font-heading prose-headings:text-ink prose-p:text-ink-muted prose-a:text-primary mt-6 max-w-none">
       <Content />
@@ -101,7 +105,7 @@ const breadcrumbItems = [
     {
       relatedEntries.length > 0 && (
         <section class="py-12">
-          <h2 class="font-heading text-2xl font-bold text-ink">Related Guides</h2>
+          <h2 class="font-heading text-2xl font-bold text-ink">Guías Relacionadas</h2>
           <div class="mt-6 grid gap-4 sm:grid-cols-2">
             {relatedEntries.map((related) => (
               <Card href={`/guias/${related.slug}/`}>
