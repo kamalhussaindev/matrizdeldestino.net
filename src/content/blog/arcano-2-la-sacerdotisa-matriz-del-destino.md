@@ -8,7 +8,7 @@ tags: ["arcanos", "arcano 2", "la sacerdotisa", "matriz del destino"]
 heroImage: "/images/blog/arcano-2-la-sacerdotisa-matriz-del-destino.webp"
 ---
 
-Pocos arcanos generan tanta identificación silenciosa como el Arcano 2. Si calculaste tu [Matriz del Destino](/matriz-del-destino/) y La Sacerdotisa apareció en alguna de tus posiciones, es probable que reconozcas de inmediato esa sensación de "saber cosas sin poder explicar cómo las sabes". Es uno de los arcanos más intuitivos de todo el sistema.
+Pocos arcanos generan tanta identificación silenciosa como el Arcano 2. Si calculaste tu [Matriz del Destino](/) y La Sacerdotisa apareció en alguna de tus posiciones, es probable que reconozcas de inmediato esa sensación de "saber cosas sin poder explicar cómo las sabes". Es uno de los arcanos más intuitivos de todo el sistema.
 
 ## Significado del Arcano 2 — La Sacerdotisa
 
@@ -48,4 +48,4 @@ En la [línea del dinero](/guias/linea-del-dinero/), esta energía suele traduci
 
 El Arcano 2 se relaciona especialmente con [el Arcano 9](/arcanos/9/) —la introspección solitaria del Ermitaño—, [el Arcano 17](/arcanos/17/) —la esperanza serena que también trabaja desde el silencio— y [el Arcano 18](/arcanos/18/) —el mundo de lo intuitivo y lo no dicho—. Leer estos arcanos en conjunto ayuda a comprender mejor el papel del 2 dentro de tu matriz completa.
 
-Si quieres ver en qué posición exacta aparece el Arcano 2 en tu caso, puedes [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en minutos, o revisar la ficha completa del [Arcano 2](/arcanos/2/) para profundizar en cada matiz de su significado.
+Si quieres ver en qué posición exacta aparece el Arcano 2 en tu caso, puedes [calcular tu Matriz del Destino](/) gratis en minutos, o revisar la ficha completa del [Arcano 2](/arcanos/2/) para profundizar en cada matiz de su significado.

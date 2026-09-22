@@ -17,7 +17,7 @@ El arcano central, también llamado Punto E, es el resultado final de la primera
 
 ## Cómo se calcula el Punto E
 
-El cálculo sigue la misma lógica de reducción que el resto del sistema. Primero se obtiene el Punto A (tu día de nacimiento), el Punto B (tu mes) y el Punto C (la suma reducida de los dígitos de tu año). Sumando estos tres se obtiene el Punto D, tu misión terrenal. Y sumando A + B + C + D, reduciendo el resultado hasta un número entre 1 y 22, se llega al arcano central: el Punto E. Puedes ver el proceso completo, con un ejemplo resuelto paso a paso, en nuestra guía sobre [cómo calcular la Matriz del Destino](/guias/como-calcular-la-matriz-del-destino/) —o simplemente [calcular el tuyo gratis](/matriz-del-destino/) en segundos.
+El cálculo sigue la misma lógica de reducción que el resto del sistema. Primero se obtiene el Punto A (tu día de nacimiento), el Punto B (tu mes) y el Punto C (la suma reducida de los dígitos de tu año). Sumando estos tres se obtiene el Punto D, tu misión terrenal. Y sumando A + B + C + D, reduciendo el resultado hasta un número entre 1 y 22, se llega al arcano central: el Punto E. Puedes ver el proceso completo, con un ejemplo resuelto paso a paso, en nuestra guía sobre [cómo calcular la Matriz del Destino](/guias/como-calcular-la-matriz-del-destino/) —o simplemente [calcular el tuyo gratis](/) en segundos.
 
 ## Qué significa en tu vida
 
@@ -31,4 +31,4 @@ Aquí es donde más se confunde la terminología, porque en realidad son dos nom
 
 Conocer tu arcano central no es solo un dato curioso: es la base sobre la que conviene interpretar el resto de tu matriz. Antes de mirar tu cola kármica, tu línea del dinero o tus propósitos, vale la pena preguntarte cómo esa energía central se manifiesta en tu día a día, y si actualmente la estás viviendo de forma sana o forzada. Un arcano central bien integrado no se siente como una limitación, sino como un lugar al que es un alivio volver.
 
-¿Todavía no sabes cuál es tu arcano central? Puedes [calcular tu Matriz del Destino gratis](/matriz-del-destino/), sin registro y con el resultado al instante, y ver de inmediato qué arcano ocupa el centro de tu octagrama.
+¿Todavía no sabes cuál es tu arcano central? Puedes [calcular tu Matriz del Destino gratis](/), sin registro y con el resultado al instante, y ver de inmediato qué arcano ocupa el centro de tu octagrama.

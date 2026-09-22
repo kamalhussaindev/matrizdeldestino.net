@@ -1,11 +1,48 @@
 ---
+// Mobile-only CTA that catches readers who scrolled past the calculator.
+// On the homepage it stays hidden until the calculator has scrolled out of
+// view above, then slides in and scrolls back to it. On pages that have no
+// calculator (guides, blog) it is a plain link to the homepage and is shown
+// straight away.
 ---
 
-<div class="fixed inset-x-0 bottom-0 z-40 border-t border-surface-alt bg-white p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] md:hidden">
+<div
+  id="mobile-sticky-bar"
+  data-visible="false"
+  class="fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-surface-alt bg-white p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] transition-transform duration-200 data-[visible=true]:translate-y-0 md:hidden"
+>
   <a
-    href="/matriz-del-destino/"
-    class="block w-full rounded-full bg-accent px-6 py-3 text-center text-sm font-semibold text-ink"
+    id="mobile-sticky-cta"
+    href="/#calculadora"
+    class="block w-full rounded-lg bg-primary px-6 py-3 text-center text-sm font-semibold text-white"
   >
-    ¿Cuál es tu arcano? → Calcular Gratis
+    Calcular Matriz del Destino ↑
   </a>
 </div>
+
+<script>
+  const bar = document.getElementById('mobile-sticky-bar');
+  const cta = document.getElementById('mobile-sticky-cta');
+  const calculator = document.getElementById('calculadora');
+
+  const show = (visible: boolean) => bar?.setAttribute('data-visible', String(visible));
+
+  if (!calculator) {
+    // No calculator on this page — the CTA is just a link home.
+    show(true);
+  } else {
+    // Show the bar only once the calculator has left the viewport upwards,
+    // so it never covers the thing it is pointing at.
+    const observer = new IntersectionObserver(
+      ([entry]) => show(!entry.isIntersecting && entry.boundingClientRect.top < 0),
+      { threshold: 0 },
+    );
+    observer.observe(calculator);
+
+    cta?.addEventListener('click', (event) => {
+      event.preventDefault();
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      calculator.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  }
+</script>

@@ -39,4 +39,4 @@ La señal más clara de que esta energía se desbordó hacia la represión es el
 
 Para conocer el significado completo del Arcano 8 en cada posición de tu matriz —en el amor, el trabajo, la cola kármica y más— visita la [ficha completa del Arcano 8](/arcanos/8/).
 
-Si querés ver en qué posición aparece el Arcano 8 en tu propio resultado, podés [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en minutos.
+Si querés ver en qué posición aparece el Arcano 8 en tu propio resultado, podés [calcular tu Matriz del Destino](/) gratis en minutos.

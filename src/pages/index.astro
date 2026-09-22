@@ -2,29 +2,18 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SchemaFAQ from '../components/seo/SchemaFAQ.astro';
-import Hero from '../components/content/Hero.astro';
-import Button from '../components/ui/Button.astro';
-import ValuePropCards from '../components/content/ValuePropCards.astro';
-import ExampleResult from '../components/content/ExampleResult.astro';
-import BenefitsGrid from '../components/content/BenefitsGrid.astro';
-import HowItWorks from '../components/content/HowItWorks.astro';
-import TrustSignals from '../components/content/TrustSignals.astro';
+import SchemaSoftwareApp from '../components/seo/SchemaSoftwareApp.astro';
+import UnifiedCalculator from '../components/calculator/UnifiedCalculator';
 import ArcanoDelDia from '../components/content/ArcanoDelDia.astro';
+import HowItWorks from '../components/content/HowItWorks.astro';
 import FaqAccordion from '../components/content/FaqAccordion.astro';
-import RelatedCalculators from '../components/content/RelatedCalculators.astro';
 import BlogStrip from '../components/content/BlogStrip.astro';
 import { homeFaq } from '../data/faq';
-import { calculators } from '../data/calculators';
 import { INDEXABLE_BLOG_SLUGS } from '../data/indexable';
 
-// The homepage is now a brand/informational hub (the calculator itself lives
-// on /matriz-del-destino/), so all calculators — including the main one —
-// belong in this rail.
-const relatedCalculators = calculators;
-
-// Only the indexable posts are linked from here: the homepage is one of the
-// 8 indexed pages, so its outbound links should feed the other 7, not the
-// noindexed archive.
+// Only the indexable posts are linked from here: the homepage is the page we
+// want ranking, so its outbound links should feed the other 5 indexed pages,
+// not the noindexed archive.
 const latestPosts = (await getCollection('blog'))
   .filter((post) => INDEXABLE_BLOG_SLUGS.includes(post.slug))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -40,30 +29,37 @@ const latestPosts = (await getCollection('blog'))
   title="Matriz del Destino — Calculadora Gratis con los 22 Arcanos | Arcania"
   description="Calcula tu Matriz del Destino gratis con fecha de nacimiento. Descubre tus 22 arcanos, cola kármica, línea del amor y propósito de vida al instante."
   canonicalPath="/"
-  preloadImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
+  showMobileStickyBar
 >
   <SchemaFAQ slot="schema" qa={homeFaq} />
+  <SchemaSoftwareApp
+    slot="schema"
+    name="Calculadora de la Matriz del Destino"
+    description="Calculadora gratuita de la Matriz del Destino a partir de la fecha de nacimiento, con interpretación de cada posición del octagrama y cálculo de compatibilidad de pareja."
+  />
 
-  <Hero
-    title="Descubre Tu Matriz del Destino"
-    subtitle="Un sistema de autoconocimiento que revela tu personalidad, propósito y energías a partir de tu fecha de nacimiento y los 22 arcanos mayores."
-    backgroundImage="/images/homepage/hero-calculadora-matriz-del-destino.webp"
-  >
-    <Button href="/matriz-del-destino/" size="lg">Calcular Mi Matriz del Destino →</Button>
-  </Hero>
+  <section id="calculadora" class="mx-auto max-w-5xl px-4 pb-4 pt-10 sm:px-6 sm:pt-14">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="font-heading text-2xl font-bold text-ink sm:text-3xl">
+        Calculadora de la Matriz del Destino
+      </h1>
+      <p class="mx-auto mt-3 max-w-xl text-base text-ink-muted">
+        Ingresa tu fecha de nacimiento y descubre tus 22 arcanos, tu cola kármica y tu propósito de
+        vida al instante.
+      </p>
+    </div>
 
-  <div class="pt-8">
+    <div class="mt-8">
+      <UnifiedCalculator client:load />
+    </div>
+  </section>
+
+  <div class="pb-4 pt-6">
     <ArcanoDelDia />
   </div>
 
-  <ValuePropCards />
-  <ExampleResult />
-  <BenefitsGrid />
-  <HowItWorks />
-  <TrustSignals />
-
-  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">¿Qué es la Matriz del Destino?</h2>
+  <section class="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+    <h2 class="font-heading text-2xl font-bold text-ink">¿Qué es la Matriz del Destino?</h2>
     <div class="mt-4 flex flex-col gap-4 text-ink-muted">
       <p>
         La Matriz del Destino es un sistema de autoconocimiento creado en 2006 por la numeróloga rusa
@@ -77,31 +73,18 @@ const latestPosts = (await getCollection('blog'))
         personalidad, talentos, propósito, relaciones y tu relación con el dinero — interpretado
         cruzando su significado con el arcano correspondiente.
       </p>
-      <p>
-        ¿Quieres profundizar? Visita nuestra guía completa sobre <a href="/guias/que-es-la-matriz-del-destino/" class="font-medium text-primary hover:underline">qué es la Matriz del Destino</a>
-        o aprende <a href="/guias/como-calcular-la-matriz-del-destino/" class="font-medium text-primary hover:underline">cómo calcularla paso a paso</a>.
-      </p>
     </div>
+    <a
+      href="/guias/que-es-la-matriz-del-destino/"
+      class="mt-5 inline-block font-medium text-primary hover:underline"
+    >
+      Leer la guía completa →
+    </a>
   </section>
+
+  <HowItWorks />
 
   <FaqAccordion qa={homeFaq} />
-  <RelatedCalculators items={relatedCalculators} />
-  <BlogStrip posts={latestPosts} />
 
-  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <div class="rounded-2xl bg-gradient-to-br from-primary to-primary-dark px-6 py-10 text-center text-white sm:px-12">
-      <h2 class="font-heading text-2xl font-bold sm:text-3xl">El Informe PDF Está en Camino</h2>
-      <p class="mx-auto mt-3 max-w-xl text-white/85">
-        Estamos preparando un informe descargable más completo. Esta función estará disponible
-        próximamente.
-      </p>
-      <button
-        type="button"
-        disabled
-        class="mx-auto mt-6 rounded-xl bg-white/10 px-6 py-3 text-sm font-semibold text-white/70 disabled:cursor-not-allowed"
-      >
-        Próximamente
-      </button>
-    </div>
-  </section>
+  <BlogStrip posts={latestPosts} />
 </BaseLayout>

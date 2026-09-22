@@ -15,7 +15,7 @@ faqs:
     answer: "No necesariamente. Aquí se usa el término para describir un patrón energético heredado y repetido, no como sistema de castigo o recompensa."
 ---
 
-De todas las posiciones de la [Matriz del Destino](/matriz-del-destino/), la cola kármica es probablemente la que más preguntas genera. A diferencia de tu Punto E o tu línea del dinero, que describen una sola energía con un solo arcano, la cola kármica está formada por tres arcanos que trabajan juntos para señalar un patrón que se repite en tu vida casi sin que lo decidas conscientemente.
+De todas las posiciones de la [Matriz del Destino](/), la cola kármica es probablemente la que más preguntas genera. A diferencia de tu Punto E o tu línea del dinero, que describen una sola energía con un solo arcano, la cola kármica está formada por tres arcanos que trabajan juntos para señalar un patrón que se repite en tu vida casi sin que lo decidas conscientemente.
 
 ## Qué es la cola kármica en la Matriz del Destino
 
@@ -53,4 +53,4 @@ Es común confundir estas dos posiciones porque ambas hablan de algo "profundo",
 
 **¿Es lo mismo que el karma en el sentido religioso?** No necesariamente. Aquí se usa el término para describir un patrón energético heredado y repetido, no como sistema de castigo o recompensa.
 
-Si todavía no calculaste tu propia cola kármica, puedes hacerlo gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) y ver el desglose completo de tus tres arcanos junto con el resto de tus posiciones. Y si ya tienes tus tres arcanos y quieres saber qué significan específicamente combinados entre sí, nuestra guía sobre las [combinaciones de la cola kármica](/blog/cola-karmica-combinaciones-numeros/) profundiza en las lecturas más frecuentes.
+Si todavía no calculaste tu propia cola kármica, puedes hacerlo gratis en nuestra [calculadora de la Matriz del Destino](/) y ver el desglose completo de tus tres arcanos junto con el resto de tus posiciones. Y si ya tienes tus tres arcanos y quieres saber qué significan específicamente combinados entre sí, nuestra guía sobre las [combinaciones de la cola kármica](/blog/cola-karmica-combinaciones-numeros/) profundiza en las lecturas más frecuentes.

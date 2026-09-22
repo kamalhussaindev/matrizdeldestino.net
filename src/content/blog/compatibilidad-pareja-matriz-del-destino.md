@@ -29,4 +29,4 @@ Cuando los arcanos centrales de una pareja son muy distintos, suele ser útil le
 
 ## Calcula la compatibilidad con tu pareja
 
-Si quieres ver esta comparación aplicada a tu propia relación, puedes calcular la matriz de compatibilidad de pareja gratis en nuestra [calculadora de compatibilidad](/matriz-del-destino/compatibilidad/): vas a ver el desglose completo de ambas matrices, lado a lado, junto con una interpretación de las energías compartidas y complementarias entre ambos.
+Si quieres ver esta comparación aplicada a tu propia relación, puedes calcular la matriz de compatibilidad de pareja gratis en nuestra [calculadora de compatibilidad](/?tab=compatibilidad): vas a ver el desglose completo de ambas matrices, lado a lado, junto con una interpretación de las energías compartidas y complementarias entre ambos.

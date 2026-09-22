@@ -25,4 +25,4 @@ Aquí está la diferencia importante: en la numerología clásica, el 11 y el 22
 
 Lo que sí conservan es su propio significado como arcanos: el 11 corresponde a [La Justicia](/arcanos/11/) —equilibrio, verdad, consecuencias claras de cada acción— y el 22, en la numeración que usamos en este sitio, corresponde a [El Loco](/arcanos/22/) —potencial puro y el inicio de un nuevo ciclo—. Si cualquiera de los dos aparece en una posición central de tu matriz, como tu Punto E, vale la pena leer su significado completo con calma: ambos describen energías intensas, aunque no por las mismas razones que en la numerología tradicional.
 
-¿Quieres ver si el 11 o el 22 aparecen en tu propio resultado? Puedes [calcular tu Matriz del Destino gratis](/matriz-del-destino/) en minutos.
+¿Quieres ver si el 11 o el 22 aparecen en tu propio resultado? Puedes [calcular tu Matriz del Destino gratis](/) en minutos.

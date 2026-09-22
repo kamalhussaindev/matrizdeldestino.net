@@ -17,7 +17,7 @@ Los chakras son, en la tradición yóguica, siete centros de energía distribuid
 
 ## Cómo se calculan tus chakras
 
-Los veintiún arcanos de tus chakras —tres por cada uno de los siete— se derivan de una secuencia de puntos que ya forman parte de tu octagrama, combinados en un orden específico entre sí y con tu cuadrado ancestral. No hace falta calcular esto a mano: nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) entrega el desglose completo de tus siete chakras junto con el resto de tu resultado.
+Los veintiún arcanos de tus chakras —tres por cada uno de los siete— se derivan de una secuencia de puntos que ya forman parte de tu octagrama, combinados en un orden específico entre sí y con tu cuadrado ancestral. No hace falta calcular esto a mano: nuestra [calculadora de la Matriz del Destino](/) entrega el desglose completo de tus siete chakras junto con el resto de tu resultado.
 
 ## Los 7 chakras y sus posiciones
 
@@ -55,4 +55,4 @@ Rige la conciencia espiritual y el sentido de conexión con algo más amplio que
 
 La forma más útil de interpretar tus chakras no es analizar cada uno de los veintiún arcanos por separado, sino observar el patrón completo. Presta atención a los chakras donde tus tres arcanos —físico, energético y emocional— son afines entre sí: suelen ser zonas de coherencia y fortaleza. Y presta igual atención a los chakras donde los tres arcanos son muy distintos entre sí, porque ahí suele haber una tensión interna que vale la pena observar, ya sea en el cuerpo, en la energía o en las emociones. Comparar tus chakras con tu Punto E y tu [línea de bienestar](/guias/linea-de-bienestar/) suele dar una lectura todavía más completa.
 
-¿Quieres ver el desglose completo de tus siete chakras, con sus veintiún arcanos correspondientes? Puedes [calcular tu Matriz del Destino gratis](/matriz-del-destino/), sin registro y con el resultado al instante.
+¿Quieres ver el desglose completo de tus siete chakras, con sus veintiún arcanos correspondientes? Puedes [calcular tu Matriz del Destino gratis](/), sin registro y con el resultado al instante.

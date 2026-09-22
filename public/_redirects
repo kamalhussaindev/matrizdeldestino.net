@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects. The homepage is now the calculator, so both
+# former calculator URLs fold into it — one strong page instead of two.
+/matriz-del-destino/               /                        301
+/matriz-del-destino/compatibilidad/ /?tab=compatibilidad    301

@@ -42,4 +42,4 @@ Esta lista resume el significado general de cada arcano, pero recuerda que en tu
 
 ## Calcula tu matriz completa
 
-Si todavía no calculaste tu Matriz del Destino, puedes hacerlo gratis en nuestra [calculadora](/matriz-del-destino/) y ver exactamente qué números —y por lo tanto qué arcanos— corresponden a cada una de tus posiciones.
+Si todavía no calculaste tu Matriz del Destino, puedes hacerlo gratis en nuestra [calculadora](/) y ver exactamente qué números —y por lo tanto qué arcanos— corresponden a cada una de tus posiciones.

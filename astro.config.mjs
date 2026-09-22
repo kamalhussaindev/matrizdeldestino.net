@@ -5,13 +5,13 @@ import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
-// Only these 8 pages are indexable. Every other route carries
+// Only these 6 pages are indexable. Every other route carries
 // <meta name="robots" content="noindex, follow"> and is filtered out of the
-// sitemap here, so the two signals stay in sync.
+// sitemap here, so the two signals stay in sync. The two former calculator
+// URLs are absent deliberately: they 301 to / (see public/_redirects), and a
+// sitemap should only list pages that answer with 200.
 const INDEXABLE_URLS = [
   'https://matrizdeldestino.net/',
-  'https://matrizdeldestino.net/matriz-del-destino/',
-  'https://matrizdeldestino.net/matriz-del-destino/compatibilidad/',
   'https://matrizdeldestino.net/guias/que-es-la-matriz-del-destino/',
   'https://matrizdeldestino.net/guias/como-calcular-la-matriz-del-destino/',
   'https://matrizdeldestino.net/guias/cola-karmica/',

@@ -31,4 +31,4 @@ Este es un error de expectativa, no de cálculo. La Matriz del Destino es una he
 
 Es tentador calcular tu matriz, mirar solo tu arcano central y cerrar la pestaña. Pero el verdadero valor del sistema está en cruzar varias posiciones entre sí: tu Punto E junto con tu cola kármica, tu línea del dinero junto con tu propósito personal. Por ejemplo, tener el [Arcano 16: La Torre](/arcanos/16/) en tu cola kármica se lee muy distinto si tu Punto E es un arcano estable como el [Arcano 4: El Emperador](/arcanos/4/) que si también es una energía de cambio constante. Leídas en conjunto cuentan una historia mucho más completa que cualquier posición aislada. Nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/) explica en qué orden conviene leerlas.
 
-¿Quieres calcular la tuya sin cometer ninguno de estos errores? Nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) hace todo el cálculo por ti, de forma automática y gratuita.
+¿Quieres calcular la tuya sin cometer ninguno de estos errores? Nuestra [calculadora de la Matriz del Destino](/) hace todo el cálculo por ti, de forma automática y gratuita.

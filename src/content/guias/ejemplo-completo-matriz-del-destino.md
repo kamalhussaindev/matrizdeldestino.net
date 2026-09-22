@@ -8,7 +8,7 @@ author: "Equipo Arcania"
 heroImage: "/images/guias/ejemplo-completo-matriz-del-destino.webp"
 ---
 
-Leer una explicación teórica de cómo se calcula la Matriz del Destino ayuda, pero nada aclara tanto como ver el método aplicado a una fecha real, con cada paso a la vista. En esta guía calculamos, número por número, la matriz completa de una persona nacida el **15 de mayo de 1990**, usando exactamente la misma lógica que aplica nuestra [calculadora](/matriz-del-destino/).
+Leer una explicación teórica de cómo se calcula la Matriz del Destino ayuda, pero nada aclara tanto como ver el método aplicado a una fecha real, con cada paso a la vista. En esta guía calculamos, número por número, la matriz completa de una persona nacida el **15 de mayo de 1990**, usando exactamente la misma lógica que aplica nuestra [calculadora](/).
 
 ## La fecha de ejemplo: 15 de mayo de 1990
 
@@ -88,4 +88,4 @@ Ninguno de estos arcanos se lee de forma aislada: la clave de una buena interpre
 
 ## Cómo leer tu propio resultado
 
-Si ya calculaste tu matriz y quieres profundizar en la lectura de cada posición, te recomendamos nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/), donde explicamos cómo conectar los distintos puntos entre sí en lugar de leerlos como datos sueltos. Y si todavía no calculaste la tuya, puedes [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en menos de un minuto y ver tu octagrama completo, con exactamente el mismo nivel de detalle que mostramos en este ejemplo.
+Si ya calculaste tu matriz y quieres profundizar en la lectura de cada posición, te recomendamos nuestra guía sobre [cómo leer la Matriz del Destino](/guias/como-leer-la-matriz-del-destino/), donde explicamos cómo conectar los distintos puntos entre sí en lugar de leerlos como datos sueltos. Y si todavía no calculaste la tuya, puedes [calcular tu Matriz del Destino](/) gratis en menos de un minuto y ver tu octagrama completo, con exactamente el mismo nivel de detalle que mostramos en este ejemplo.

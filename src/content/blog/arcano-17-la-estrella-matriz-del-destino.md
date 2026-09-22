@@ -36,4 +36,4 @@ La diferencia clave está en la acción. El optimismo ingenuo espera que las cos
 
 Para profundizar en el significado completo del Arcano 17 —en el amor, el trabajo y cada posición de tu matriz— visita la [ficha completa del Arcano 17](/arcanos/17/).
 
-Si querés ver en qué posición aparece el Arcano 17 en tu propio resultado, podés [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en minutos.
+Si querés ver en qué posición aparece el Arcano 17 en tu propio resultado, podés [calcular tu Matriz del Destino](/) gratis en minutos.

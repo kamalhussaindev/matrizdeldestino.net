@@ -79,4 +79,4 @@ El más común es reducir el año usando solo sus dos últimos dígitos: hay que
 
 Si al terminar tus valores no coinciden con los de una calculadora, revisa esos tres puntos antes que ningún otro.
 
-¿Prefieres que lo calculemos por ti? [Usa nuestra calculadora gratuita →](/matriz-del-destino/)
+¿Prefieres que lo calculemos por ti? [Usa nuestra calculadora gratuita →](/)

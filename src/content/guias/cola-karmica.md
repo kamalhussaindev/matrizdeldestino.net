@@ -29,7 +29,7 @@ La cola kármica ocupa la zona inferior de la matriz y se lee como una secuencia
 
 El primer punto arranca desde tu misión terrenal (el punto D) y describe el **karma individual**: el patrón tal como se manifiesta en tu propia conducta. El segundo corresponde al **karma heredado**: la versión del mismo patrón que venía de antes, en tus padres o abuelos. El tercero es la **síntesis**: lo que ocurre cuando los dos anteriores se combinan, y suele ser el punto donde el patrón se vuelve visible para los demás antes que para ti.
 
-Si aún no sabes cuáles son tus tres arcanos, puedes obtenerlos en segundos con la [calculadora de la Matriz del Destino](/matriz-del-destino/), o calcularlos a mano siguiendo nuestra [guía paso a paso](/guias/como-calcular-la-matriz-del-destino/).
+Si aún no sabes cuáles son tus tres arcanos, puedes obtenerlos en segundos con la [calculadora de la Matriz del Destino](/), o calcularlos a mano siguiendo nuestra [guía paso a paso](/guias/como-calcular-la-matriz-del-destino/).
 
 ## Cómo leer los tres arcanos de la cola
 
@@ -65,4 +65,4 @@ Transformar una cola kármica no consiste en eliminarla: consiste en dejar de ej
 
 **Sustituir.** Elige una respuesta alternativa concreta y pequeña para la próxima vez. No "voy a dejar de controlar", sino "cuando sienta el impulso de revisar su mensaje, espero hasta mañana". Los patrones no se desmontan con propósitos generales; se desmontan con decisiones específicas repetidas.
 
-Si te ayuda tener el mapa completo delante, [calcula tu Matriz del Destino gratis](/matriz-del-destino/) y lee tu cola kármica junto al resto de tus posiciones: casi siempre, el patrón se entiende mejor cuando se ve en relación con tu punto E y tu línea del dinero.
+Si te ayuda tener el mapa completo delante, [calcula tu Matriz del Destino gratis](/) y lee tu cola kármica junto al resto de tus posiciones: casi siempre, el patrón se entiende mejor cuando se ve en relación con tu punto E y tu línea del dinero.

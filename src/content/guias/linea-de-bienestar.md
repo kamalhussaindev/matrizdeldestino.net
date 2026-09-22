@@ -24,4 +24,4 @@ Si al revisar tus chakras encuentras que se repite el mismo arcano en más de un
 
 ## Consulta tu propio desglose
 
-Puedes ver el desglose completo de tus siete chakras y tu Punto E calculando tu matriz gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/). Aunque no ofrecemos todavía un "arcano único de bienestar" separado, cruzar estas posiciones te da una lectura integral genuinamente útil sobre tu equilibrio físico, emocional y mental, siguiendo el mismo espíritu con el que otras escuelas describen este concepto.
+Puedes ver el desglose completo de tus siete chakras y tu Punto E calculando tu matriz gratis en nuestra [calculadora de la Matriz del Destino](/). Aunque no ofrecemos todavía un "arcano único de bienestar" separado, cruzar estas posiciones te da una lectura integral genuinamente útil sobre tu equilibrio físico, emocional y mental, siguiendo el mismo espíritu con el que otras escuelas describen este concepto.

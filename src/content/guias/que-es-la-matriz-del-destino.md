@@ -53,7 +53,7 @@ Para cualquier persona con curiosidad por entenderse mejor. No hace falta saber 
 
 Lo que la Matriz del Destino no es: un diagnóstico clínico, una predicción de hechos concretos ni un sustituto de la ayuda profesional. Es un punto de partida para la reflexión personal, y funciona mejor cuando se usa así.
 
-Si quieres ver el método en acción, lee nuestra guía sobre [cómo calcular la Matriz del Destino paso a paso](/guias/como-calcular-la-matriz-del-destino/), o deja que lo hagamos por ti con la [calculadora gratuita de la Matriz del Destino](/matriz-del-destino/).
+Si quieres ver el método en acción, lee nuestra guía sobre [cómo calcular la Matriz del Destino paso a paso](/guias/como-calcular-la-matriz-del-destino/), o deja que lo hagamos por ti con la [calculadora gratuita de la Matriz del Destino](/).
 
 ## Preguntas frecuentes
 

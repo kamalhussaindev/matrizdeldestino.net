@@ -86,4 +86,4 @@ Apego frente a la mirada ajena. Lo heredado es el juicio —el qué dirán, la e
 
 Ninguna de estas lecturas es un destino. La cola kármica describe la respuesta por defecto, la que se activa cuando no eliges: en el momento en que la reconoces mientras ocurre, deja de ser automática y pasa a ser una opción entre varias. Ese es todo el trabajo, y es suficiente.
 
-Si todavía no conoces tus tres arcanos, [calcula tu Matriz del Destino gratis](/matriz-del-destino/): el resultado incluye tu cola kármica completa junto con la interpretación de cada posición de tu octagrama.
+Si todavía no conoces tus tres arcanos, [calcula tu Matriz del Destino gratis](/): el resultado incluye tu cola kármica completa junto con la interpretación de cada posición de tu octagrama.

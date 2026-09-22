@@ -28,4 +28,4 @@ En lugar de buscar un significado único para "el cuadrado ancestral" como si fu
 
 ## Trabajar el patrón, no negarlo
 
-Como con la cola kármica, el objetivo de leer tu cuadrado ancestral no es juzgar lo que heredaste, sino identificarlo con claridad para decidir conscientemente qué parte de esa herencia familiar quieres conservar y cuál prefieres transformar. Si todavía no has calculado tu matriz completa, puedes hacerlo gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) y ver tu cuadrado ancestral reflejado directamente en tus líneas masculina y femenina.
+Como con la cola kármica, el objetivo de leer tu cuadrado ancestral no es juzgar lo que heredaste, sino identificarlo con claridad para decidir conscientemente qué parte de esa herencia familiar quieres conservar y cuál prefieres transformar. Si todavía no has calculado tu matriz completa, puedes hacerlo gratis en nuestra [calculadora de la Matriz del Destino](/) y ver tu cuadrado ancestral reflejado directamente en tus líneas masculina y femenina.

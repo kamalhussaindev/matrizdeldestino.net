@@ -47,4 +47,4 @@ El desborde del Arcano 13 no siempre se ve como un cierre dramático: muchas vec
 
 Para el significado completo del Arcano 13 en cada posición de tu matriz —en el amor, el trabajo, la cola kármica y más— visita [nuestra página dedicada](/arcanos/13/).
 
-Si todavía no calculaste tu matriz y quieres ver en qué posición aparece el Arcano 13 en tu caso, puedes [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en menos de un minuto.
+Si todavía no calculaste tu matriz y quieres ver en qué posición aparece el Arcano 13 en tu caso, puedes [calcular tu Matriz del Destino](/) gratis en menos de un minuto.

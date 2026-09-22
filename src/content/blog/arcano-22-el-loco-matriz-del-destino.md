@@ -44,4 +44,4 @@ El desborde del Arcano 22 no se ve como caos evidente, sino como una acumulació
 
 Para el significado completo del Arcano 22 en la Matriz del Destino, visita [nuestra página dedicada](/arcanos/22/).
 
-Si todavía no calculaste tu matriz y quieres ver en qué posición exacta aparece el Arcano 22 en tu caso —y cómo se combina con el resto de tu octagrama—, puedes [calcular tu Matriz del Destino](/matriz-del-destino/) gratis en menos de un minuto.
+Si todavía no calculaste tu matriz y quieres ver en qué posición exacta aparece el Arcano 22 en tu caso —y cómo se combina con el resto de tu octagrama—, puedes [calcular tu Matriz del Destino](/) gratis en menos de un minuto.

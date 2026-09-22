@@ -30,6 +30,6 @@ Trabajar estos bloqueos no significa forzar una energía que no es la tuya, sino
 
 ## Calcula tu línea del dinero
 
-Si todavía no conoces tu línea del dinero, puedes calcularla gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/): además de esta posición, vas a ver el desglose completo de tu octagrama —tu Punto E, tu cola kármica, tus líneas masculina y femenina y tus cuatro propósitos— interpretado en conjunto. Entender tu línea del dinero de forma aislada es útil, pero cruzarla con el resto de tu matriz suele dar una lectura mucho más completa de tu relación real con la prosperidad.
+Si todavía no conoces tu línea del dinero, puedes calcularla gratis en nuestra [calculadora de la Matriz del Destino](/): además de esta posición, vas a ver el desglose completo de tu octagrama —tu Punto E, tu cola kármica, tus líneas masculina y femenina y tus cuatro propósitos— interpretado en conjunto. Entender tu línea del dinero de forma aislada es útil, pero cruzarla con el resto de tu matriz suele dar una lectura mucho más completa de tu relación real con la prosperidad.
 
-Calcula tu línea del dinero ahora: [Calculadora de la Matriz del Destino](/matriz-del-destino/).
+Calcula tu línea del dinero ahora: [Calculadora de la Matriz del Destino](/).

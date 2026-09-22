@@ -66,4 +66,4 @@ También merece una mirada tu [cola kármica](/guias/cola-karmica/): los años 1
 
 Si quieres entender el sistema completo antes de leer tu año, empieza por nuestra guía sobre [qué es la Matriz del Destino](/guias/que-es-la-matriz-del-destino/).
 
-Y para ver cómo se combina esta energía con tu mapa concreto, [calcula tu Matriz del Destino gratis](/matriz-del-destino/) y compara tu punto E y tu arcano central con el impulso de comienzo que marca 2026.
+Y para ver cómo se combina esta energía con tu mapa concreto, [calcula tu Matriz del Destino gratis](/) y compara tu punto E y tu arcano central con el impulso de comienzo que marca 2026.

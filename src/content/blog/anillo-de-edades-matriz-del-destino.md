@@ -25,4 +25,4 @@ Actualmente, nuestra calculadora se enfoca en el octagrama central completo: los
 
 ## Qué puedes hacer mientras tanto
 
-Si te interesa este concepto, lo más recomendable es tratarlo como información complementaria y no como sustituto de tu matriz central. Todo lo que sí calculamos hoy —tu octagrama completo— ya te da una lectura profunda y verificada de tu personalidad, tus talentos, tus relaciones y tu propósito de vida. Puedes calcular ese resultado completo gratis en nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/), y explorar el significado de cada arcano en nuestro [catálogo de los 22 arcanos](/arcanos/).
+Si te interesa este concepto, lo más recomendable es tratarlo como información complementaria y no como sustituto de tu matriz central. Todo lo que sí calculamos hoy —tu octagrama completo— ya te da una lectura profunda y verificada de tu personalidad, tus talentos, tus relaciones y tu propósito de vida. Puedes calcular ese resultado completo gratis en nuestra [calculadora de la Matriz del Destino](/), y explorar el significado de cada arcano en nuestro [catálogo de los 22 arcanos](/arcanos/).
