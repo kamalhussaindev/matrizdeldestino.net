@@ -13,12 +13,12 @@ const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 
-const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' });
+const dateFormatter = new Intl.DateTimeFormat('es', { dateStyle: 'long' });
 ---
 
 <BaseLayout
-  title="Matriz del Destino Blog — Guides and Insights | Arcania"
-  description="Articles on the Matriz del Destino, numerology, and self-knowledge: practical guides, insights, and real interpretation examples."
+  title="Blog: Matriz del Destino y Numerología | Arcania"
+  description="Artículos sobre la Matriz del Destino, numerología y autoconocimiento: guías prácticas, curiosidades y ejemplos reales de interpretación."
   showMobileStickyBar
   noindex
 >
@@ -29,7 +29,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' });
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Blog</h1>
     <p class="mt-4 text-lg text-ink-muted">
-      Guides, interpretations, and insights to help you understand your Matriz del Destino.
+      Guías, interpretaciones y reflexiones para entender tu Matriz del Destino.
     </p>
   </div>
 

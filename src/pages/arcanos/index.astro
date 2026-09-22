@@ -5,14 +5,14 @@ import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import ArcanaCard from '../../components/content/ArcanaCard.astro';
 
-const breadcrumbItems = [{ label: 'Arcana' }];
+const breadcrumbItems = [{ label: 'Arcanos' }];
 
 const arcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - b.data.numero);
 ---
 
 <BaseLayout
-  title="The 22 Major Arcana of the Matriz del Destino | Arcania"
-  description="Explore the meaning of each of the 22 major arcana in the Matriz del Destino. Discover what each arcana reveals about your personality, purpose, and karmic patterns."
+  title="Los 22 Arcanos de la Matriz del Destino | Arcania"
+  description="Descubre el significado de los 22 arcanos mayores del tarot en la Matriz del Destino: en el amor, el trabajo y cada posición del octagrama."
   showMobileStickyBar
   noindex
 >
@@ -21,10 +21,10 @@ const arcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - 
   <Breadcrumbs items={breadcrumbItems} />
 
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
-    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">The 22 Major Arcana</h1>
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Los 22 Arcanos Mayores</h1>
     <p class="mt-4 text-lg text-ink-muted">
-      Each position in your Matriz del Destino is interpreted through one of the 22 major arcana. Click
-      any arcana to discover its meaning.
+      Cada posición de tu Matriz del Destino se interpreta a través de uno de los 22 arcanos mayores.
+      Haz clic en cualquier arcano para descubrir su significado.
     </p>
   </div>
 
@@ -34,7 +34,7 @@ const arcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - 
         <ArcanaCard
           numero={entry.data.numero}
           nombre={entry.data.nombre}
-          description={entry.data.metaDescription ?? `Discover the meaning of Arcana ${entry.data.numero} in your Matriz del Destino.`}
+          description={entry.data.metaDescription ?? `Descubre el significado del Arcano ${entry.data.numero} en tu Matriz del Destino.`}
           href={`/arcanos/${entry.data.numero}/`}
           heroImage={entry.data.heroImage}
         />

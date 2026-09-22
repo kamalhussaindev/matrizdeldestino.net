@@ -5,14 +5,14 @@ import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../../components/seo/SchemaBreadcrumb.astro';
 import Card from '../../components/ui/Card.astro';
 
-const breadcrumbItems = [{ label: 'Guides' }];
+const breadcrumbItems = [{ label: 'Guías' }];
 
 const guias = await getCollection('guias');
 ---
 
 <BaseLayout
-  title="Matriz del Destino Guides — Learn to Read Your Chart | Arcania"
-  description="Complete guides to understanding, calculating, and interpreting your Matriz del Destino: what it is, how it's calculated, how to read each position, and what the karmic tail means."
+  title="Guías sobre la Matriz del Destino | Arcania"
+  description="Guías completas para entender, calcular e interpretar tu Matriz del Destino: qué es, cómo se calcula, cómo leer cada posición y qué es la cola kármica."
   showMobileStickyBar
   noindex
 >
@@ -21,9 +21,9 @@ const guias = await getCollection('guias');
   <Breadcrumbs items={breadcrumbItems} />
 
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
-    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Guides</h1>
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Guías</h1>
     <p class="mt-4 text-lg text-ink-muted">
-      Everything you need to understand and read your Matriz del Destino.
+      Todo lo que necesitas para entender y leer tu Matriz del Destino.
     </p>
   </div>
 

@@ -5,7 +5,7 @@ metaDescription: "Descubre qué es la cola kármica en la Matriz del Destino: c�
 keywords: ["cola kármica", "cola karmica matriz del destino", "karma matriz del destino", "patrones kármicos"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-calcular-la-matriz-del-destino"]
 author: "Equipo de Arcania"
-heroImage: "/images/guias/guia-cola-karmica.webp"
+heroImage: "/images/guias/guia-cola-karmica-matriz-del-destino.webp"
 faqs:
   - question: "¿Tener cola kármica significa que hice algo malo en otra vida?"
     answer: "No. La cola kármica no es un castigo ni un registro de culpas: es la descripción de un patrón de conducta que se repite en tu linaje y que llega hasta ti sin que lo hayas elegido. Todo el mundo tiene cola kármica, porque todo el mundo hereda patrones."

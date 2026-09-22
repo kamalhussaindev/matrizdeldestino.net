@@ -1,58 +1,58 @@
 ---
 slug: "chakras-en-la-matriz-del-destino"
-title: "The Chakras in the Matriz del Destino: Meaning and Positions"
-metaDescription: "Discover how the 7 chakras relate to the Matriz del Destino, which arcana corresponds to each chakra, and what it reveals about your physical and emotional energy."
-keywords: ["chakras matriz del destino", "chakras numerology", "7 chakras matriz del destino"]
+title: "Los Chakras en la Matriz del Destino: Significado y Posiciones"
+metaDescription: "Descubre cómo se relacionan los 7 chakras con la Matriz del Destino, qué arcano corresponde a cada chakra y qué revela sobre tu energía física y emocional."
+keywords: ["chakras matriz del destino", "chakras numerología", "7 chakras matriz del destino"]
 relatedGuias: ["que-es-la-matriz-del-destino", "linea-de-bienestar", "punto-e-zona-de-confort"]
-author: "Arcania Team"
+author: "Equipo Arcania"
 datePublished: 2026-07-21
 heroImage: "/images/arcanos/arcano-14-la-templanza-matriz-del-destino.webp"
 ---
 
-Beyond your personality, your purpose, and your karmic tail, the Matriz del Destino includes a layer that tends to surprise people calculating their octagram for the first time: the breakdown of your seven chakras, each translated into specific arcana based on your date of birth.
+Además de tu personalidad, tu propósito y tu cola kármica, la Matriz del Destino incluye una capa que suele sorprender a quienes calculan su octagrama por primera vez: el desglose de tus siete chakras, cada uno traducido a arcanos concretos según tu fecha de nacimiento.
 
-## What the chakras are in the matrix
+## Qué son los chakras en la matriz
 
-In the yogic tradition, the chakras are seven energy centres distributed along the body, from the base of the spine to the crown of the head. Each governs a different aspect of human experience: survival and grounding, creativity, personal will, love, expression, intuition, and spiritual awareness. The Matriz del Destino doesn't just name them: it assigns each chakra three of its own arcana — one physical, one energetic, one emotional — derived mathematically from your date of birth, using the same logic of addition and reduction as the rest of the system.
+Los chakras son, en la tradición yóguica, siete centros de energía distribuidos a lo largo del cuerpo, desde la base de la columna hasta la coronilla. Cada uno rige un aspecto distinto de la experiencia humana: la supervivencia y el arraigo, la creatividad, la voluntad personal, el amor, la expresión, la intuición y la conciencia espiritual. La Matriz del Destino no se limita a nombrarlos: le asigna a cada chakra tres arcanos propios —uno físico, uno energético y uno emocional— derivados matemáticamente de tu fecha de nacimiento, con la misma lógica de suma y reducción que el resto del sistema.
 
-## How your chakras are calculated
+## Cómo se calculan tus chakras
 
-The twenty-one arcana across your chakras — three for each of the seven — are derived from a sequence of points that are already part of your octagram, combined in a specific order with each other and with your ancestral square. There's no need to calculate this by hand: our [Matriz del Destino calculator](/matriz-del-destino/) delivers the complete breakdown of your seven chakras alongside the rest of your result.
+Los veintiún arcanos de tus chakras —tres por cada uno de los siete— se derivan de una secuencia de puntos que ya forman parte de tu octagrama, combinados en un orden específico entre sí y con tu cuadrado ancestral. No hace falta calcular esto a mano: nuestra [calculadora de la Matriz del Destino](/matriz-del-destino/) entrega el desglose completo de tus siete chakras junto con el resto de tu resultado.
 
-## The 7 chakras and their positions
+## Los 7 chakras y sus posiciones
 
-Each chakra receives three arcana that are best read together, not separately: one describes your physical plane, another your energy, and another your emotional world in that same area.
+Cada chakra recibe tres arcanos que conviene leer juntos, no por separado: uno describe tu plano físico, otro tu energía y otro tu mundo emocional en esa misma área.
 
-### Root chakra
+### Chakra raíz
 
-Governs survival, grounding, and the sense of basic security. The arcana in your root chakra describe how stable you feel on the material plane and how much you trust that your most basic needs will be met.
+Rige la supervivencia, el arraigo y la sensación de seguridad básica. Los arcanos de tu chakra raíz describen qué tan estable te sientes en el plano material y qué tanto confías en que tus necesidades más elementales estarán cubiertas.
 
-### Sacral chakra
+### Chakra sacro
 
-Associated with creativity, pleasure, and sexuality. This is where you read your capacity to enjoy, to create, and to connect from desire, without guilt or repression.
+Asociado a la creatividad, el placer y la sexualidad. Aquí se lee tu capacidad de disfrutar, de crear y de vincularte desde el deseo, sin culpa ni represión.
 
-### Solar plexus
+### Plexo solar
 
-Linked to personal will, confidence, and the capacity for action. The arcana in this zone speak to your self-esteem and how capable you feel of standing behind your own decisions.
+Vinculado a la voluntad personal, la confianza y la capacidad de acción. Los arcanos de esta zona hablan de tu autoestima y de cuánto te sientes capaz de sostener tus propias decisiones.
 
-### Heart
+### Corazón
 
-Governs love and connection, both with yourself and with others. It's one of the zones most often compared with Point E: if they share an arcana, it usually indicates an identity and an emotional life that are closely aligned.
+Rige el amor y la conexión, tanto contigo mismo como con los demás. Es una de las zonas que más se compara con el Punto E: si comparten arcano, suele indicar una identidad y una vida afectiva muy alineadas.
 
-### Throat
+### Garganta
 
-Associated with expression and communication. It describes how freely you feel you can say what you think and feel, and what blocks, if any, show up when you try.
+Asociado a la expresión y la comunicación. Describe qué tan libremente sientes que puedes decir lo que piensas y sientes, y qué bloqueos, si los hay, aparecen al hacerlo.
 
-### Third eye
+### Tercer ojo
 
-Linked to intuition and perception beyond the obvious. The arcana in this position speak to your ability to trust signals you can't always explain rationally.
+Vinculado a la intuición y la percepción más allá de lo evidente. Los arcanos de esta posición hablan de tu capacidad de confiar en señales que no siempre puedes explicar racionalmente.
 
-### Crown
+### Corona
 
-Governs spiritual awareness and the sense of connection to something bigger than yourself. It's usually read alongside your social, general, and planetary purposes.
+Rige la conciencia espiritual y el sentido de conexión con algo más amplio que tú mismo. Suele leerse en conjunto con tus propósitos social, general y planetario.
 
-## How to read your chakras in your result
+## Cómo leer tus chakras en tu resultado
 
-The most useful way to interpret your chakras isn't to analyse each of the twenty-one arcana separately, but to observe the overall pattern. Pay attention to the chakras where your three arcana — physical, energetic, and emotional — align with each other: these tend to be zones of coherence and strength. And pay equal attention to the chakras where the three arcana are very different from each other, because that's usually where there's an inner tension worth observing, whether in the body, the energy, or the emotions. Comparing your chakras with your Point E and your [wellbeing line](/guias/linea-de-bienestar/) usually gives an even fuller reading.
+La forma más útil de interpretar tus chakras no es analizar cada uno de los veintiún arcanos por separado, sino observar el patrón completo. Presta atención a los chakras donde tus tres arcanos —físico, energético y emocional— son afines entre sí: suelen ser zonas de coherencia y fortaleza. Y presta igual atención a los chakras donde los tres arcanos son muy distintos entre sí, porque ahí suele haber una tensión interna que vale la pena observar, ya sea en el cuerpo, en la energía o en las emociones. Comparar tus chakras con tu Punto E y tu [línea de bienestar](/guias/linea-de-bienestar/) suele dar una lectura todavía más completa.
 
-Want to see the complete breakdown of your seven chakras, with their twenty-one corresponding arcana? You can [calculate your Matriz del Destino for free](/matriz-del-destino/), with no registration and an instant result.
+¿Quieres ver el desglose completo de tus siete chakras, con sus veintiún arcanos correspondientes? Puedes [calcular tu Matriz del Destino gratis](/matriz-del-destino/), sin registro y con el resultado al instante.

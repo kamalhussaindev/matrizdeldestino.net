@@ -4,12 +4,12 @@ import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
 import Card from '../components/ui/Card.astro';
 
-const breadcrumbItems = [{ label: 'Contact' }];
+const breadcrumbItems = [{ label: 'Contacto' }];
 ---
 
 <BaseLayout
-  title="Contact Arcania"
-  description="Write to us with your questions, suggestions, or feedback about the Matriz del Destino and our calculators."
+  title="Contacto | Arcania"
+  description="Escríbenos con tus preguntas, sugerencias o comentarios sobre la Matriz del Destino y nuestras calculadoras."
   noindex
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
@@ -17,22 +17,23 @@ const breadcrumbItems = [{ label: 'Contact' }];
   <Breadcrumbs items={breadcrumbItems} />
 
   <article class="mx-auto max-w-2xl px-4 pb-16 sm:px-6">
-    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Contact</h1>
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Contacto</h1>
     <p class="mt-4 text-lg text-ink-muted">
-      Have a question or suggestion? Get in touch with us — we read every message.
+      ¿Tienes preguntas sobre tu resultado, sugerencias para el sitio o encontraste algo que no
+      funciona como debería? Escríbenos, leemos todos los mensajes.
     </p>
 
     <Card class="mt-8">
-      <h2 class="font-heading text-lg font-semibold text-ink">Email</h2>
+      <h2 class="font-heading text-lg font-semibold text-ink">Correo electrónico</h2>
       <p class="mt-2 text-ink-muted">
         <a href="mailto:hola@matrizdeldestino.net" class="font-medium text-primary hover:underline">
           hola@matrizdeldestino.net
         </a>
       </p>
       <p class="mt-4 text-sm text-ink-muted">
-        We reply within 2 to 3 business days. If your question is about how to interpret a specific
-        position in your matrix, let us know which position and which arcana you got so we can help you
-        better.
+        Respondemos en un plazo de 2 a 3 días hábiles. Si tu consulta es sobre cómo interpretar una
+        posición específica de tu matriz, cuéntanos qué posición y qué arcano te salió para poder
+        ayudarte mejor.
       </p>
     </Card>
   </article>

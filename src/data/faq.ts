@@ -117,122 +117,30 @@ export const compatibilityFaq: FaqItem[] = [
   },
 ];
 
-export const lifePathFaq: FaqItem[] = [
-  {
-    question: 'What is a life path number?',
-    answer:
-      'Your life path number is the most important number in numerology: it summarises the core lessons, talents, and challenges you came into this life to work with. It is calculated entirely from your date of birth.',
-  },
-  {
-    question: 'How is the life path number calculated?',
-    answer:
-      'We add together every digit of your day, month, and year of birth, then reduce that total to a single digit by repeatedly summing its digits — unless the total lands on a master number (11, 22, or 33), in which case we stop there.',
-  },
-  {
-    question: 'What are master numbers?',
-    answer:
-      "11, 22, and 33 are considered master numbers in numerology. They carry the same core meaning as their reduced form (11→2, 22→4, 33→6) but with heightened intensity and potential, along with heightened challenges — they are traditionally not reduced further.",
-  },
-  {
-    question: 'Is my life path number the same as my Matriz del Destino arcana?',
-    answer:
-      'No. The life path number uses a different, simpler numerology tradition (reducing to 1–9 or a master number) than the Matriz del Destino, which reduces to one of 22 major arcana. They are complementary systems, not the same calculation.',
-  },
-];
-
-export const personalYearFaq: FaqItem[] = [
-  {
-    question: 'What is a personal year number?',
-    answer:
-      'Your personal year number describes the overarching theme and energy of a specific calendar year for you personally. It changes every year, moving through a repeating 9-year cycle (1 through 9, with 11 and 22 appearing as master years).',
-  },
-  {
-    question: 'How is my personal year number calculated?',
-    answer:
-      'We add together the digits of your birth day, birth month, and the calendar year in question, then reduce that total to a single digit — stopping early if the total lands on the master number 11 or 22.',
-  },
-  {
-    question: 'Why does my personal year number change every year?',
-    answer:
-      "Because the year itself changes. Your birth day and month stay fixed, but adding a new calendar year to the sum shifts the total — which is what moves you through the 9-year cycle one step at a time.",
-  },
-  {
-    question: 'What happens after personal year 9?',
-    answer:
-      'After a 9 (a year of completion and release), the cycle resets to 1 — a fresh new-beginnings year — and the 9-year pattern repeats throughout your life.',
-  },
-];
-
-export const karmicDebtFaq: FaqItem[] = [
-  {
-    question: 'What is a karmic debt number?',
-    answer:
-      "A karmic debt number (13, 14, 16, or 19) is a pattern some numerologists believe points to a lesson carried over from a past life. It shows up when certain numbers in your chart total to one of these four values before their final reduction.",
-  },
-  {
-    question: 'Is having a karmic debt number bad?',
-    answer:
-      "No. It simply highlights a specific area for conscious growth in this lifetime — not a punishment. Many people with karmic debt numbers channel that extra friction into real strength once they recognise the pattern.",
-  },
-  {
-    question: 'Can I have more than one karmic debt number?',
-    answer:
-      'Yes. We check both your birth day and your life path calculation independently, so it is possible to have zero, one, or two karmic debt numbers.',
-  },
-  {
-    question: "What if I don't have any karmic debt numbers?",
-    answer:
-      "That's common, and it's a good thing — it simply means your chart doesn't carry any of the four recognised karmic debt patterns. It doesn't mean you have no lessons to work on, just not this particular kind.",
-  },
-];
-
-export const soulUrgeFaq: FaqItem[] = [
-  {
-    question: 'What is a soul urge number?',
-    answer:
-      "Your soul urge number — also called your heart's desire number — reveals your deepest inner motivation: what you truly want beneath your outward behaviour and habits.",
-  },
-  {
-    question: 'How is the soul urge number calculated?',
-    answer:
-      'We take only the vowels (A, E, I, O, U, and Y) from your full birth name, convert each to its numerology value, add them together, and reduce the total to a single digit or master number (11 or 22).',
-  },
-  {
-    question: 'Why does the calculation only use vowels?',
-    answer:
-      'In numerology, vowels are considered to represent your inner self and true desires, while consonants represent how others perceive you. The soul urge number focuses specifically on that inner layer.',
-  },
-  {
-    question: 'Which name should I use — my legal name or my nickname?',
-    answer:
-      'For the most accurate reading, use your full name exactly as it appears on your birth certificate, including all middle names.',
-  },
-];
-
 export const childFaq: FaqItem[] = [
   {
-    question: "From what age can I calculate my child's matrix?",
+    question: '¿A partir de qué edad puedo calcular la matriz de mi hijo/a?',
     answer:
-      'You can calculate it from birth. The matrix is built solely from the date of birth, so it is just as valid for a baby as for a teenager.',
+      'Puedes calcularla desde el nacimiento. La matriz se construye únicamente con la fecha de nacimiento, así que es igual de válida para un bebé que para un adolescente.',
   },
   {
-    question: "What's the point of knowing a child's matrix?",
+    question: '¿Para qué sirve conocer la matriz infantil?',
     answer:
-      "It helps you understand your child's natural talents, dominant energies, and possible tendencies from an early age, so you can support them in a way that is more conscious of their particular way of being, without forcing comparisons with other children.",
+      'Te ayuda a entender los talentos naturales, las energías dominantes y las posibles tendencias de tu hijo/a desde una edad temprana, para acompañarlo de una manera más consciente de su forma particular de ser, sin forzar comparaciones con otros niños.',
   },
   {
-    question: 'Should I share the result with my child?',
+    question: '¿Debo compartir el resultado con mi hijo/a?',
     answer:
-      'It depends on their age and maturity. For young children, the result is usually more useful as guidance for parents; for teenagers, sharing it can open up a valuable conversation about their own talents and interests.',
+      'Depende de su edad y madurez. Con niños pequeños, el resultado suele ser más útil como guía para los padres; con adolescentes, compartirlo puede abrir una conversación valiosa sobre sus propios talentos e intereses.',
   },
   {
-    question: 'Does it replace a psychological or vocational assessment?',
+    question: '¿Reemplaza una evaluación psicológica o vocacional?',
     answer:
-      "No. It is a self-knowledge and support tool, not a clinical diagnosis or a professional assessment. If you have concerns about your child's development, it is always best to consult a specialist.",
+      'No. Es una herramienta de autoconocimiento y acompañamiento, no un diagnóstico clínico ni una evaluación profesional. Si tienes dudas sobre el desarrollo de tu hijo/a, siempre es mejor consultar con un especialista.',
   },
   {
-    question: 'Can I calculate the matrix for more than one child?',
+    question: '¿Puedo calcular la matriz de varios hijos?',
     answer:
-      'Yes, you can calculate the matrix for each of your children as many times as you like; the calculation is free and has no registration or usage limit.',
+      'Sí, puedes calcular la matriz de cada uno de tus hijos las veces que quieras; el cálculo es gratuito y no requiere registro ni límite de usos.',
   },
 ];

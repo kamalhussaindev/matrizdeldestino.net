@@ -1,32 +1,32 @@
 ---
 slug: "compatibilidad-pareja-matriz-del-destino"
-title: "How to Use the Matriz del Destino to Understand Your Relationship"
-metaDescription: "How to compare two people's Matriz del Destino to understand relationship compatibility: what it means to share an arcana and what to do with the differences."
+title: "Cómo usar la Matriz del Destino para entender tu relación de pareja"
+metaDescription: "Cómo comparar la Matriz del Destino de dos personas para entender la compatibilidad de pareja: qué significa compartir un arcano y qué hacer con las diferencias."
 publishDate: 2026-02-24
-author: "Arcania Team"
-tags: ["compatibility", "relationships"]
+author: "Equipo Arcania"
+tags: ["compatibilidad", "pareja"]
 featured: false
 heroImage: "/images/arcanos/arcano-6-los-enamorados-matriz-del-destino.webp"
 ---
 
-Many people calculate their own Matriz del Destino first, and shortly after start wondering: what happens if I compare my matrix with my partner's? The short answer is yes, you can, and it tends to be one of the most revealing readings the whole system offers.
+Muchas personas calculan primero su propia Matriz del Destino, y poco después se preguntan: ¿qué pasa si comparo mi matriz con la de mi pareja? La respuesta corta es que sí se puede, y que suele ser una de las lecturas más reveladoras de todo el sistema.
 
-## What a couple's matrix actually compares
+## Qué compara realmente la matriz de pareja
 
-There's no single "compatibility arcana" between two people. What we do is calculate each person's complete Matriz del Destino separately, based on their dates of birth, and then compare their main positions — especially the central arcana (Point E) and Points A, B, C, D — to identify shared energies and complementary energies between the two.
+No existe un "arcano de compatibilidad" único entre dos personas. Lo que hacemos es calcular la Matriz del Destino completa de cada persona por separado, a partir de sus fechas de nacimiento, y luego comparar sus posiciones principales —sobre todo el arcano central (Punto E) y los puntos A, B, C, D— para identificar energías compartidas y energías complementarias entre ambos.
 
-## What it means to share an arcana
+## Qué significa compartir un arcano
 
-When two people share the same arcana in a key position, like Point E, it usually points to a natural affinity in that area of life: they recognize each other easily in that shared energy, almost without needing to explain it. For example, two people with [Arcana 6 (The Lovers)](/arcanos/6/) at their center likely share a similar way of making important decisions from the heart, and of needing alignment of values to feel fully comfortable in the relationship.
+Cuando dos personas comparten el mismo arcano en una posición clave, como el Punto E, suele indicar una afinidad natural en esa área de la vida: se reconocen fácilmente en esa energía compartida, casi sin necesidad de explicarla. Por ejemplo, dos personas con el [Arcano 6 (Los Enamorados)](/arcanos/6/) en su centro probablemente compartan una forma similar de tomar decisiones importantes desde el corazón, y de necesitar afinidad de valores para sentirse plenamente cómodas en la relación.
 
-## A different arcana doesn't mean incompatibility
+## Un arcano distinto no significa incompatibilidad
 
-It's a common mistake to think that if two people have different arcana at their center, the relationship is doomed. That's not the case: different energies don't mean incompatibility, they mean complementarity. Each person brings something the other doesn't have, which can also be a solid foundation for the relationship if both learn to value that difference instead of trying to erase it.
+Es un error común pensar que si dos personas tienen arcanos distintos en su centro, la relación está condenada. No es así: energías distintas no significan incompatibilidad, sino complementariedad. Cada persona aporta algo que la otra no tiene, lo cual también puede ser una base sólida para la relación si ambos aprenden a valorar esa diferencia en lugar de tratar de eliminarla.
 
-## How to read the differences as useful information
+## Cómo leer las diferencias como información útil
 
-When a couple's central arcana are very different, it's usually helpful to read them as two legitimate ways of being in the world, not as a scale of who's right. Someone with The Emperor energy (structure, order) paired with someone with The Fool energy (freedom, spontaneity) will likely need to actively negotiate how much structure the relationship needs, instead of assuming that one person's way is correct and the other's is a problem to fix.
+Cuando los arcanos centrales de una pareja son muy distintos, suele ser útil leerlos como dos formas legítimas de estar en el mundo, no como una escala de quién tiene razón. Una persona con energía de El Emperador (estructura, orden) junto a otra con energía de El Loco (libertad, espontaneidad) probablemente tenga que negociar activamente cuánta estructura necesita la relación, en lugar de asumir que la forma de uno es la correcta y la del otro un problema a corregir.
 
-## Calculate your compatibility as a couple
+## Calcula la compatibilidad con tu pareja
 
-If you want to see this comparison applied to your own relationship, you can calculate your couple's compatibility matrix for free with our [compatibility calculator](/matriz-del-destino/compatibilidad/): you'll get the complete breakdown of both matrices, side by side, along with an interpretation of the shared and complementary energies between you both.
+Si quieres ver esta comparación aplicada a tu propia relación, puedes calcular la matriz de compatibilidad de pareja gratis en nuestra [calculadora de compatibilidad](/matriz-del-destino/compatibilidad/): vas a ver el desglose completo de ambas matrices, lado a lado, junto con una interpretación de las energías compartidas y complementarias entre ambos.

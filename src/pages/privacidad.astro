@@ -3,13 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
 
-const breadcrumbItems = [{ label: 'Privacy' }];
-const lastUpdated = new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(new Date('2026-01-01'));
+const breadcrumbItems = [{ label: 'Privacidad' }];
+const lastUpdated = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(new Date('2026-01-01'));
 ---
 
 <BaseLayout
-  title="Privacy Policy | Arcania"
-  description="What data Arcania collects, how we use it, and what your rights are as a user of our calculators."
+  title="Política de Privacidad | Arcania"
+  description="Qué datos recopila Arcania, cómo los usamos y cuáles son tus derechos como usuario de nuestras calculadoras."
   noindex
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
@@ -17,49 +17,52 @@ const lastUpdated = new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(
   <Breadcrumbs items={breadcrumbItems} />
 
   <article class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
-    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Privacy Policy</h1>
-    <p class="mt-2 text-sm text-ink-muted">Last updated: {lastUpdated}</p>
+    <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">Política de Privacidad</h1>
+    <p class="mt-2 text-sm text-ink-muted">Última actualización: {lastUpdated}</p>
 
     <div class="mt-6 flex flex-col gap-4 text-ink-muted">
-      <h2 class="font-heading text-2xl font-bold text-ink">Current state of data collection</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Estado actual de la recopilación de datos</h2>
       <p>
-        The PDF report form currently doesn't transmit or store email addresses. This feature is still
-        under development. Your Matriz del Destino calculation happens locally on your device.
+        Actualmente, el formulario del informe PDF no transmite ni almacena direcciones de correo
+        electrónico. Esta funcionalidad se encuentra en desarrollo. El cálculo de la Matriz del Destino
+        se realiza localmente en tu dispositivo.
       </p>
 
-      <h2 class="font-heading text-2xl font-bold text-ink">What data we collect</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Qué datos recopilamos</h2>
       <p>
-        To calculate your Matriz del Destino, we only need your date of birth and, optionally, a name to
-        personalise the result on screen. This calculation happens entirely in your browser: your date of
-        birth is never sent to our servers or stored in any database.
+        Para calcular tu Matriz del Destino solo necesitamos tu fecha de nacimiento y, opcionalmente,
+        un nombre para personalizar el resultado en pantalla. Este cálculo ocurre por completo en tu
+        navegador: tu fecha de nacimiento nunca se envía a nuestros servidores ni se almacena en
+        ninguna base de datos.
       </p>
 
-      <h2 class="font-heading text-2xl font-bold text-ink">What we don't do</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Qué no hacemos</h2>
       <p>
-        We don't sell, rent, or share your personal data with third parties for commercial purposes. We
-        don't use your date of birth for any purpose other than what you explicitly authorised by using
-        it.
+        No vendemos, alquilamos ni compartimos tus datos personales con terceros con fines
+        comerciales. No usamos tu fecha de nacimiento para ningún propósito distinto al que autorizaste
+        explícitamente al usarla.
       </p>
 
-      <h2 class="font-heading text-2xl font-bold text-ink">Cookies and analytics</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Cookies y analítica</h2>
       <p>
-        Where enabled, we use aggregate analytics tools (such as Google Analytics) solely to understand,
-        in aggregate, how the site is used — which pages are visited most, from which devices — so we can
-        improve it. The site works the same whether or not they're enabled. We don't use this information
-        to identify you individually or for third-party advertising purposes.
+        Si están habilitadas, usamos herramientas de analítica agregada (como Google Analytics)
+        únicamente para entender de forma agregada cómo se usa el sitio —qué páginas se visitan más,
+        desde qué dispositivos— y así poder mejorarlo. El sitio funciona igual si están desactivadas. No
+        usamos esta información para identificarte individualmente ni para fines publicitarios de
+        terceros.
       </p>
 
-      <h2 class="font-heading text-2xl font-bold text-ink">Your rights</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Tus derechos</h2>
       <p>
-        Since we don't collect or store identifiable personal data, we have no data of yours to correct
-        or delete. If you have any questions about this policy, reach us through our
-        <a href="/contacto/" class="font-medium text-primary hover:underline">contact page</a>.
+        Como no recopilamos ni almacenamos datos personales identificables, no tenemos datos tuyos que
+        corregir o eliminar. Si tienes alguna duda sobre esta política, escríbenos a través de nuestra
+        <a href="/contacto/" class="font-medium text-primary hover:underline">página de contacto</a>.
       </p>
 
-      <h2 class="font-heading text-2xl font-bold text-ink">Changes to this policy</h2>
+      <h2 class="font-heading text-2xl font-bold text-ink">Cambios a esta política</h2>
       <p>
-        If we update this policy in a significant way, we'll note it on this same page with a new update
-        date.
+        Si actualizamos esta política de forma significativa, lo indicaremos en esta misma página con
+        una nueva fecha de actualización.
       </p>
     </div>
   </article>

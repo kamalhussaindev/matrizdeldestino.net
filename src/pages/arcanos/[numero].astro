@@ -25,11 +25,11 @@ interface Props {
 const CONTENT_UPDATED = new Date('2026-07-10');
 
 const POSITION_SECTIONS = [
-  { key: 'puntoE', heading: (n: number) => `Arcana ${n} in Point E (comfort zone)`, slug: 'punto-e-zona-de-confort' },
-  { key: 'colaKarmica', heading: (n: number) => `Arcana ${n} in the Karmic Tail`, slug: 'cola-karmica' },
-  { key: 'lineaDinero', heading: (n: number) => `Arcana ${n} in the Money Line`, slug: 'linea-del-dinero' },
-  { key: 'lineaMasculina', heading: (n: number) => `Arcana ${n} in the Masculine Line`, slug: 'linea-masculina' },
-  { key: 'lineaFemenina', heading: (n: number) => `Arcana ${n} in the Feminine Line`, slug: 'linea-femenina' },
+  { key: 'puntoE', heading: (n: number) => `Arcano ${n} en el Punto E (zona de confort)`, slug: 'punto-e-zona-de-confort' },
+  { key: 'colaKarmica', heading: (n: number) => `Arcano ${n} en la Cola kármica`, slug: 'cola-karmica' },
+  { key: 'lineaDinero', heading: (n: number) => `Arcano ${n} en la Línea del dinero`, slug: 'linea-del-dinero' },
+  { key: 'lineaMasculina', heading: (n: number) => `Arcano ${n} en la Línea masculina`, slug: 'linea-masculina' },
+  { key: 'lineaFemenina', heading: (n: number) => `Arcano ${n} en la Línea femenina`, slug: 'linea-femenina' },
 ] as const;
 
 const { entry } = Astro.props;
@@ -38,13 +38,13 @@ const { numero, nombre, metaDescription, relatedArcanos, datePublished, heroImag
 
 const tocHeadings = [
   ...headings.filter((h) => h.depth === 2),
-  { depth: 2, slug: 'en-cada-posicion-de-la-matriz', text: 'In Each Position of the Matrix' },
+  { depth: 2, slug: 'en-cada-posicion-de-la-matriz', text: 'En cada posición de la matriz' },
 ];
 
-const title = entry.data.title ?? `Arcana ${numero} ${nombre} in the Matriz del Destino | Arcania`;
+const title = entry.data.title ?? `Arcano ${numero} ${nombre}: Significado Completo | Matriz del Destino`;
 const description =
   metaDescription ??
-  `Discover the meaning of Arcana ${numero} ${nombre} in your Matriz del Destino: positive and negative energy, in love, work, and karmic tail.`;
+  `Descubre gratis el Arcano ${numero} ${nombre} en la Matriz del Destino: en el amor, el trabajo, zona de confort, cola kármica y línea del dinero.`;
 
 const allArcanos = (await getCollection('arcanos')).sort((a, b) => a.data.numero - b.data.numero);
 const currentIndex = allArcanos.findIndex((e) => e.data.numero === numero);
@@ -56,8 +56,8 @@ const relatedEntries = relatedArcanos
   .filter((e): e is CollectionEntry<'arcanos'> => Boolean(e));
 
 const breadcrumbItems = [
-  { label: 'Arcana', href: '/arcanos/' },
-  { label: `Arcana ${numero}` },
+  { label: 'Arcanos', href: '/arcanos/' },
+  { label: `Arcano ${numero}` },
 ];
 
 const arcanaPositions = getArcana(numero).positions;
@@ -90,7 +90,7 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
       heroImage && (
         <Image
           src={heroImage}
-          alt={`Arcana ${numero} ${nombre} in the Matriz del Destino`}
+          alt={`Arcano ${numero} ${nombre} en la Matriz del Destino`}
           width={800}
           height={450}
           widths={[400, 600, 800]}
@@ -103,14 +103,14 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
     }
 
     <h1 class="font-heading text-4xl font-bold text-ink sm:text-5xl">
-      Arcana {numero} in the Matriz del Destino: {nombre}
+      Arcano {numero} en la Matriz del Destino: {nombre}
     </h1>
 
     <a
       href="/matriz-del-destino/"
       class="mt-4 inline-block font-medium text-primary hover:underline"
     >
-      Calculate Your Matriz del Destino →
+      Calcula tu Matriz del Destino →
     </a>
 
     <TableOfContents headings={tocHeadings} />
@@ -121,11 +121,11 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
 
     <section class="py-12">
       <h2 id="en-cada-posicion-de-la-matriz" class="font-heading text-2xl font-bold text-ink">
-        In Each Position of the Matrix
+        En cada posición de la matriz
       </h2>
       <p class="mt-3 text-ink-muted">
-        Where this arcana falls changes its reading considerably. Here's how it's interpreted in each of
-        the main positions of your octagram:
+        La ubicación de este arcano cambia mucho su lectura. Así se interpreta en cada una de las posiciones
+        principales de tu octagrama:
       </p>
       <div class="mt-6 flex flex-col gap-6">
         {
@@ -144,13 +144,13 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
     {
       relatedEntries.length > 0 && (
         <section class="py-12">
-          <h2 class="font-heading text-2xl font-bold text-ink">Related Arcana</h2>
+          <h2 class="font-heading text-2xl font-bold text-ink">Arcanos relacionados</h2>
           <div class="mt-6 grid gap-4 sm:grid-cols-2">
             {relatedEntries.map((related) => (
               <ArcanaCard
                 numero={related.data.numero}
                 nombre={related.data.nombre}
-                description={related.data.metaDescription ?? `Discover the meaning of Arcana ${related.data.numero}.`}
+                description={related.data.metaDescription ?? `Descubre el significado del Arcano ${related.data.numero}.`}
                 href={`/arcanos/${related.data.numero}/`}
                 heroImage={related.data.heroImage}
               />
@@ -162,15 +162,15 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
 
     <div class="border-t border-surface-alt py-8">
       <p class="text-center text-sm font-medium text-ink-muted">
-        Exploring the 22 arcana · {currentIndex + 1} of 22
+        Explorando los 22 arcanos · {currentIndex + 1} de 22
       </p>
-      <nav aria-label="All arcana" class="mt-4 flex flex-wrap justify-center gap-2">
+      <nav aria-label="Todos los arcanos" class="mt-4 flex flex-wrap justify-center gap-2">
         {
           allArcanos.map((a) => (
             <a
               href={`/arcanos/${a.data.numero}/`}
               aria-current={a.data.numero === numero ? 'page' : undefined}
-              aria-label={`Arcana ${a.data.numero}: ${a.data.nombre}`}
+              aria-label={`Arcano ${a.data.numero}: ${a.data.nombre}`}
               class={
                 a.data.numero === numero
                   ? 'flex h-8 w-8 items-center justify-center rounded-full bg-accent font-heading text-xs font-bold text-ink'
@@ -184,12 +184,12 @@ const ogImage = `/og/arcanos/arcano-${numero}-${entry.slug}.png`;
       </nav>
     </div>
 
-    <nav class="flex items-center justify-between border-t border-surface-alt py-8" aria-label="Navigate between arcana">
+    <nav class="flex items-center justify-between border-t border-surface-alt py-8" aria-label="Navegación entre arcanos">
       <a href={`/arcanos/${prevEntry.data.numero}/`} class="font-medium text-primary hover:underline">
-        ← Arcana {prevEntry.data.numero}
+        ← Arcano {prevEntry.data.numero}
       </a>
       <a href={`/arcanos/${nextEntry.data.numero}/`} class="font-medium text-primary hover:underline">
-        Arcana {nextEntry.data.numero} →
+        Arcano {nextEntry.data.numero} →
       </a>
     </nav>
   </article>

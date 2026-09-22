@@ -6,7 +6,7 @@ publishDate: 2026-02-10
 author: "Equipo de Arcania"
 tags: ["cola kármica", "arcanos", "karma"]
 featured: true
-heroImage: "/images/guias/guia-cola-karmica.webp"
+heroImage: "/images/guias/guia-cola-karmica-matriz-del-destino.webp"
 faqs:
   - question: "¿Qué pasa si mi combinación no está en esta lista?"
     answer: "La lógica de lectura es la misma para cualquier combinación: el primer arcano describe cómo se manifiesta el patrón en ti, el segundo de dónde viene, y el tercero lo que los demás ven cuando se activa. Lee los tres significados por separado y luego encadénalos en esa secuencia."
