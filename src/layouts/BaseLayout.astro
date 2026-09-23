@@ -17,6 +17,8 @@ export interface Props {
   showMobileStickyBar?: boolean;
   preloadImage?: string;
   noindex?: boolean;
+  /** URL of the equivalent English page; when set, emits reciprocal hreflang tags. */
+  hreflangEn?: string;
 }
 
 const {
@@ -28,6 +30,7 @@ const {
   showMobileStickyBar = false,
   preloadImage,
   noindex = false,
+  hreflangEn,
 } = Astro.props;
 ---
 
@@ -51,10 +54,6 @@ const {
       </style>
     </noscript>
 
-    <link rel="alternate" hreflang="es" href="https://matrizdeldestino.net/" />
-    <link rel="alternate" hreflang="en" href="https://mymatrixofdestiny.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://mymatrixofdestiny.com/" />
-
     <SEOHead
       title={title}
       description={description}
@@ -62,6 +61,7 @@ const {
       ogImage={ogImage}
       ogType={ogType}
       noindex={noindex}
+      hreflangEn={hreflangEn}
     />
     <SchemaOrganization />
     <SchemaWebSite />

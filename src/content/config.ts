@@ -34,6 +34,7 @@ const guias = defineCollection({
     metaDescription: z.string(),
     keywords: z.array(z.string()).default([]),
     relatedGuias: z.array(z.string()).default([]),
+    hreflangEn: z.string().url().optional(),
     author: z.string().default('Arcania Team'),
     datePublished: z.coerce.date().default(SITE_LAUNCH_DATE),
     heroImage: z.string().optional(),

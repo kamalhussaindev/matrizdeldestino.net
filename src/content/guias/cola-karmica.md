@@ -5,6 +5,7 @@ metaDescription: "Descubre qué es la cola kármica en la Matriz del Destino: c�
 keywords: ["cola kármica", "cola karmica matriz del destino", "karma matriz del destino", "patrones kármicos"]
 relatedGuias: ["que-es-la-matriz-del-destino", "como-calcular-la-matriz-del-destino"]
 author: "Equipo de Arcania"
+hreflangEn: "https://mymatrixofdestiny.com/blog/what-is-karmic-tail-matrix-of-destiny"
 heroImage: "/images/guias/guia-cola-karmica-matriz-del-destino.webp"
 faqs:
   - question: "¿Tener cola kármica significa que hice algo malo en otra vida?"

@@ -29,7 +29,8 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
-const { title, metaDescription, author, relatedGuias, datePublished, heroImage, faqs } = entry.data;
+const { title, metaDescription, author, relatedGuias, datePublished, heroImage, faqs, hreflangEn } =
+  entry.data;
 const minutesToRead = readingTime(entry.body);
 
 const ogImageCandidate = `/og/og-guia-${entry.slug}.png`;
@@ -54,6 +55,7 @@ const breadcrumbItems = [
   preloadImage={heroImage}
   showMobileStickyBar
   noindex={!INDEXABLE_GUIA_SLUGS.includes(entry.slug)}
+  hreflangEn={hreflangEn}
 >
   <SchemaBreadcrumb slot="schema" items={breadcrumbItems} />
   <SchemaArticle

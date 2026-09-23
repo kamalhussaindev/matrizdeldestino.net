@@ -6,6 +6,7 @@ export interface Props {
   ogImage?: string;
   ogType?: 'website' | 'article';
   noindex?: boolean;
+  hreflangEn?: string;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   ogImage = '/og/default.png',
   ogType = 'website',
   noindex = false,
+  hreflangEn,
 } = Astro.props;
 
 const canonicalURL = new URL(canonicalPath, Astro.site);
@@ -26,6 +28,15 @@ const ogImageURL = new URL(ogImage, Astro.site);
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
 {noindex && <meta name="robots" content="noindex, follow" />}
+{
+  hreflangEn && (
+    <>
+      <link rel="alternate" hreflang="es" href={canonicalURL} />
+      <link rel="alternate" hreflang="en" href={hreflangEn} />
+      <link rel="alternate" hreflang="x-default" href={hreflangEn} />
+    </>
+  )
+}
 
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
